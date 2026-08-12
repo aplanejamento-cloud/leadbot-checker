@@ -9,24 +9,28 @@
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "O que é a Calculadora de Prejuízo por Leads Perdidos no WhatsApp?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "É uma ferramenta que ajuda pequenos negócios a estimarem quanto estão perdendo por não responderem leads no WhatsApp a tempo."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Como funciona o cálculo?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O cálculo é baseado no número de leads mensais, tempo de resposta, ticket médio e taxa de conversão do seu negócio."
-          }
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "O que é a Calculadora de Prejuízo por Leads Perdidos no WhatsApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É uma ferramenta que ajuda pequenos negócios a calcular quanto estão perdendo por não responder leads no WhatsApp a tempo."
         }
-      ]
+      }, {
+        "@type": "Question",
+        "name": "Como funciona a calculadora?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Basta inserir informações como tipo de negócio, número de leads por mês, tempo de resposta, ticket médio e taxa de conversão. A calculadora mostrará os leads perdidos e a receita perdida."
+        }
+      }, {
+        "@type": "Question",
+        "name": "O que é o LeadBot 24h?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LeadBot 24h é uma solução que ajuda pequenos negócios a responder leads no WhatsApp automaticamente, 24 horas por dia, por apenas R$ 197."
+        }
+      }]
     }
     </script>
     <style>
@@ -36,12 +40,12 @@
             margin: 0;
             padding: 20px;
             color: #333;
-            background-color: #f5f5f5;
+            background-color: #f9f9f9;
         }
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #fff;
+            background: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -72,8 +76,8 @@
             padding: 10px 15px;
             border-radius: 4px;
             cursor: pointer;
-            width: 100%;
             font-size: 16px;
+            width: 100%;
         }
         button:hover {
             background-color: #047857;
@@ -81,13 +85,23 @@
         .result {
             margin-top: 20px;
             padding: 15px;
-            background-color: #e8f5e9;
+            background-color: #f0f0f0;
             border-radius: 4px;
             display: none;
         }
         .cta-button {
             background-color: #047857;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
             margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
         }
         .cta-button:hover {
             background-color: #059669;
@@ -97,10 +111,8 @@
 <body>
     <div class="container">
         <h1>Calculadora de Prejuízo por Leads Perdidos no WhatsApp</h1>
-        <p>Descubra quanto seu negócio está perdendo por não responder leads no WhatsApp a tempo.</p>
-
         <div class="form-group">
-            <label for="tipo_negocio">Tipo de Negócio:</label>
+            <label for="tipo_negocio">Tipo de Negócio</label>
             <select id="tipo_negocio">
                 <option value="oficina">Oficina</option>
                 <option value="clinica">Clínica</option>
@@ -110,61 +122,49 @@
                 <option value="outro">Outro</option>
             </select>
         </div>
-
         <div class="form-group">
-            <label for="leads_mes">Leads por Mês:</label>
+            <label for="leads_mes">Leads por Mês</label>
             <input type="number" id="leads_mes" placeholder="Ex: 100">
         </div>
-
         <div class="form-group">
-            <label for="tempo_resposta_horas">Tempo de Resposta (horas):</label>
+            <label for="tempo_resposta_horas">Tempo de Resposta (horas)</label>
             <input type="number" id="tempo_resposta_horas" placeholder="Ex: 2">
         </div>
-
         <div class="form-group">
-            <label for="ticket_medio">Ticket Médio (R$):</label>
+            <label for="ticket_medio">Ticket Médio (R$)</label>
             <input type="number" id="ticket_medio" placeholder="Ex: 150">
         </div>
-
         <div class="form-group">
-            <label for="taxa_conversao_pct">Taxa de Conversão (%):</label>
+            <label for="taxa_conversao_pct">Taxa de Conversão (%)</label>
             <input type="number" id="taxa_conversao_pct" placeholder="Ex: 30">
         </div>
-
         <button onclick="calcularPrejuizo()">Calcular Prejuízo</button>
-
-        <div class="result" id="result">
-            <h2>Resultado:</h2>
-            <p><strong>Leads perdidos por mês:</strong> <span id="leads_perdidos_mes"></span></p>
-            <p><strong>Receita perdida por mês:</strong> R$ <span id="receita_perdida_mes"></span></p>
-            <p><strong>Receita perdida por ano:</strong> R$ <span id="receita_perdida_ano"></span></p>
+        <div id="resultado" class="result">
+            <h2>Resultado</h2>
+            <p><strong>Leads perdidos por mês:</strong> <span id="leads_perdidos_mes">0</span></p>
+            <p><strong>Receita perdida por mês:</strong> R$ <span id="receita_perdida_mes">0</span></p>
+            <p><strong>Receita perdida por ano:</strong> R$ <span id="receita_perdida_ano">0</span></p>
         </div>
-
         <a href="https://planificador7.gumroad.com/l/leadbot-24h" class="cta-button">Resolver com LeadBot 24h — R$ 197</a>
     </div>
-
     <script>
         function calcularPrejuizo() {
-            // Obter valores do formulário
-            const leadsMes = parseFloat(document.getElementById('leads_mes').value);
-            const tempoResposta = parseFloat(document.getElementById('tempo_resposta_horas').value);
-            const ticketMedio = parseFloat(document.getElementById('ticket_medio').value);
-            const taxaConversao = parseFloat(document.getElementById('taxa_conversao_pct').value);
+            const leads_mes = parseInt(document.getElementById('leads_mes').value) || 0;
+            const tempo_resposta_horas = parseInt(document.getElementById('tempo_resposta_horas').value) || 0;
+            const ticket_medio = parseFloat(document.getElementById('ticket_medio').value) || 0;
+            const taxa_conversao_pct = parseFloat(document.getElementById('taxa_conversao_pct').value) || 0;
 
-            // Calcular leads perdidos por mês (assumindo que leads não respondidos em até 1 hora são perdidos)
-            const leadsPerdidosMes = leadsMes * (Math.min(tempoResposta, 24) / 24);
+            // Cálculo simplificado: assume que leads não respondidos em até 5 minutos têm 80% de chance de serem perdidos
+            const taxa_perda = tempo_resposta_horas > 0.083 ? 0.8 : 0.2;
+            const leads_perdidos_mes = Math.round(leads_mes * taxa_perda);
+            const receita_perdida_mes = Math.round(leads_perdidos_mes * (taxa_conversao_pct / 100) * ticket_medio);
+            const receita_perdida_ano = receita_perdida_mes * 12;
 
-            // Calcular receita perdida por mês e por ano
-            const receitaPerdidaMes = leadsPerdidosMes * (taxaConversao / 100) * ticketMedio;
-            const receitaPerdidaAno = receitaPerdidaMes * 12;
+            document.getElementById('leads_perdidos_mes').textContent = leads_perdidos_mes;
+            document.getElementById('receita_perdida_mes').textContent = receita_perdida_mes.toLocaleString('pt-BR');
+            document.getElementById('receita_perdida_ano').textContent = receita_perdida_ano.toLocaleString('pt-BR');
 
-            // Exibir resultados
-            document.getElementById('leads_perdidos_mes').textContent = Math.round(leadsPerdidosMes);
-            document.getElementById('receita_perdida_mes').textContent = receitaPerdidaMes.toFixed(2);
-            document.getElementById('receita_perdida_ano').textContent = receitaPerdidaAno.toFixed(2);
-
-            // Mostrar resultados
-            document.getElementById('result').style.display = 'block';
+            document.getElementById('resultado').style.display = 'block';
         }
     </script>
 </body>
