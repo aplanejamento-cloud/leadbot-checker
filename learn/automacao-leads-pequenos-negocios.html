@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automação de Leads para Pequenos Negócios: O Que Funciona</title>
-    <meta name="description" content="Descubra como automatizar leads para pequenos negócios de forma eficiente e econômica. Passo a passo prático e comparação detalhada.">
+    <meta name="description" content="Descubra como automatizar a captação de leads para pequenos negócios de forma eficiente e econômica.">
     <meta property="og:title" content="Automação de Leads para Pequenos Negócios: O Que Funciona">
-    <meta property="og:description" content="Descubra como automatizar leads para pequenos negócios de forma eficiente e econômica. Passo a passo prático e comparação detalhada.">
+    <meta property="og:description" content="Descubra como automatizar a captação de leads para pequenos negócios de forma eficiente e econômica.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://seusite.com/learn/automacao-leads-pequenos-negocios.html">
-    <meta property="og:image" content="https://seusite.com/images/automacao-leads.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Automação de Leads para Pequenos Negócios: O Que Funciona">
-    <meta name="twitter:description" content="Descubra como automatizar leads para pequenos negócios de forma eficiente e econômica. Passo a passo prático e comparação detalhada.">
-    <meta name="twitter:image" content="https://seusite.com/images/automacao-leads.jpg">
+    <meta name="twitter:description" content="Descubra como automatizar a captação de leads para pequenos negócios de forma eficiente e econômica.">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,33 +33,53 @@
         h2 {
             color: #059669;
         }
-        .cta-button {
-            background-color: #059669;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+        .intro {
+            background-color: #fff;
+            padding: 20px;
             border-radius: 5px;
-            display: inline-block;
-            margin: 20px 0;
-            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .steps {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .comparison {
+            overflow-x: auto;
+            margin-bottom: 20px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px;
             text-align: left;
+            border-bottom: 1px solid #ddd;
         }
         th {
             background-color: #059669;
             color: white;
         }
+        .cta {
+            background-color: #059669;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .cta a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
         pre {
-            background-color: #f4f4f4;
-            padding: 10px;
+            background-color: #f5f5f5;
+            padding: 15px;
             border-radius: 5px;
             overflow-x: auto;
         }
@@ -69,143 +87,127 @@
 </head>
 <body>
     <div class="container">
-        <h1>Automação de Leads para Pequenos Negócios: O Que Realmente Funciona</h1>
-        <p>Você está perdendo tempo e dinheiro gerenciando leads manualmente? Pequenos negócios frequentemente enfrentam o desafio de captar e nutrir leads de forma eficiente, sem uma equipe grande ou recursos ilimitados. A automação pode ser a solução, mas como implementar de forma simples e eficaz?</p>
+        <h1>Automação de Leads para Pequenos Negócios: O Guia Definitivo</h1>
 
-        <h2>Passo a Passo para Automatizar Seus Leads</h2>
-        <ol>
-            <li><strong>Crie um formulário de captura:</strong>
-                <pre>
-&lt;form id="leadForm"&gt;
-    &lt;input type="text" id="name" placeholder="Nome" required&gt;
-    &lt;input type="email" id="email" placeholder="Email" required&gt;
-    &lt;button type="submit"&gt;Cadastrar&lt;/button&gt;
-&lt;/form&gt;</pre>
-            </li>
-            <li><strong>Integre com uma ferramenta de automação:</strong> Use o n8n para criar um fluxo de automação. Exemplo de código para configurar um webhook:
-                <pre>
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
+        <div class="intro">
+            <h2>O Problema Real</h2>
+            <p>Pequenos negócios enfrentam um grande desafio: como captar leads de forma eficiente sem gastar muito tempo ou dinheiro. Muitas vezes, os donos de pequenos negócios acabam perdendo oportunidades valiosas porque não conseguem responder rapidamente aos potenciais clientes ou não têm um sistema eficiente para gerenciar esses contatos.</p>
+        </div>
 
-app.use(bodyParser.json());
-
-app.post('/webhook', (req, res) => {
-    const lead = req.body;
-    console.log('Novo lead:', lead);
-    // Adicione aqui a lógica para enviar o lead para o n8n
-    res.sendStatus(200);
-});
-
-app.listen(3000, () => console.log('Servidor rodando na porta 3000'));</pre>
-            </li>
-            <li><strong>Configure um fluxo de nutrição:</strong> No n8n, crie um fluxo para enviar emails automaticamente. Exemplo de fluxo:
+        <div class="steps">
+            <h2>Passo a Passo para Automatizar a Captação de Leads</h2>
+            <ol>
+                <li><strong>Defina Seu Público-Alvo:</strong> Antes de começar, é crucial saber quem são seus potenciais clientes. Crie personas detalhadas para entender melhor suas necessidades e comportamentos.</li>
+                <li><strong>Escolha as Ferramentas Certas:</strong> Utilize ferramentas como n8n para criar fluxos de automação. Aqui está um exemplo de código mínimo para começar:</li>
                 <pre>
 {
   "nodes": [
     {
-      "parameters": {
-        "authentication": "oAuth2",
-        "resource": "me",
-        "operation": "get"
-      },
-      "name": "Microsoft Outlook",
-      "type": "n8n-nodes-base.microsoftOutlook",
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
       "typeVersion": 1,
       "position": [
         250,
         300
       ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "leadData": {
+          "name": "={{$node["Start"].json["name"]}}",
+          "email": "={{$node["Start"].json["email"]}}"
+        }
+      },
+      "name": "LeadBot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
     }
-  ]
-}</pre>
-            </li>
-        </ol>
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "LeadBot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+                </pre>
+                <li><strong>Crie Formulários de Captação:</strong> Utilize ferramentas como Google Forms ou Typeform para criar formulários de captação de leads. Integre esses formulários com seu sistema de automação.</li>
+                <li><strong>Automatize Respostas:</strong> Configure respostas automáticas para os leads capturados. Isso pode ser feito através de e-mails automáticos ou mensagens no WhatsApp.</li>
+                <li><strong>Monitore e Ajuste:</strong> Acompanhe os resultados e faça ajustes conforme necessário. Utilize métricas como taxa de conversão e tempo de resposta para avaliar a eficácia do seu sistema.</li>
+            </ol>
+        </div>
 
-        <h2>Comparação: Manual vs LeadBot</h2>
-        <table>
-            <tr>
-                <th>Processo</th>
-                <th>Manual</th>
-                <th>LeadBot</th>
-            </tr>
-            <tr>
-                <td>Captura de Leads</td>
-                <td>Formulários em papel ou planilhas</td>
-                <td>Formulários online integrados</td>
-            </tr>
-            <tr>
-                <td>Nutrição de Leads</td>
-                <td>Emails manuais</td>
-                <td>Emails automáticos personalizados</td>
-            </tr>
-            <tr>
-                <td>Tempo Gasto</td>
-                <td>Horas por dia</td>
-                <td>Minutos por semana</td>
-            </tr>
-            <tr>
-                <td>Custo</td>
-                <td>Alto (tempo e recursos)</td>
-                <td>Baixo (automatizado)</td>
-            </tr>
-        </table>
+        <div class="comparison">
+            <h2>Comparação: Manual vs LeadBot</h2>
+            <table>
+                <tr>
+                    <th>Critério</th>
+                    <th>Manual</th>
+                    <th>LeadBot</th>
+                </tr>
+                <tr>
+                    <td>Tempo de Resposta</td>
+                    <td>Lento (horas/dias)</td>
+                    <td>Rápido (minutos/segundos)</td>
+                </tr>
+                <tr>
+                    <td>Custo</td>
+                    <td>Alto (mais horas de trabalho)</td>
+                    <td>Baixo (automatizado)</td>
+                </tr>
+                <tr>
+                    <td>Eficiência</td>
+                    <td>Baixa (erros humanos)</td>
+                    <td>Alta (processos automatizados)</td>
+                </tr>
+                <tr>
+                    <td>Escalabilidade</td>
+                    <td>Limitada</td>
+                    <td>Ilimitada</td>
+                </tr>
+            </table>
+        </div>
 
-        <h2>Pronto para Automatizar Seus Leads?</h2>
-        <p>Não perca mais tempo com processos manuais. Comece a automatizar seus leads hoje mesmo e veja seu negócio crescer.</p>
-        <a href="https://planificador7.gumroad.com/l/leadbot-24h" class="cta-button">Adquirir LeadBot Agora</a>
-
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Automação de Leads para Pequenos Negócios: O Que Funciona",
-            "description": "Descubra como automatizar leads para pequenos negócios de forma eficiente e econômica. Passo a passo prático e comparação detalhada.",
-            "author": {
-                "@type": "Person",
-                "name": "Seu Nome"
-            },
-            "datePublished": "2023-10-01",
-            "image": "https://seusite.com/images/automacao-leads.jpg",
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://seusite.com/learn/automacao-leads-pequenos-negocios.html"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Sua Empresa",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://seusite.com/images/logo.jpg"
-                }
-            }
-        }
-        </script>
-
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "O que é automação de leads?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Automação de leads é o processo de usar software para captar, nutrir e gerenciar leads de forma automática, economizando tempo e recursos."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Por que pequenos negócios precisam de automação de leads?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Pequenos negócios precisam de automação de leads para competir de forma eficiente, economizando tempo e recursos limitados."
-                    }
-                }
-            ]
-        }
-        </script>
+        <div class="cta">
+            <h2>Pronto para Automatizar Seu Negócio?</h2>
+            <p>Adquira agora o LeadBot e comece a captar leads de forma eficiente e econômica.</p>
+            <p><a href="https://planificador7.gumroad.com/l/leadbot-24h" target="_blank">Comprar LeadBot</a></p>
+        </div>
     </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Automação de Leads para Pequenos Negócios: O Que Funciona",
+      "description": "Descubra como automatizar a captação de leads para pequenos negócios de forma eficiente e econômica.",
+      "author": {
+        "@type": "Person",
+        "name": "Seu Nome"
+      },
+      "datePublished": "2023-10-01",
+      "mainEntity": {
+        "@type": "Question",
+        "name": "Como automatizar a captação de leads para pequenos negócios?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para automatizar a captação de leads para pequenos negócios, você pode seguir os seguintes passos: definir seu público-alvo, escolher as ferramentas certas, criar formulários de captação, automatizar respostas e monitorar e ajustar conforme necessário."
+        }
+      }
+    }
+    </script>
 </body>
 </html>
