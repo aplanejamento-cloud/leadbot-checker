@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Como Qualificar Leads no WhatsApp com n8n + IA Grátis</title>
-    <meta name="description" content="Aprenda a qualificar leads no WhatsApp usando n8n e IA gratuitamente. Automatize seu processo de vendas e economize tempo.">
+    <meta name="description" content="Aprenda a qualificar leads no WhatsApp usando n8n e IA gratuitamente. Passo a passo simples e eficiente para pequenos negócios.">
     <meta property="og:title" content="Como Qualificar Leads no WhatsApp com n8n + IA Grátis">
-    <meta property="og:description" content="Aprenda a qualificar leads no WhatsApp usando n8n e IA gratuitamente. Automatize seu processo de vendas e economize tempo.">
+    <meta property="og:description" content="Aprenda a qualificar leads no WhatsApp usando n8n e IA gratuitamente. Passo a passo simples e eficiente para pequenos negócios.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://seusite.com/learn/como-qualificar-leads-whatsapp-n8n.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Como Qualificar Leads no WhatsApp com n8n + IA Grátis">
-    <meta name="twitter:description" content="Aprenda a qualificar leads no WhatsApp usando n8n e IA gratuitamente. Automatize seu processo de vendas e economize tempo.">
+    <meta name="twitter:description" content="Aprenda a qualificar leads no WhatsApp usando n8n e IA gratuitamente. Passo a passo simples e eficiente para pequenos negócios.">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,35 +21,35 @@
             color: #333;
             background-color: #f9f9f9;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-        }
-        h1 {
-            color: #059669;
+        header {
+            background-color: #059669;
+            color: white;
+            padding: 1rem;
             text-align: center;
         }
-        h2 {
-            color: #059669;
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .container {
+            padding: 1rem;
+            max-width: 800px;
+            margin: auto;
         }
         .step {
-            background-color: #f4f4f4;
-            padding: 15px;
-            border-left: 5px solid #059669;
-            margin: 20px 0;
+            background-color: white;
+            border-left: 4px solid #059669;
+            padding: 1rem;
+            margin-bottom: 1rem;
         }
-        code {
-            background-color: #eaeaea;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-family: monospace;
+        .step h2 {
+            margin-top: 0;
+            color: #059669;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 1rem 0;
         }
         th, td {
             border: 1px solid #ddd;
@@ -60,80 +60,70 @@
             background-color: #059669;
             color: white;
         }
-        .cta-button {
+        .cta {
             background-color: #059669;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 20px 0;
+            padding: 1rem;
             text-align: center;
+            margin: 1rem 0;
+            border-radius: 4px;
         }
-        .cta-button:hover {
-            background-color: #047a56;
+        .cta a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            overflow-x: auto;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Qualifique Leads no WhatsApp com n8n e IA Grátis</h1>
+    </header>
     <div class="container">
-        <h1>Como Qualificar Leads no WhatsApp com n8n + IA Grátis</h1>
-        <p>Você está perdendo tempo qualificando leads manualmente no WhatsApp? Imagine se você pudesse automatizar esse processo e focar apenas nos leads mais promissores. Com n8n e IA, isso é possível e gratuito!</p>
-
-        <h2>Passo a Passo para Qualificar Leads no WhatsApp</h2>
+        <p>Você está perdendo tempo respondendo manualmente a cada lead que chega pelo WhatsApp? Muitas pequenas empresas enfrentam esse problema, gastando horas do dia apenas para qualificar leads que nem sempre se convertem em vendas. Com n8n e IA, você pode automatizar esse processo e focar no que realmente importa: fechar negócios.</p>
 
         <div class="step">
-            <h3>1. Configure seu ambiente n8n</h3>
-            <p>Primeiro, você precisa ter o n8n instalado. Você pode usar a versão em nuvem ou instalar localmente.</p>
-            <p><strong>Código mínimo para começar:</strong></p>
+            <h2>Passo 1: Configure o n8n</h2>
+            <p>Primeiro, você precisa ter o n8n instalado. Você pode usar a versão gratuita em <a href="https://n8n.io/" target="_blank">n8n.io</a>.</p>
             <pre><code>npm install n8n -g</code></pre>
         </div>
 
         <div class="step">
-            <h3>2. Crie um novo workflow</h3>
-            <p>Acesse o n8n e crie um novo workflow. Adicione um nó de WhatsApp para receber as mensagens.</p>
-            <p><strong>Configuração básica:</strong></p>
-            <pre><code>{
-  "nodes": [
-    {
-      "parameters": {
-        "authentication": "credential",
-        "operation": "receiveMessage"
-      },
-      "name": "WhatsApp",
-      "type": "n8n-nodes-base.whatsapp",
-      "typeVersion": 1,
-      "position": [
-        250,
-        300
-      ]
-    }
-  ]
-}</code></pre>
+            <h2>Passo 2: Crie um novo workflow</h2>
+            <p>No n8n, crie um novo workflow e adicione um nó de WhatsApp para receber as mensagens.</p>
         </div>
 
         <div class="step">
-            <h3>3. Adicione um nó de IA para qualificar os leads</h3>
-            <p>Use um nó de HTTP Request para enviar a mensagem para um serviço de IA gratuito, como o Hugging Face.</p>
-            <p><strong>Exemplo de configuração:</strong></p>
+            <h2>Passo 3: Adicione um nó de IA</h2>
+            <p>Use um nó de HTTP Request para se conectar a uma API de IA gratuita, como a do Hugging Face.</p>
             <pre><code>{
   "nodes": [
     {
       "parameters": {
-        "url": "https://api-inference.huggingface.co/models/roberta-base",
-        "method": "POST",
-        "headers": {
-          "Authorization": "Bearer SEU_TOKEN"
-        },
-        "body": {
-          "inputs": "{{$node["WhatsApp"].json["message"]}}"
+        "url": "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill",
+        "options": {
+          "method": "POST",
+          "headers": {
+            "Authorization": "Bearer SEU_TOKEN_AQUI",
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "inputs": {
+              "text": "{{$node["WhatsApp"].json["messages"][0]["text"]}}"
+            }
+          }
         }
       },
       "name": "HuggingFace",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        450,
+        500,
         300
       ]
     }
@@ -142,109 +132,68 @@
         </div>
 
         <div class="step">
-            <h3>4. Classifique e responda automaticamente</h3>
-            <p>Adicione um nó de Function para classificar os leads com base na resposta da IA e enviar uma resposta automática.</p>
-            <p><strong>Exemplo de código:</strong></p>
-            <pre><code>const score = $input.all()[0].json[0][0].score;
-if (score > 0.8) {
-  return {
-    message: "Olá! Vamos agendar uma reunião? Qual o melhor horário para você?"
-  };
-} else {
-  return {
-    message: "Obrigado pelo contato! Vamos manter comunicação."
-  };
-}</code></pre>
+            <h2>Passo 4: Configure a resposta automática</h2>
+            <p>Adicione um nó de WhatsApp para enviar a resposta gerada pela IA de volta para o lead.</p>
         </div>
 
-        <h2>Comparação: Manual vs LeadBot</h2>
+        <h2>Manual vs LeadBot</h2>
         <table>
             <tr>
-                <th>Critério</th>
                 <th>Manual</th>
                 <th>LeadBot</th>
             </tr>
             <tr>
-                <td>Tempo gasto</td>
-                <td>Alto</td>
-                <td>Baixo</td>
+                <td>Respostas lentas</td>
+                <td>Respostas instantâneas</td>
             </tr>
             <tr>
-                <td>Precisão</td>
-                <td>Variável</td>
-                <td>Consistente</td>
+                <td>Alto custo de tempo</td>
+                <td>Baixo custo de tempo</td>
             </tr>
             <tr>
-                <td>Custo</td>
-                <td>Alto</td>
-                <td>Baixo</td>
-            </tr>
-            <tr>
-                <td>Escalabilidade</td>
-                <td>Limitada</td>
-                <td>Alta</td>
+                <td>Qualificação inconsistente</td>
+                <td>Qualificação consistente</td>
             </tr>
         </table>
 
-        <h2>Automatize Seu Processo de Qualificação de Leads</h2>
-        <p>Quer uma solução pronta e fácil de usar? Adquira o LeadBot e comece a qualificar seus leads automaticamente hoje mesmo!</p>
-        <a href="https://planificador7.gumroad.com/l/leadbot-24h" class="cta-button">Comprar LeadBot Agora</a>
-
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Como Qualificar Leads no WhatsApp com n8n + IA Grátis",
-          "description": "Aprenda a qualificar leads no WhatsApp usando n8n e IA gratuitamente. Automatize seu processo de vendas e economize tempo.",
-          "author": {
-            "@type": "Person",
-            "name": "Seu Nome"
-          },
-          "datePublished": "2023-10-01",
-          "image": "https://seusite.com/images/qualificar-leads-whatsapp.jpg",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Sua Empresa",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://seusite.com/images/logo.jpg"
-            }
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://seusite.com/learn/como-qualificar-leads-whatsapp-n8n.html"
-          }
-        }
-        </script>
-
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [{
-            "@type": "Question",
-            "name": "O que é n8n?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "n8n é uma ferramenta de automação de workflow que permite conectar diferentes serviços e automatizar tarefas."
-            }
-          }, {
-            "@type": "Question",
-            "name": "Como a IA pode ajudar a qualificar leads?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A IA pode analisar as mensagens dos leads e classificar sua intenção de compra, permitindo que você foque nos leads mais promissores."
-            }
-          }, {
-            "@type": "Question",
-            "name": "O LeadBot é fácil de usar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim, o LeadBot é uma solução pronta e fácil de usar, projetada para pequenos negócios."
-            }
-          }]
-        }
-        </script>
+        <div class="cta">
+            <h2>Automatize Seu WhatsApp em 24h</h2>
+            <p>Quer um bot pronto para qualificar leads no WhatsApp? Adquira o <a href="https://planificador7.gumroad.com/l/leadbot-24h" target="_blank">LeadBot</a> e tenha seu bot configurado em menos de 24 horas.</p>
+        </div>
     </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Como Qualificar Leads no WhatsApp com n8n + IA Grátis",
+      "description": "Aprenda a qualificar leads no WhatsApp usando n8n e IA gratuitamente. Passo a passo simples e eficiente para pequenos negócios.",
+      "author": {
+        "@type": "Person",
+        "name": "Seu Nome"
+      },
+      "datePublished": "2023-10-01",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://seusite.com/learn/como-qualificar-leads-whatsapp-n8n.html"
+      },
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "O que é n8n?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "n8n é uma ferramenta de automação de workflow que permite conectar diferentes serviços e automatizar tarefas."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Como a IA pode ajudar a qualificar leads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A IA pode analisar as mensagens dos leads e responder de forma inteligente, qualificando-os automaticamente com base em critérios pré-definidos."
+        }
+      }]
+    }
+    </script>
 </body>
 </html>
