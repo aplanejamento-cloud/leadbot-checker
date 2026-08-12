@@ -3,146 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Prejuízo por Leads Perdidos no WhatsApp</title>
+    <title>Calculadora de Perda de Leads no WhatsApp</title>
     <meta name="description" content="Calcule quanto seu negócio está perdendo por não responder leads no WhatsApp a tempo. Descubra como o LeadBot 24h pode ajudar.">
+    <style>
+        :root { --primary: #059669; --secondary: #047857; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; color: #333; max-width: 600px; margin: 0 auto; }
+        h1 { color: var(--primary); text-align: center; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: var(--primary); color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: var(--secondary); }
+        #results { display: none; margin-top: 20px; padding: 15px; background-color: #f5f5f5; border-radius: 4px; }
+        .cta-button { background-color: var(--secondary); text-align: center; margin-top: 20px; }
+        .highlight { font-weight: bold; color: var(--primary); }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [{
         "@type": "Question",
-        "name": "O que é a Calculadora de Prejuízo por Leads Perdidos no WhatsApp?",
+        "name": "O que é a Calculadora de Perda de Leads no WhatsApp?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "É uma ferramenta que ajuda pequenos negócios a calcular quanto estão perdendo por não responder leads no WhatsApp a tempo."
+          "text": "É uma ferramenta que ajuda pequenos negócios a estimarem quanto estão perdendo por não responderem leads no WhatsApp a tempo."
         }
       }, {
         "@type": "Question",
-        "name": "Como funciona a calculadora?",
+        "name": "Como o LeadBot 24h pode ajudar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Você insere informações sobre seu negócio, como número de leads por mês, tempo de resposta, ticket médio e taxa de conversão. A calculadora então estima seus leads perdidos e a receita perdida."
-        }
-      }, {
-        "@type": "Question",
-        "name": "O que é o LeadBot 24h?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "LeadBot 24h é uma solução que ajuda seu negócio a responder leads no WhatsApp automaticamente, 24 horas por dia, reduzindo a perda de clientes."
+          "text": "O LeadBot 24h é uma solução automatizada que responde leads no WhatsApp imediatamente, 24 horas por dia, por apenas R$ 197."
         }
       }]
     }
     </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #047857;
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        select, input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #059669;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #047857;
-        }
-        .result {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e8f5e9;
-            border-radius: 4px;
-            display: none;
-        }
-        .cta-button {
-            background-color: #047857;
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-            border-radius: 4px;
-        }
-        .cta-button:hover {
-            background-color: #035a41;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Calculadora de Prejuízo por Leads Perdidos no WhatsApp</h1>
-        <div class="form-group">
-            <label for="tipo_negocio">Tipo de Negócio:</label>
-            <select id="tipo_negocio">
-                <option value="oficina">Oficina</option>
-                <option value="clinica">Clínica</option>
-                <option value="salao">Salão</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="autonomo">Autônomo</option>
-                <option value="outro">Outro</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="leads_mes">Leads por Mês:</label>
-            <input type="number" id="leads_mes" placeholder="Ex: 100">
-        </div>
-        <div class="form-group">
-            <label for="tempo_resposta_horas">Tempo de Resposta (horas):</label>
-            <input type="number" id="tempo_resposta_horas" placeholder="Ex: 2">
-        </div>
-        <div class="form-group">
-            <label for="ticket_medio">Ticket Médio (R$):</label>
-            <input type="number" id="ticket_medio" placeholder="Ex: 150">
-        </div>
-        <div class="form-group">
-            <label for="taxa_conversao_pct">Taxa de Conversão (%):</label>
-            <input type="number" id="taxa_conversao_pct" placeholder="Ex: 30">
-        </div>
-        <button onclick="calcularPrejuizo()">Calcular Prejuízo</button>
-        <div class="result" id="result">
-            <h2>Resultado:</h2>
-            <p><strong>Leads perdidos por mês:</strong> <span id="leads_perdidos_mes">0</span></p>
-            <p><strong>Receita perdida por mês:</strong> R$ <span id="receita_perdida_mes">0</span></p>
-            <p><strong>Receita perdida por ano:</strong> R$ <span id="receita_perdida_ano">0</span></p>
-        </div>
-        <a href="https://planificador7.gumroad.com/l/leadbot-24h" class="cta-button">Resolver com LeadBot 24h — R$ 197</a>
+    <h1>Calculadora de Perda de Leads no WhatsApp</h1>
+    <p>Descubra quanto seu negócio está perdendo por não responder leads a tempo.</p>
+
+    <div class="form-group">
+        <label for="tipo_negocio">Tipo de Negócio:</label>
+        <select id="tipo_negocio">
+            <option value="oficina">Oficina</option>
+            <option value="clinica">Clínica</option>
+            <option value="salao">Salão</option>
+            <option value="ecommerce">E-commerce</option>
+            <option value="autonomo">Autônomo</option>
+            <option value="outro">Outro</option>
+        </select>
     </div>
+
+    <div class="form-group">
+        <label for="leads_mes">Leads por mês:</label>
+        <input type="number" id="leads_mes" placeholder="Ex: 100" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="tempo_resposta_horas">Tempo médio de resposta (horas):</label>
+        <input type="number" id="tempo_resposta_horas" placeholder="Ex: 2" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="ticket_medio">Ticket médio (R$):</label>
+        <input type="number" id="ticket_medio" placeholder="Ex: 150" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="taxa_conversao_pct">Taxa de conversão (%):</label>
+        <input type="number" id="taxa_conversao_pct" placeholder="Ex: 30" min="0" max="100">
+    </div>
+
+    <button onclick="calcularPrejuizo()">Calcular prejuízo</button>
+
+    <div id="results">
+        <h2>Resultado:</h2>
+        <p>Leads perdidos por mês: <span class="highlight" id="leads_perdidos_mes">0</span></p>
+        <p>Receita perdida por mês: <span class="highlight" id="receita_perdida_mes">R$ 0</span></p>
+        <p>Receita perdida por ano: <span class="highlight" id="receita_perdida_ano">R$ 0</span></p>
+    </div>
+
+    <a href="https://planificador7.gumroad.com/l/leadbot-24h" class="cta-button">Resolver com LeadBot 24h — R$ 197</a>
+
     <script>
         function calcularPrejuizo() {
             // Obter valores do formulário
@@ -152,18 +96,18 @@
             const taxaConversao = parseFloat(document.getElementById('taxa_conversao_pct').value) || 0;
 
             // Calcular leads perdidos (simplificado: assume que cada hora de atraso reduz a conversão em 10%)
-            const reducaoConversao = Math.min(tempoResposta * 0.1, 1);
+            const reducaoConversao = Math.min(tempoResposta * 0.1, 0.9); // Máximo de 90% de redução
             const leadsPerdidosMes = Math.round(leadsMes * reducaoConversao);
             const receitaPerdidaMes = Math.round(leadsPerdidosMes * (taxaConversao / 100) * ticketMedio);
             const receitaPerdidaAno = receitaPerdidaMes * 12;
 
             // Exibir resultados
             document.getElementById('leads_perdidos_mes').textContent = leadsPerdidosMes;
-            document.getElementById('receita_perdida_mes').textContent = receitaPerdidaMes.toLocaleString('pt-BR');
-            document.getElementById('receita_perdida_ano').textContent = receitaPerdidaAno.toLocaleString('pt-BR');
+            document.getElementById('receita_perdida_mes').textContent = `R$ ${receitaPerdidaMes.toLocaleString()}`;
+            document.getElementById('receita_perdida_ano').textContent = `R$ ${receitaPerdidaAno.toLocaleString()}`;
 
-            // Mostrar resultado
-            document.getElementById('result').style.display = 'block';
+            // Mostrar seção de resultados
+            document.getElementById('results').style.display = 'block';
         }
     </script>
 </body>
