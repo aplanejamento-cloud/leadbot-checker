@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Grátis no n8n: Automatize sem Custo | LeadBot</title>
+    <meta name="description" content="Aprenda a configurar o Gemini grátis no n8n com este guia passo a passo. Automatize tarefas sem custo e aumente sua produtividade.">
+    <meta property="og:title" content="Gemini Grátis no n8n: Automatize sem Custo | LeadBot">
+    <meta property="og:description" content="Aprenda a configurar o Gemini grátis no n8n com este guia passo a passo. Automatize tarefas sem custo e aumente sua produtividade.">
+    <meta property="og:url" content="https://seusite.com/learn/gemini-gratis-n8n-automacao.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gemini Grátis no n8n: Automatize sem Custo | LeadBot">
+    <meta name="twitter:description" content="Aprenda a configurar o Gemini grátis no n8n com este guia passo a passo. Automatize tarefas sem custo e aumente sua produtividade.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #059669;
+            text-align: center;
+        }
+        h2 {
+            color: #059669;
+        }
+        .step {
+            background-color: white;
+            border-left: 4px solid #059669;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .step h3 {
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #059669;
+            color: white;
+        }
+        .cta {
+            background-color: #059669;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .cta a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gemini Grátis no n8n: Automatize sem Custo e Aumente sua Produtividade</h1>
+        <p>Você está perdendo tempo com tarefas repetitivas e quer automatizá-las, mas não tem orçamento para ferramentas caras? O Gemini grátis no n8n pode ser a solução perfeita para o seu pequeno negócio. Neste guia, vamos mostrar como configurar o Gemini no n8n passo a passo, sem custos.</p>
+
+        <h2>Passo a Passo para Configurar o Gemini Grátis no n8n</h2>
+
+        <div class="step">
+            <h3>Passo 1: Crie uma Conta no n8n</h3>
+            <p>Primeiro, acesse o site do <a href="https://n8n.io/" target="_blank">n8n</a> e crie uma conta gratuita. Você pode usar o n8n na nuvem ou instalar localmente.</p>
+        </div>
+
+        <div class="step">
+            <h3>Passo 2: Obtenha sua Chave de API do Gemini</h3>
+            <p>Acesse o <a href="https://makersuite.google.com/" target="_blank">Google AI Studio</a>, faça login com sua conta Google e crie uma nova chave de API para o Gemini.</p>
+            <pre>// Exemplo de chave de API (substitua pela sua)
+const API_KEY = 'sua_chave_de_api_aqui';</pre>
+        </div>
+
+        <div class="step">
+            <h3>Passo 3: Configure um Novo Workflow no n8n</h3>
+            <p>No painel do n8n, clique em "New Workflow" e adicione um novo nó HTTP Request. Configure o nó com as seguintes informações:</p>
+            <pre>{
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "contents": [
+            {
+              "parts": [
+                {
+                  "text": "Conteúdo a ser enviado para o Gemini"
+                }
+              ]
+            }
+          ]
+        },
+        "authentication": "header",
+        "headerAuth": {
+          "name": "x-goog-api-key",
+          "value": "sua_chave_de_api_aqui"
+        }
+      },
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    }
+  ]
+}</pre>
+        </div>
+
+        <div class="step">
+            <h3>Passo 4: Teste e Ative o Workflow</h3>
+            <p>Clique em "Execute Workflow" para testar a configuração. Se tudo estiver correto, ative o workflow para que ele seja executado automaticamente.</p>
+        </div>
+
+        <h2>Comparação: Manual vs LeadBot</h2>
+        <table>
+            <tr>
+                <th>Tarefa</th>
+                <th>Manual</th>
+                <th>LeadBot</th>
+            </tr>
+            <tr>
+                <td>Configuração Inicial</td>
+                <td>Complexa e demorada</td>
+                <td>Simples e rápida</td>
+            </tr>
+            <tr>
+                <td>Custo</td>
+                <td>Gratuito, mas requer conhecimento técnico</td>
+                <td>Baixo custo, sem necessidade de conhecimento técnico</td>
+            </tr>
+            <tr>
+                <td>Suporte</td>
+                <td>Comunidade e documentação</td>
+                <td>Suporte dedicado e personalizado</td>
+            </tr>
+            <tr>
+                <td>Tempo de Implementação</td>
+                <td>Horas ou dias</td>
+                <td>Minutos</td>
+            </tr>
+        </table>
+
+        <div class="cta">
+            <h3>Quer Automatizar sem Complicação?</h3>
+            <p>Com o <a href="https://planificador7.gumroad.com/l/leadbot-24h" target="_blank">LeadBot</a>, você pode automatizar suas tarefas de forma simples e rápida, sem precisar de conhecimento técnico. Acesse agora e comece a aumentar sua produtividade!</p>
+        </div>
+    </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Gemini Grátis no n8n: Automatize sem Custo",
+      "description": "Aprenda a configurar o Gemini grátis no n8n com este guia passo a passo. Automatize tarefas sem custo e aumente sua produtividade.",
+      "author": {
+        "@type": "Organization",
+        "name": "LeadBot"
+      },
+      "datePublished": "2023-10-01",
+      "mainEntity": {
+        "@type": "Question",
+        "name": "Como configurar o Gemini grátis no n8n?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para configurar o Gemini grátis no n8n, siga os passos: 1) Crie uma conta no n8n, 2) Obtenha sua chave de API do Gemini, 3) Configure um novo workflow no n8n, 4) Teste e ative o workflow."
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "O que é o n8n?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O n8n é uma ferramenta de automação de workflow que permite conectar diferentes serviços e automatizar tarefas."
+        }
+      }, {
+        "@type": "Question",
+        "name": "O Gemini é gratuito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, o Gemini oferece uma versão gratuita com limitações de uso."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Preciso de conhecimento técnico para usar o n8n?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, o n8n requer algum conhecimento técnico para configuração e uso avançado."
+        }
+      }]
+    }
+    </script>
+</body>
+</html>
