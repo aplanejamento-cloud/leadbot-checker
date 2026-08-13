@@ -3,36 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Prejuízo por Leads Perdidos no WhatsApp</title>
     <meta name="description" content="Calcule quanto seu negócio está perdendo por não responder leads no WhatsApp a tempo. Descubra como o LeadBot 24h pode ajudar.">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "O que é a Calculadora de Prejuízo por Leads Perdidos no WhatsApp?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "É uma ferramenta que ajuda pequenos negócios a estimarem quanto estão perdendo por não responderem leads no WhatsApp a tempo."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Como funciona o cálculo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O cálculo é baseado no número de leads mensais, tempo de resposta, ticket médio e taxa de conversão do seu negócio."
-        }
-      }, {
-        "@type": "Question",
-        "name": "O que é o LeadBot 24h?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "LeadBot 24h é uma solução que ajuda pequenos negócios a responderem leads no WhatsApp automaticamente, 24 horas por dia."
-        }
-      }]
-    }
-    </script>
+    <title>WhatsApp Lead Loss Calculator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -85,7 +57,7 @@
         .result {
             margin-top: 20px;
             padding: 15px;
-            background-color: #e8f5e9;
+            background-color: #f0f0f0;
             border-radius: 4px;
             display: none;
         }
@@ -96,18 +68,19 @@
             margin-top: 20px;
             text-decoration: none;
             color: white;
-            padding: 15px;
+            padding: 10px;
             border-radius: 4px;
-            font-weight: bold;
         }
         .cta-button:hover {
-            background-color: #035a41;
+            background-color: #059669;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora de Prejuízo por Leads Perdidos no WhatsApp</h1>
+        <h1>WhatsApp Lead Loss Calculator</h1>
+        <p>Descubra quanto seu negócio está perdendo por não responder leads no WhatsApp a tempo.</p>
+
         <div class="form-group">
             <label for="tipo_negocio">Tipo de Negócio:</label>
             <select id="tipo_negocio">
@@ -119,52 +92,81 @@
                 <option value="outro">Outro</option>
             </select>
         </div>
+
         <div class="form-group">
             <label for="leads_mes">Leads por Mês:</label>
             <input type="number" id="leads_mes" placeholder="Ex: 100">
         </div>
+
         <div class="form-group">
             <label for="tempo_resposta_horas">Tempo de Resposta (horas):</label>
             <input type="number" id="tempo_resposta_horas" placeholder="Ex: 2">
         </div>
+
         <div class="form-group">
             <label for="ticket_medio">Ticket Médio (R$):</label>
             <input type="number" id="ticket_medio" placeholder="Ex: 150">
         </div>
+
         <div class="form-group">
             <label for="taxa_conversao_pct">Taxa de Conversão (%):</label>
             <input type="number" id="taxa_conversao_pct" placeholder="Ex: 30">
         </div>
+
         <button onclick="calcularPrejuizo()">Calcular Prejuízo</button>
+
         <div class="result" id="result">
             <h2>Resultado:</h2>
             <p><strong>Leads perdidos por mês:</strong> <span id="leads_perdidos_mes"></span></p>
             <p><strong>Receita perdida por mês:</strong> R$ <span id="receita_perdida_mes"></span></p>
             <p><strong>Receita perdida por ano:</strong> R$ <span id="receita_perdida_ano"></span></p>
         </div>
+
         <a href="https://planificador7.gumroad.com/l/leadbot-24h" class="cta-button">Resolver com LeadBot 24h — R$ 197</a>
     </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é o WhatsApp Lead Loss Calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O WhatsApp Lead Loss Calculator é uma ferramenta que ajuda a calcular quanto seu negócio está perdendo por não responder leads no WhatsApp a tempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como o LeadBot 24h pode ajudar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O LeadBot 24h é uma solução que responde automaticamente aos leads no WhatsApp, garantindo que nenhum lead seja perdido e aumentando suas vendas."
+          }
+        }
+      ]
+    }
+    </script>
+
     <script>
         function calcularPrejuizo() {
-            // Obter valores do formulário
+            const tipoNegocio = document.getElementById('tipo_negocio').value;
             const leadsMes = parseFloat(document.getElementById('leads_mes').value);
             const tempoResposta = parseFloat(document.getElementById('tempo_resposta_horas').value);
             const ticketMedio = parseFloat(document.getElementById('ticket_medio').value);
             const taxaConversao = parseFloat(document.getElementById('taxa_conversao_pct').value);
 
-            // Calcular leads perdidos por mês (assumindo que 50% dos leads são perdidos a cada hora de atraso)
-            const leadsPerdidosMes = Math.round(leadsMes * (0.5 * tempoResposta));
-
-            // Calcular receita perdida por mês e por ano
+            // Fórmula simplificada para cálculo de leads perdidos
+            const leadsPerdidosMes = Math.round(leadsMes * (tempoResposta / 24) * 0.7);
             const receitaPerdidaMes = Math.round(leadsPerdidosMes * (taxaConversao / 100) * ticketMedio);
             const receitaPerdidaAno = receitaPerdidaMes * 12;
 
-            // Exibir resultados
             document.getElementById('leads_perdidos_mes').textContent = leadsPerdidosMes;
-            document.getElementById('receita_perdida_mes').textContent = receitaPerdidaMes.toLocaleString('pt-BR');
-            document.getElementById('receita_perdida_ano').textContent = receitaPerdidaAno.toLocaleString('pt-BR');
+            document.getElementById('receita_perdida_mes').textContent = receitaPerdidaMes.toLocaleString();
+            document.getElementById('receita_perdida_ano').textContent = receitaPerdidaAno.toLocaleString();
 
-            // Mostrar resultado
             document.getElementById('result').style.display = 'block';
         }
     </script>
