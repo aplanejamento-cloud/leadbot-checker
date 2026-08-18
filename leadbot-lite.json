@@ -10,7 +10,10 @@
       },
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
-      "position": [240, 300],
+      "position": [
+        240,
+        300
+      ],
       "id": "webhook-free-1",
       "name": "WhatsApp Webhook"
     },
@@ -22,7 +25,10 @@
       },
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
-      "position": [460, 300],
+      "position": [
+        460,
+        300
+      ],
       "id": "respond-1",
       "name": "Respond to Webhook"
     }
@@ -39,5 +45,10 @@
         ]
       ]
     }
+  },
+  "meta": {
+    "instanceId": "leadbot-lite-viral-edition",
+    "author": "LeadBot 24h (https://planificador7.gumroad.com/l/leadbot-24h)",
+    "viral_footer": "Criado com LeadBot 24h - Atendimento 24h no WhatsApp sem mensalidade"
   }
 }
