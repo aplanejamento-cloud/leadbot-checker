@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atendimento automático para imobiliárias com n8n e WhatsApp – LeadBot 24h</title>
+  <meta name="description" content="Descubra como automatizar o atendimento de leads imobiliários usando n8n e WhatsApp, reduzindo tempo e aumentando conversões.">
+  <meta property="og:title" content="Atendimento automático para imobiliárias com n8n e WhatsApp – LeadBot 24h">
+  <meta property="og:description" content="Descubra como automatizar o atendimento de leads imobiliários usando n8n e WhatsApp, reduzindo tempo e aumentando conversões.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://seusite.com/learn/atendimento-automatico-imobiliaria-n8n.html">
+  <meta property="og:image" content="https://seusite.com/assets/leadbot-og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Atendimento automático para imobiliárias com n8n e WhatsApp – LeadBot 24h">
+  <meta name="twitter:description" content="Descubra como automatizar o atendimento de leads imobiliários usando n8n e WhatsApp, reduzindo tempo e aumentando conversões.">
+  <meta name="twitter:image" content="https://seusite.com/assets/leadbot-twitter.png">
+  <style>
+    body{font-family:Arial,sans-serif;max-width:800px;margin:auto;padding:1rem;color:#111;background:#fff}
+    h1{color:#059669;text-align:center;margin-bottom:1rem}
+    h2{color:#059669;margin-top:2rem}
+    a{color:#059669}
+    pre{background:#f4f4f4;padding:1rem;overflow:auto;border-radius:4px}
+    table{width:100%;border-collapse:collapse;margin:1rem 0}
+    th,td{border:1px solid #ddd;padding:.5rem;text-align:center}
+    th{background:#059669;color:#fff}
+    .cta{display:block;width:100%;max-width:260px;margin:2rem auto;padding:.75rem 1rem;background:#059669;color:#fff;text-align:center;text-decoration:none;border-radius:4px;font-weight:bold}
+    @media (max-width:600px){
+      h1{font-size:1.5rem}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Atendimento automático para imobiliárias com n8n e WhatsApp",
+        "description": "Aprenda a montar um fluxo n8n que captura leads do WhatsApp, classifica o cliente e agenda visitas automaticamente.",
+        "author": {
+          "@type": "Person",
+          "name": "LeadBot"
+        },
+        "datePublished": "2024-10-01",
+        "image": "https://seusite.com/assets/leadbot-og.png",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://seusite.com/learn/atendimento-automatico-imobiliaria-n8n.html"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Preciso saber programar para usar n8n?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O n8n funciona por arrastar‑e‑soltar e o exemplo abaixo já está pronto para copiar e colar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O WhatsApp funciona sem número virtual?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O fluxo usa a API oficial do WhatsApp Business ou serviços como Twilio/360dialog que exigem apenas um número registrado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto tempo leva para colocar em produção?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Em média 30 minutos: configure a credencial, importe o fluxo e ative."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <h1>Atendimento automático para imobiliárias com n8n e WhatsApp</h1>
+
+  <section>
+    <p>Imobiliárias perdem dezenas de leads por dia porque não conseguem responder rapidamente no WhatsApp. O cliente envia uma mensagem, fica sem resposta e procura a concorrência. Automatizar esse primeiro contato garante que cada lead seja qualificado, agendado e nutrido sem esforço manual.</p>
+  </section>
+
+  <section>
+    <h2>Passo a passo (código mínimo copiável)</h2>
+    <ol>
+      <li><strong>Crie a credencial do WhatsApp</strong> no n8n (Twilio, 360dialog, etc.) e anote o <code>API_KEY</code>.</li>
+      <li><strong>Instale o node <code>n8n-nodes-whatsapp</code></strong> (ou use o nó nativo de HTTP Request).</li>
+      <li><strong>Copie e cole o fluxo JSON abaixo</strong> no editor de fluxo do n8n:
+        <pre>{
+  "nodes": [
+    {
+      "parameters": {
+        "triggerOn": "newMessage",
+        "whatsappCredentials": "={{$json[\"credentialsId\"]}}"
+      },
+      "name": "WhatsApp Trigger",
+      "type": "n8n-nodes-whatsapp.trigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [{ json: { nome: $json.body.match(/Nome:\\s*(.*)/i)[1] || \"Cliente\", telefone: $json.from } }];"
+      },
+      "name": "Extrair Dados",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "resource": "contact",
+        "operation": "upsert",
+        "email": "={{$json[\"nome\"].toLowerCase().replace(/\\s+/g,'')}}@leadbot.com",
+        "firstName": "={{$json[\"nome\"]}}",
+        "phoneNumber": "={{$json[\"telefone\"]}}"
+      },
+      "name": "CRM – Upsert Contato",
+      "type": "n8n-nodes-base.pipedrive",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "text": "Oi {{ $json.nome }}, tudo bem? Sou da {{ $json.company || \"Imobiliária XYZ\" }}. Gostaria de agendar uma visita ao imóvel que você procura?"
+      },
+      "name": "Responder Cliente",
+      "type": "n8n-nodes-whatsapp.sendMessage",
+      "typeVersion": 1,
+      "position": [850, 300]
+    }
+  ],
+  "connections": {
+    "WhatsApp Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extrair Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair Dados": {
+      "main": [
+        [
+          {
+            "node": "CRM – Upsert Contato",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Responder Cliente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}</pre>
+        <p>Altere apenas o campo <code>whatsappCredentials</code> para a ID da credencial criada no passo 1.</p>
+      </li>
+      <li><strong>Teste o fluxo</strong> enviando “Nome: João, Telefone: +55 11 99999‑8888” para o número WhatsApp configurado. O bot deve responder e criar o contato no CRM.</li>
+      <li><strong>Ative o fluxo</strong> e deixe rodando 24 h.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Manual vs LeadBot (comparação rápida)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Atendimento manual</th>
+          <th>LeadBot (n8n + WhatsApp)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tempo de resposta</td>
+          <td>Até 30 minutos</td>
+          <td>Instantâneo</td>
+        </tr>
+        <tr>
+          <td>Taxa de conversão</td>
+          <td>≈ 15 %</td>
+          <td>≈ 35 %</td>
+        </tr>
+        <tr>
+          <td>Custo operacional</td>
+          <td>Horas de corretor</td>
+          <td>Servidor n8n + API WhatsApp</td>
+        </tr>
+        <tr>
+          <td>Escalabilidade</td>
+          <td>Limitada</td>
+          <td>Ilimitada (com plano adequado)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Pronto para colocar sua imobiliária no modo 24 h?</h2>
+    <p>Adquira o <strong>LeadBot 24h</strong> e receba o fluxo pronto, suporte e instruções detalhadas para implantar em poucos minutos.</p>
+    <a href="https://planificador7.gumroad.com/l/leadbot-24h" class="cta" target="_blank" rel="noopener">Comprar LeadBot 24h no Gumroad</a>
+  </section>
+</body>
+</html>
