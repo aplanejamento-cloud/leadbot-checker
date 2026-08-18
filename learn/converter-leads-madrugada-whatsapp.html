@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Como Converter Leads de Madrugada no WhatsApp Automaticamente</title>
+  <meta name="description" content="Aprenda, passo a passo, a automatizar a conversão de leads entre 00h e 06h no WhatsApp usando n8n e o LeadBot 24h.">
+  <meta property="og:title" content="Como Converter Leads de Madrugada no WhatsApp Automaticamente">
+  <meta property="og:description" content="Descubra como transformar mensagens de madrugada em vendas sem esforço, usando automação no WhatsApp.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://seusite.com/learn/converter-leads-madrugada-whatsapp.html">
+  <meta property="og:image" content="https://seusite.com/assets/leadbot-24h.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como Converter Leads de Madrugada no WhatsApp Automaticamente">
+  <meta name="twitter:description" content="Automatize a captura e a qualificação de leads entre 00h e 06h no WhatsApp com n8n e LeadBot 24h.">
+  <meta name="twitter:image" content="https://seusite.com/assets/leadbot-24h.png">
+  <style>
+    body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;line-height:1.6}
+    .wrapper{max-width:800px;margin:auto;padding:1rem}
+    h1{color:#059669;font-size:2rem;margin-bottom:.5rem}
+    h2{color:#059669;margin-top:2rem}
+    p{margin:1rem 0}
+    ol{margin-left:1.2rem}
+    code{background:#e5e7eb;padding:2px 4px;border-radius:4px;font-size:.95rem}
+    table{width:100%;border-collapse:collapse;margin:1rem 0}
+    th,td{border:1px solid #d1d5db;padding:.5rem;text-align:center}
+    th{background:#059669;color:#fff}
+    a.button{
+      display:inline-block;background:#059669;color:#fff;padding:.75rem 1.5rem;
+      text-decoration:none;border-radius:.4rem;margin-top:1rem
+    }
+    @media (max-width:600px){
+      h1{font-size:1.6rem}
+      a.button{width:100%;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Como Converter Leads de Madrugada no WhatsApp Automaticamente</h1>
+
+    <p><strong>Problema real:</strong> Muitos negócios recebem mensagens de clientes entre 00h e 06h, mas quem está de plantão não tem tempo para responder, gerando perda de vendas e frustração.</p>
+
+    <h2>Passo a passo (código mínimo copiável)</h2>
+    <ol>
+      <li>Crie um <strong>Webhook Trigger</strong> no n8n que receba a notificação do WhatsApp (via Twilio, 360dialog ou WATI).</li>
+      <li>Adicione um nó <code>Set</code> para mapear os campos <code>nome</code>, <code>telefone</code> e <code>mensagem</code>.</li>
+      <li>Insira um nó <code>HTTP Request</code> que chame a API do <a href="https://planificador7.gumroad.com/l/leadbot-24h" target="_blank">LeadBot 24h</a>:
+<pre><code>POST https://api.leadbot24h.com/lead
+Headers:
+  Content-Type: application/json
+Body:
+{
+  "name": "{{$json["nome"]}}",
+  "phone": "{{$json["telefone"]}}",
+  "message": "{{$json["mensagem"]}}",
+  "schedule": "00:00-06:00"
+}
+</code></pre>
+      </li>
+      <li>Use um nó <code>Send WhatsApp Message</code> (Twilio/360dialog) para confirmar o recebimento:
+<pre><code>Olá {{ $json["nome"] }}, seu contato foi registrado e será atendido assim que possível!
+</code></pre>
+      </li>
+      <li>Salve e ative o workflow. Agora, toda mensagem recebida de madrugada entra automaticamente no LeadBot e fica pronta para follow‑up.</li>
+    </ol>
+
+    <h2>Comparação rápida</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Manual</th>
+          <th>LeadBot 24h</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Leitura manual das mensagens</td>
+          <td>Captura automática via webhook</td>
+        </tr>
+        <tr>
+          <td>Inserção manual em planilha ou CRM</td>
+          <td>Integração direta com seu CRM</td>
+        </tr>
+        <tr>
+          <td>Risco de esquecer mensagens</td>
+          <td>Log 24h garantido</td>
+        </tr>
+        <tr>
+          <td>Respostas fora do horário</td>
+          <td>Mensagem automática de confirmação</td>
+        </tr>
+        <tr>
+          <td>Tempo gasto: ~15 min/hora</td>
+          <td>Tempo gasto: 0 min (totalmente automático)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Pronto para automatizar?</h2>
+    <p>Adquira agora o <strong>LeadBot 24h</strong> e nunca mais perca um lead durante a madrugada.</p>
+    <a class="button" href="https://planificador7.gumroad.com/l/leadbot-24h" target="_blank">Comprar LeadBot 24h no Gumroad</a>
+  </div>
+
+  <!-- JSON‑LD Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Como Converter Leads de Madrugada no WhatsApp Automaticamente",
+    "description": "Aprenda, passo a passo, a automatizar a captura e a qualificação de leads entre 00h e 06h no WhatsApp usando n8n e o LeadBot 24h.",
+    "author": {
+      "@type": "Person",
+      "name": "Planificador7"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Planificador7",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://seusite.com/assets/logo.png"
+      }
+    },
+    "datePublished": "2026-08-18",
+    "image": "https://seusite.com/assets/leadbot-24h.png",
+    "url": "https://seusite.com/learn/converter-leads-madrugada-whatsapp.html",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://seusite.com/learn/converter-leads-madrugada-whatsapp.html"
+    }
+  }
+  </script>
+
+  <!-- JSON‑LD FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Preciso saber programar para usar o LeadBot 24h?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. O LeadBot já vem configurado. Você só precisa colar o webhook no n8n e conectar sua conta de WhatsApp."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "É seguro armazenar dados de clientes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Todas as comunicações são criptografadas (HTTPS) e os dados são armazenados em servidores GDPR‑compliant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funciona 24 h por dia, inclusive nos fins de semana?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exatamente. O LeadBot captura e agenda leads 24 h/dia, 7 dias/semana."
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
