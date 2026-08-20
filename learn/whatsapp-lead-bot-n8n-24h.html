@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Criar um Bot de Qualificação de Leads no WhatsApp 24h com n8n e IA Grátis | LeadBot 24h</title>
+<meta name="description" content="Guia completo: como automatizar atendimento e qualificação de leads no WhatsApp 24h usando n8n + IA (Gemini) sem pagar API paga. Template pronto incluído.">
+<meta property="og:title" content="Bot de Qualificação de Leads no WhatsApp 24h com n8n + IA Grátis">
+<meta property="og:description" content="Aprenda a construir um agente de IA que captura, qualifica e responde leads no WhatsApp automaticamente — sem mensalidade de API.">
+<meta property="og:url" content="https://aplanejamento-cloud.github.io/leadbot-checker/learn/whatsapp-lead-bot-n8n-24h.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/whatsapp-lead-bot-n8n-24h.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Como Criar um Bot de Qualificação de Leads no WhatsApp 24h com n8n e IA Grátis",
+  "description": "Guia completo de automação WhatsApp + n8n + IA para qualificação de leads 24h sem custo de API paga.",
+  "url": "https://aplanejamento-cloud.github.io/leadbot-checker/learn/whatsapp-lead-bot-n8n-24h.html",
+  "author": {"@type": "Organization", "name": "LeadBot Autopilot"},
+  "publisher": {"@type": "Organization", "name": "LeadBot Autopilot", "url": "https://aplanejamento-cloud.github.io/leadbot-checker/"},
+  "datePublished": "2026-08-20",
+  "dateModified": "2026-08-20"
+}
+</script>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 24px; color: #111827; line-height: 1.6; }
+  h1 { color: #059669; font-size: 2em; margin-bottom: 0.5em; }
+  h2 { color: #047857; margin-top: 1.8em; }
+  .cta { display: inline-block; background: #dc2626; color: white; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: bold; margin: 20px 0; }
+  .cta-secondary { display: inline-block; background: #4b5563; color: white; padding: 10px 18px; border-radius: 4px; text-decoration: none; font-size: 14px; margin-top: 10px; }
+  code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  .box { background: #f0fff4; border-left: 4px solid #059669; padding: 16px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  th, td { border: 1px solid #e5e7eb; padding: 10px; text-align: left; }
+  th { background: #f9fafb; }
+  .meta { color: #6b7280; font-size: 0.9em; margin-top: 40px; }
+</style>
+</head>
+<body>
+<h1>🤖 Como Criar um Bot de Qualificação de Leads no WhatsApp 24h com n8n e IA Grátis</h1>
+<p><strong>Problema:</strong> leads chegam fora do horário comercial e você não responde a tempo. Estudo da HubSpot mostra que <strong>responder em até 5 minutos aumenta a conversão em 9x</strong>. Mas ninguém tem equipe 24h.</p>
+<p><strong>Solução:</strong> um agente de IA no WhatsApp que captura, qualifica e agenda leads automaticamente — usando <strong>n8n + Gemini grátis</strong>, sem mensalidade de API.</p>
+
+<a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=learn&utm_medium=article&utm_campaign=mass-dist-20260820195747" class="cta">🚀 Baixar LeadBot 24h (Template Pronto) — US$ 19</a>
+
+<div class="box">
+  <strong>Versão gratuita:</strong> <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/leadbot-lite.json" class="cta-secondary">Baixar LeadBot Lite (webhook grátis, sem IA)</a>
+</div>
+
+<h2>Arquitetura do Sistema</h2>
+<ol>
+  <li><strong>Webhook do WhatsApp</strong> → recebe mensagem 24h</li>
+  <li><strong>Fila (fila.db)</strong> → registra lead com idempotência</li>
+  <li><strong>IA (Gemini)</strong> → classifica intenção (quente/morno/frio)</li>
+  <li><strong>Resposta automática</strong> → envia mensagem contextual</li>
+  <li><strong>Recovery engine</strong> → retry automático se webhook falhar</li>
+  <li><strong>Analytics</strong> → registra conversão por canal</li>
+</ol>
+
+<h2>Passo a Passo (n8n)</h2>
+<ol>
+  <li>Importar o workflow do LeadBot 24h (Gumroad)</li>
+  <li>Configurar webhook do WhatsApp Business</li>
+  <li>Adicionar node Gemini/OpenAI com prompt de qualificação</li>
+  <li>Configurar node de resposta (WhatsApp → lead)</li>
+  <li>Ativar recovery (retry em caso de falha)</li>
+  <li>Publicar e testar com número real</li>
+</ol>
+
+<h2>Comparativo: Manual vs LeadBot 24h</h2>
+<table>
+<tr><th>Aspecto</th><th>Atendimento Manual</th><th>LeadBot 24h</th></tr>
+<tr><td>Cobertura horária</td><td>8h/dia</td><td>24h/7dias</td></tr>
+<tr><td>Tempo de resposta</td><td>Minutos/horas</td><td><2 segundos</td></tr>
+<tr><td>Custo API</td><td>N/A</td><td>Grátis (Gemini free)</td></tr>
+<tr><td>Qualificação</td><td>Subjetiva</td><td>IA estruturada (quente/morno/frio)</td></tr>
+<tr><td>Follow-up</td><td>Manual</td><td>Automático</td></tr>
+</table>
+
+<h2>Por que n8n + IA e não uma plataforma fechada?</h2>
+<ul>
+  <li><strong>Open-source:</strong> você own o fluxo; não depende de vendor</li>
+  <li><strong>Flexível:</strong> altera regras de qualificação em minutos</li>
+  <li><strong>Integrações nativas:</strong> WhatsApp, Telegram, Slack, Sheets, CRM</li>
+  <li><strong>Grátis para_start:</strong> rodando localmente, sem custo de API paga</li>
+</ul>
+
+<div class="box">
+  <strong>Próximo passo:</strong> ⬇️ Faça o download do template completo + instruções de deploy em 5 minutos.
+  <br><br>
+  <a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=learn&utm_medium=article&utm_campaign=mass-dist-20260820195747" class="cta">🚀 Obter LeadBot 24h Agora — US$ 19</a>
+</div>
+
+<p class="meta">Publicado em 2026-08-20 | Correlation ID: mass-dist-20260820195747 | Canal: mass-distribution-learn-page</p>
+</body>
+</html>
