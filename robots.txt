@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /learn/
+Allow: /feed.xml
+
+Sitemap: https://aplanejamento-cloud.github.io/leadbot-checker/sitemap.xml
