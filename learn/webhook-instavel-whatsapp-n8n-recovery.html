@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Resolver Webhook Instável no WhatsApp com n8n (Recovery Automático)</title>
+<meta name="description" content="Guia prático: como evitar que webhooks do WhatsApp mudem de URL após horas usando n8n + recovery engine. Solução testada para produção.">
+<link rel="canonical" href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/webhook-instavel-whatsapp-n8n-recovery.html">
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 24px; color: #111827; line-height: 1.6; }
+  h1 { color: #059669; } .cta { display: inline-block; background: #dc2626; color: white; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+  .box { background: #f0fff4; border-left: 4px solid #059669; padding: 16px; margin: 20px 0; }
+</style>
+</head>
+<body>
+<h1>🔧 Como Resolver Webhook Instável no WhatsApp com n8n</h1>
+<p><strong>Problema:</strong> o webhook do WhatsApp Business muda de URL após algumas horas, quebrando o fluxo. Issue #19037 do n8n relata exatamente isso.</p>
+<p><strong>Solução:</strong> camada de recovery + persistência de webhook no n8n:</p>
+<ol>
+  <li>Salvar webhook válido em fila com idempotência</li>
+  <li>Testar endpoint antes de cada execução</li>
+  <li>Usar recovery automático quando o endpoint mudar</li>
+  <li>Alertar quando o webhook for renovado</li>
+</ol>
+<div class="box">
+  <strong>Template pronto:</strong> LeadBot 24h já inclui esse padrão de recovery.<br>
+  <a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=learn&utm_medium=webhook-recovery&utm_campaign=mass-dist-20260820200459" class="cta">🚀 Obter LeadBot 24h — US$ 19</a>
+</div>
+<p class="meta">Correlation ID: mass-dist-20260820200459 | Canal: mass-dist-seo-webhook</p>
+</body>
+</html>
