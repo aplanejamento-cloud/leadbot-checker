@@ -20,7 +20,7 @@
     {
       "parameters": {
         "respondWith": "json",
-        "responseBody": "{\"status\": \"received\", \"message\": \"Lead captured. Upgrade to LeadBot 24h for AI qualification: https://planificador7.gumroad.com/l/leadbot-24h\"}",
+        "responseBody": "{\"status\": \"received\", \"message\": \"Obrigado pelo contato! Em breve entraremos em contato.\"}",
         "options": {}
       },
       "type": "n8n-nodes-base.respondToWebhook",
@@ -49,6 +49,7 @@
   "meta": {
     "instanceId": "leadbot-lite-viral-edition",
     "author": "LeadBot 24h (https://planificador7.gumroad.com/l/leadbot-24h)",
-    "viral_footer": "Criado com LeadBot 24h - Atendimento 24h no WhatsApp sem mensalidade"
+    "viral_footer": "Criado com LeadBot 24h — Atendimento 24h no WhatsApp sem mensalidade.\nVersão completa com IA + qualificação automática de leads: https://planificador7.gumroad.com/l/leadbot-24h?utm_source=github&utm_medium=free_template&utm_campaign=leadbot24h&utm_content=leadbot-lite",
+    "cta_url": "https://planificador7.gumroad.com/l/leadbot-24h?utm_source=github&utm_medium=free_template&utm_campaign=leadbot24h&utm_content=leadbot-lite"
   }
 }
