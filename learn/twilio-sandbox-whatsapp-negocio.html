@@ -1,213 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twilio WhatsApp Sandbox: Teste Grátis para Seu Negócio</title>
-    <meta name="description" content="Aprenda a usar o Twilio WhatsApp Sandbox para testes gratuitos e automatize seu atendimento. Passo a passo simples e comparação com o LeadBot.">
-    <meta property="og:title" content="Twilio WhatsApp Sandbox: Teste Grátis para Seu Negócio">
-    <meta property="og:description" content="Aprenda a usar o Twilio WhatsApp Sandbox para testes gratuitos e automatize seu atendimento. Passo a passo simples e comparação com o LeadBot.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://seusite.com/learn/twilio-sandbox-whatsapp-negocio.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Twilio WhatsApp Sandbox: Teste Grátis para Seu Negócio">
-    <meta name="twitter:description" content="Aprenda a usar o Twilio WhatsApp Sandbox para testes gratuitos e automatize seu atendimento. Passo a passo simples e comparação com o LeadBot.">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #059669;
-            text-align: center;
-        }
-        h2 {
-            color: #059669;
-        }
-        .step {
-            background-color: white;
-            border-left: 4px solid #059669;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .step h3 {
-            margin-top: 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #059669;
-            color: white;
-        }
-        .cta {
-            background-color: #059669;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        .cta a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como testar o WhatsApp Business de graça com Twilio Sandbox</title>
+  <meta name="description" content="Aprenda passo a passo a configurar o Twilio WhatsApp Sandbox e testar mensagens no seu negócio sem custos.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Como testar o WhatsApp Business de graça com Twilio Sandbox">
+  <meta property="og:description" content="Aprenda passo a passo a configurar o Twilio WhatsApp Sandbox e testar mensagens no seu negócio sem custos.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://seusite.com/learn/twilio-sandbox-whatsapp-negocio.html">
+  <meta property="og:image" content="https://seusite.com/assets/whatsapp-sandbox.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como testar o WhatsApp Business de graça com Twilio Sandbox">
+  <meta name="twitter:description" content="Aprenda passo a passo a configurar o Twilio WhatsApp Sandbox e testar mensagens no seu negócio sem custos.">
+  <meta name="twitter:image" content="https://seusite.com/assets/whatsapp-sandbox.png">
+  <style>
+    body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;}
+    .container{max-width:800px;margin:auto;padding:1rem;}
+    h1{background:#059669;color:#fff;padding:1rem;margin:0 0 1rem 0;font-size:1.8rem;text-align:center;}
+    p{line-height:1.6;margin:0 0 1rem 0;}
+    ol{margin:0 0 1rem 1.5rem;}
+    code{background:#e5e7eb;padding:0.2rem 0.4rem;border-radius:4px;font-family:monospace;}
+    pre{background:#e5e7eb;padding:1rem;overflow:auto;border-radius:4px;}
+    table{width:100%;border-collapse:collapse;margin:1rem 0;}
+    th,td{border:1px solid #d1d5db;padding:0.5rem;text-align:center;}
+    th{background:#059669;color:#fff;}
+    .cta{display:block;width:100%;text-align:center;background:#059669;color:#fff;padding:0.75rem;margin:2rem 0 0 0;border:none;border-radius:4px;font-size:1rem;cursor:pointer;text-decoration:none;}
+    @media (min-width:600px){
+      h1{font-size:2.2rem;}
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Twilio WhatsApp Sandbox: Automatize Seu Atendimento sem Custo</h1>
-        <p>Você sabe que o WhatsApp é essencial para o seu negócio, mas como testar automações sem gastar dinheiro? O Twilio WhatsApp Sandbox é a solução perfeita para você começar a testar automações gratuitamente antes de investir em uma solução completa.</p>
+  <div class="container">
+    <h1>Teste seu WhatsApp Business de graça com o Twilio Sandbox</h1>
 
-        <h2>Passo a Passo para Configurar o Twilio WhatsApp Sandbox</h2>
+    <p><strong>Problema real:</strong> Você quer automatizar mensagens no WhatsApp para seu negócio, mas não tem número de teste e ainda não quer gastar com a integração oficial.</p>
 
-        <div class="step">
-            <h3>1. Crie uma Conta no Twilio</h3>
-            <p>Primeiro, acesse o <a href="https://www.twilio.com/" target="_blank">site do Twilio</a> e crie uma conta. Você terá acesso a um saldo de teste para começar.</p>
-        </div>
+    <h2>Passo a passo para ativar o Sandbox</h2>
+    <ol>
+      <li>Crie uma conta <a href="https://www.twilio.com/try-twilio" target="_blank">gratuita no Twilio</a> e acesse o <strong>Console</strong>.</li>
+      <li>No menu, vá em <code>Messaging → Try it out → WhatsApp Sandbox</code>.</li>
+      <li>Copie o código <code>XXXXXX</code> exibido e envie como mensagem para <code>whatsapp:+14155238886</code> a partir do seu celular.</li>
+      <li>Depois que o Twilio confirmar a associação, anote o <strong>Sandbox Number</strong> (ex.: <code>whatsapp:+14155238886</code>) e o <strong>Auth Token</strong> nas credenciais da conta.</li>
+      <li>Teste enviando uma mensagem usando <code>curl</code> (substitua os valores pelos seus):</li>
+    </ol>
 
-        <div class="step">
-            <h3>2. Acesse o Console do Twilio</h3>
-            <p>Após criar sua conta, acesse o console do Twilio e navegue até a seção 'WhatsApp Sandbox'.</p>
-        </div>
+    <pre><code>curl -X POST https://api.twilio.com/2010-04-01/Accounts/SEU_ACCOUNT_SID/Messages.json \
+--data-urlencode "Body=Olá, teste do Sandbox!" \
+--data-urlencode "From=whatsapp:+14155238886" \
+--data-urlencode "To=whatsapp:+SEU_NUMERO_DE_TELEFONE" \
+-u SEU_ACCOUNT_SID:SEU_AUTH_TOKEN
+</code></pre>
 
-        <div class="step">
-            <h3>3. Configure o Sandbox</h3>
-            <p>No WhatsApp Sandbox, você encontrará um número de telefone e um código de ativação. Envie uma mensagem para o número fornecido com o código de ativação para começar.</p>
-            <pre>Exemplo: Envie 'join &lt;código&gt;' para o número fornecido.</pre>
-        </div>
+    <h2>Comparação rápida</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Recurso</th>
+          <th>Configuração Manual</th>
+          <th>LeadBot (24h)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tempo de implantação</td>
+          <td>30‑60 min (inclui criação de conta, sandbox e código)</td>
+          <td>5 min (instalação automática)</td>
+        </tr>
+        <tr>
+          <td>Conhecimento técnico</td>
+          <td>Necessário entender API REST e credenciais</td>
+          <td>Zero código, interface drag‑and‑drop</td>
+        </tr>
+        <tr>
+          <td>Limite de mensagens</td>
+          <td>Até 1 000 mensagens/dia (sandbox)</td>
+          <td>Plano LeadBot 24h: 5 000 mensagens/dia</td>
+        </tr>
+        <tr>
+          <td>Custo</td>
+          <td>Grátis (sandbox) + custos de número quando sair do sandbox</td>
+          <td>R$ 49,90 (acesso ao LeadBot por 24 h)</td>
+        </tr>
+      </tbody>
+    </table>
 
-        <div class="step">
-            <h3>4. Use o Código para Testes</h3>
-            <p>Você pode usar o seguinte código para enviar uma mensagem de teste:</p>
-            <pre>
-const accountSid = 'SEU_ACCOUNT_SID';
-const authToken = 'SEU_AUTH_TOKEN';
-const client = require('twilio')(accountSid, authToken);
-
-client.messages.create({
-    body: 'Olá, esta é uma mensagem de teste!',
-    from: 'whatsapp:+14155238886',
-    to: 'whatsapp:+SEU_NUMERO'
-})
-.then(message => console.log(message.sid))
-.catch(err => console.error(err));
-            </pre>
-        </div>
-
-        <h2>Comparação: Manual vs LeadBot</h2>
-        <table>
-            <tr>
-                <th>Recurso</th>
-                <th>Manual (Twilio Sandbox)</th>
-                <th>LeadBot</th>
-            </tr>
-            <tr>
-                <td>Configuração</td>
-                <td>Complexa, requer conhecimento técnico</td>
-                <td>Simples, sem necessidade de código</td>
-            </tr>
-            <tr>
-                <td>Custo</td>
-                <td>Grátis para testes, mas limitado</td>
-                <td>Plano acessível com mais recursos</td>
-            </tr>
-            <tr>
-                <td>Suporte</td>
-                <td>Documentação online</td>
-                <td>Suporte dedicado e comunidade ativa</td>
-            </tr>
-            <tr>
-                <td>Automação</td>
-                <td>Limitada, requer desenvolvimento</td>
-                <td>Automações avançadas prontas para uso</td>
-            </tr>
-        </table>
-
-        <div class="cta">
-            <h2>Pronto para Automatizar Seu Atendimento?</h2>
-            <p>O Twilio WhatsApp Sandbox é ótimo para testes, mas para um negócio em crescimento, você precisa de mais. Conheça o <a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=learn&utm_medium=twilio-sandbox&utm_campaign=leadbot24h-202608211826" target="_blank">LeadBot</a> e leve sua automação para o próximo nível.</p>
-        </div>
-    </div>
+    <a href="https://planificador7.gumroad.com/l/leadbot-24h" class="cta" target="_blank">Quero o LeadBot 24h e automatizar já!</a>
 
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Twilio WhatsApp Sandbox: Teste Grátis para Seu Negócio",
-        "description": "Aprenda a usar o Twilio WhatsApp Sandbox para testes gratuitos e automatize seu atendimento. Passo a passo simples e comparação com o LeadBot.",
-        "author": {
-            "@type": "Person",
-            "name": "Seu Nome"
-        },
-        "datePublished": "2023-10-01",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://seusite.com/learn/twilio-sandbox-whatsapp-negocio.html"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Seu Site",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://seusite.com/logo.png",
-                "width": 600,
-                "height": 60
-            }
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Como testar o WhatsApp Business de graça com Twilio Sandbox",
+  "description": "Aprenda passo a passo a configurar o Twilio WhatsApp Sandbox e testar mensagens no seu negócio sem custos.",
+  "author": {
+    "@type": "Person",
+    "name": "LeadBot"
+  },
+  "datePublished": "2026-08-23",
+  "image": "https://seusite.com/assets/whatsapp-sandbox.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://seusite.com/learn/twilio-sandbox-whatsapp-negocio.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LeadBot",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://seusite.com/assets/logo.png"
     }
+  }
+}
     </script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "O que é o Twilio WhatsApp Sandbox?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "O Twilio WhatsApp Sandbox é um ambiente de teste gratuito fornecido pelo Twilio para que você possa testar a integração do WhatsApp com seus sistemas antes de investir em uma solução completa."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Como posso usar o Twilio WhatsApp Sandbox para meu negócio?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Você pode usar o Twilio WhatsApp Sandbox para testar automações de atendimento, enviar mensagens de teste e verificar a integração com seus sistemas antes de implementar uma solução completa."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Qual a diferença entre o Twilio WhatsApp Sandbox e o LeadBot?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "O Twilio WhatsApp Sandbox é uma ferramenta de teste gratuita, mas limitada e complexa de configurar. O LeadBot é uma solução completa de automação para WhatsApp, com configuração simples, suporte dedicado e recursos avançados prontos para uso."
-            }
-        }]
+      "@type": "Question",
+      "name": "O que é o Twilio WhatsApp Sandbox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É um ambiente de teste gratuito fornecido pela Twilio que permite enviar e receber mensagens WhatsApp sem precisar de um número oficial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto custa usar o Sandbox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Sandbox é totalmente gratuito enquanto você está em fase de testes. Quando migrar para produção, haverá custos de número e mensagem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso de um número de telefone próprio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não para testar. Você usa o número do Sandbox (whatsapp:+14155238886). Para produção, sim, será necessário registrar um número oficial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso usar o Sandbox com o LeadBot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O LeadBot já vem configurado para conectar ao Sandbox, permitindo que você comece a automatizar imediatamente."
+      }
     }
+  ]
+}
     </script>
+  </div>
 </body>
 </html>
