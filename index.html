@@ -8,6 +8,21 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-ENZCBT5Y55');
+      // CTA click tracking (CYCLE44) — funnel instrumentation, read-only observability
+      document.addEventListener('DOMContentLoaded', function(){
+        var cta = document.querySelector('.cta-button');
+        if (cta) {
+          cta.addEventListener('click', function(){
+            if (window.gtag) {
+              gtag('event', 'cta_click', {
+                'link_url': cta.getAttribute('href'),
+                'link_text': (cta.innerText || 'cta').trim(),
+                'utm_content': 'leadbot-lite'
+              });
+            }
+          });
+        }
+      });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
