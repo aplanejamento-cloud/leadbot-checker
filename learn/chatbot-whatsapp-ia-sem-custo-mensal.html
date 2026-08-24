@@ -1,186 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Como criar chatbot de WhatsApp com IA sem custo mensal fixo</title>
-  <meta name="description" content="Aprenda passo a passo a montar um chatbot de WhatsApp com IA usando ferramentas gratuitas e sem pagar mensalidade.">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal fixo">
-  <meta property="og:description" content="Aprenda passo a passo a montar um chatbot de WhatsApp com IA usando ferramentas gratuitas e sem pagar mensalidade.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html">
-  <meta property="og:image" content="https://seusite.com/assets/whatsapp-ia.jpg">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal fixo">
-  <meta name="twitter:description" content="Aprenda passo a passo a montar um chatbot de WhatsApp com IA usando ferramentas gratuitas e sem pagar mensalidade.">
-  <meta name="twitter:image" content="https://seusite.com/assets/whatsapp-ia.jpg">
-  <style>
-    body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;line-height:1.6}
-    .wrapper{max-width:800px;margin:auto;padding:1rem}
-    h1{color:#059669;font-size:2rem;margin-bottom:.5rem}
-    h2{color:#059669;font-size:1.5rem;margin-top:2rem}
-    p{margin:1rem 0}
-    ol{margin-left:1.2rem}
-    pre{background:#e5e7eb;padding:.8rem;overflow:auto;border-radius:4px}
-    code{font-family:"Courier New",Courier,monospace}
-    table{width:100%;border-collapse:collapse;margin:1rem 0}
-    th,td{border:1px solid #d1d5db;padding:.6rem;text-align:center}
-    th{background:#059669;color:#fff}
-    a.button{
-      display:inline-block;background:#059669;color:#fff;padding:.6rem 1.2rem;
-      text-decoration:none;border-radius:4px;margin-top:.5rem
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como criar chatbot de WhatsApp com IA sem custo mensal – Guia prático</title>
+    <meta name="description" content="Aprenda passo a passo a montar um chatbot de WhatsApp usando IA sem pagar mensalidade. Código simples, comparação com LeadBot e link para compra.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal – Guia prático">
+    <meta property="og:description" content="Aprenda passo a passo a montar um chatbot de WhatsApp usando IA sem pagar mensalidade. Código simples, comparação com LeadBot e link para compra.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html">
+    <meta property="og:image" content="https://seusite.com/assets/whatsapp-chatbot.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal – Guia prático">
+    <meta name="twitter:description" content="Aprenda passo a passo a montar um chatbot de WhatsApp usando IA sem pagar mensalidade. Código simples, comparação com LeadBot e link para compra.">
+    <meta name="twitter:image" content="https://seusite.com/assets/whatsapp-chatbot.png">
+    <style>
+        body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;line-height:1.6}
+        .container{max-width:800px;margin:auto;padding:1rem}
+        h1{color:#059669;font-size:2rem;margin-bottom:.5rem}
+        p{margin:0 0 1rem}
+        ol{margin-left:1.2rem}
+        pre{background:#e5e7eb;padding:.8rem;overflow:auto;border-radius:4px}
+        code{font-family:"Courier New",monospace}
+        table{width:100%;border-collapse:collapse;margin:1rem 0}
+        th,td{border:1px solid #d1d5db;padding:.6rem;text-align:center}
+        th{background:#059669;color:#fff}
+        .cta{display:block;width:100%;text-align:center;background:#059669;color:#fff;padding:.8rem 0;margin:2rem 0;border:none;border-radius:4px;text-decoration:none;font-size:1.1rem}
+        @media(min-width:600px){.cta{width:auto;padding:.6rem 2rem}}
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Article",
+        "headline":"Como criar chatbot de WhatsApp com IA sem custo mensal",
+        "description":"Aprenda passo a passo a montar um chatbot de WhatsApp usando IA sem pagar mensalidade, veja código exemplo, compare com LeadBot e adquira a solução pronta.",
+        "author":{"@type":"Person","name":"Seu Nome"},
+        "datePublished":"2026-08-24",
+        "image":"https://seusite.com/assets/whatsapp-chatbot.png",
+        "publisher":{"@type":"Organization","name":"Seu Site","logo":{"@type":"ImageObject","url":"https://seusite.com/logo.png"}},
+        "mainEntityOfPage":{"@type":"WebPage","@id":"https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html"}
     }
-    @media (max-width:600px){
-      h1{font-size:1.6rem}
-      h2{font-size:1.3rem}
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":[
+            {
+                "@type":"Question",
+                "name":"É realmente possível criar um chatbot de WhatsApp sem pagar mensalidade?",
+                "acceptedAnswer":{"@type":"Answer","text":"Sim. Usando a API oficial do WhatsApp Business combinada com serviços de IA gratuitos (ex.: OpenAI com plano gratuito ou Hugging Face) e hospedagem em plataformas free-tier, você elimina custos recorrentes."}
+            },
+            {
+                "@type":"Question",
+                "name":"Preciso de conhecimentos avançados em programação?",
+                "acceptedAnswer":{"@type":"Answer","text":"O guia apresenta um código mínimo em Node.js que pode ser copiado e colado. Conhecimentos básicos de terminal e npm são suficientes."}
+            },
+            {
+                "@type":"Question",
+                "name":"Qual a diferença entre fazer manualmente e usar o LeadBot?",
+                "acceptedAnswer":{"@type":"Answer","text":"A tabela abaixo resume custos, tempo de configuração e suporte entre as duas opções."}
+            }
+        ]
     }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Como criar chatbot de WhatsApp com IA sem custo mensal fixo",
-    "description":"Aprenda passo a passo a montar um chatbot de WhatsApp com IA usando ferramentas gratuitas e sem pagar mensalidade.",
-    "image":"https://seusite.com/assets/whatsapp-ia.jpg",
-    "author":{"@type":"Person","name":"LeadBot Team"},
-    "publisher":{"@type":"Organization","name":"LeadBot","logo":{"@type":"ImageObject","url":"https://seusite.com/logo.png"}},
-    "datePublished":"2024-10-01",
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html"}
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Preciso de servidor próprio para rodar o chatbot?",
-        "acceptedAnswer":{"@type":"Answer","text":"Não. Você pode usar serviços gratuitos como Railway ou Render que oferecem camadas grátis suficientes para um bot de baixo volume."}
-      },
-      {
-        "@type":"Question",
-        "name":"Existe custo oculto ao usar APIs de IA?",
-        "acceptedAnswer":{"@type":"Answer","text":"Utilizando modelos de IA gratuitos (ex.: OpenAI free tier, Hugging Face inference) não há custo até atingir o limite gratuito. Após isso, o gasto depende do consumo."}
-      },
-      {
-        "@type":"Question",
-        "name":"Qual a diferença entre criar manualmente e usar o LeadBot?",
-        "acceptedAnswer":{"@type":"Answer","text":"Veja a tabela comparativa abaixo para entender ganhos de tempo, manutenção e recursos."}
-      }
-    ]
-  }
-  </script>
+    </script>
 </head>
 <body>
-  <div class="wrapper">
-    <h1>Como criar chatbot de WhatsApp com IA sem custo mensal fixo</h1>
+    <div class="container">
+        <h1>Chatbot de WhatsApp com IA sem custo mensal: Guia passo a passo</h1>
 
-    <p>Empreendedores e pequenos negócios frequentemente perdem tempo (e dinheiro) tentando montar um bot de WhatsApp que responda automaticamente. A maioria das plataformas cobra mensalidades altas ou exige conhecimento avançado de programação e servidores. Nesta página você vai descobrir como montar o seu próprio chatbot usando ferramentas gratuitas e sem pagar nada por mês.</p>
+        <p><strong>Problema real:</strong> Pequenos negócios precisam responder rapidamente a clientes no WhatsApp, mas a maioria das soluções cobra assinaturas mensais caras. Este tutorial mostra como montar seu próprio bot usando ferramentas gratuitas, sem comprometer a qualidade.</p>
 
-    <h2>Passo a passo</h2>
-    <ol>
-      <li><strong>Crie uma conta no <a href="https://cloud.google.com/dialogflow" target="_blank">Dialogflow CX (gratuito)</a></strong> e configure um agente de IA.<br>
-        <pre><code>// Exemplo de intent simples no Dialogflow
-intent: "Saudação"
-training_phrases: ["Oi", "Olá", "Bom dia"]
-responses: ["Olá! Como posso ajudar você hoje?"]</code></pre>
-      </li>
-      <li><strong>Obtenha um número de WhatsApp via <a href="https://www.twilio.com/whatsapp" target="_blank">Twilio Sandbox</a> (versão free).</strong> Anote o <code>ACCOUNT_SID</code>, <code>AUTH_TOKEN</code> e o <code>WhatsApp Number</code>.</li>
-      <li><strong>Hospede um webhook gratuito.</strong> Use o <a href="https://railway.app" target="_blank">Railway</a> (camada grátis) para rodar um pequeno script Node.js:
-        <pre><code>const express = require('express');
+        <h2>Passo a passo</h2>
+        <ol>
+            <li><strong>Crie uma conta no <a href="https://cloud.facebook.com/" target="_blank">Meta Cloud</a> e habilite a API do WhatsApp Business.</strong> Siga o assistente para gerar o <code>WhatsApp Business Account ID</code> e a <code>Phone Number ID</code>.</li>
+            <li><strong>Obtenha um token de acesso.</strong> No painel da Meta, copie o <code>Access Token</code> (guarde em lugar seguro).</li>
+            <li><strong>Instale Node.js (versão 18+).</strong></li>
+            <li><strong>Crie um novo projeto e instale dependências:</strong></li>
+            <pre><code>mkdir meu-chatbot
+cd meu-chatbot
+npm init -y
+npm install express axios body-parser
+</code></pre>
+            <li><strong>Copie o código abaixo para <code>index.js</code>:</strong></li>
+            <pre><code>const express = require('express');
+const axios = require('axios');
 const bodyParser = require('body-parser');
-const { SessionsClient } = require('@google-cloud/dialogflow-cx');
 
 const app = express();
 app.use(bodyParser.json());
 
-const sessionClient = new SessionsClient();
-const projectId = 'SEU_PROJECT_ID';
-const location = 'global';
-const agentId = 'SEU_AGENT_ID';
+const WHATSAPP_TOKEN = 'SEU_ACCESS_TOKEN';
+const PHONE_ID = 'SEU_PHONE_NUMBER_ID';
+const OPENAI_API_KEY = 'SUA_API_KEY_GRATUITA';
 
-app.post('/webhook', async (req, res) => {
-  const message = req.body.Body;
-  const sessionPath = sessionClient.projectLocationAgentSessionPath(
-    projectId, location, agentId, req.body.From
-  );
+// Recebe mensagens do WhatsApp
+app.post(`/webhook/${PHONE_ID}`, async (req, res) => {
+    const msg = req.body.entry?.[0]?.changes?.[0]?.value?.messages?.[0];
+    if (!msg) return res.sendStatus(200);
 
-  const request = {
-    session: sessionPath,
-    queryInput: {
-      text: { text: message },
-      languageCode: 'pt-BR',
-    },
-  };
-  const [response] = await sessionClient.detectIntent(request);
-  const reply = response.queryResult.responseMessages[0].text.text[0];
+    const from = msg.from;
+    const text = msg.text?.body || '';
 
-  // Envia resposta via Twilio
-  const twilio = require('twilio')(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
-  await twilio.messages.create({
-    from: 'whatsapp:' + process.env.TWILIO_NUMBER,
-    to: req.body.From,
-    body: reply,
-  });
-  res.sendStatus(200);
+    // Chama IA (ex.: OpenAI)
+    const aiResponse = await axios.post(
+        'https://api.openai.com/v1/chat/completions',
+        {
+            model: 'gpt-3.5-turbo',
+            messages: [{role: 'user', content: text}]
+        },
+        {headers: {'Authorization': `Bearer ${OPENAI_API_KEY}`}}
+    );
+
+    const reply = aiResponse.data.choices[0].message.content.trim();
+
+    // Envia resposta ao WhatsApp
+    await axios.post(
+        `https://graph.facebook.com/v16.0/${PHONE_ID}/messages`,
+        {
+            messaging_product: 'whatsapp',
+            to: from,
+            text: {body: reply}
+        },
+        {headers: {'Authorization': `Bearer ${WHATSAPP_TOKEN}`}}
+    );
+
+    res.sendStatus(200);
 });
 
-app.listen(process.env.PORT || 3000);
+// Verificação do webhook (Meta)
+app.get(`/webhook/${PHONE_ID}`, (req, res) => {
+    const mode = req.query['hub.mode'];
+    const token = req.query['hub.verify_token'];
+    const challenge = req.query['hub.challenge'];
+    if (mode && token && token === 'SEU_VERIFY_TOKEN') {
+        res.status(200).send(challenge);
+    } else {
+        res.sendStatus(403);
+    }
+});
+
+app.listen(3000, () => console.log('Bot rodando na porta 3000'));
 </code></pre>
-        <p>Copie o código acima, ajuste <code>SEU_PROJECT_ID</code> e <code>SEU_AGENT_ID</code>, e faça deploy no Railway.</p>
-      </li>
-      <li><strong>Configure o webhook no Twilio.</strong> No console do Twilio, em <em>Sandbox > Settings > When a message comes in</em>, coloque a URL do seu endpoint Railway (ex.: <code>https://seu-app.railway.app/webhook</code>).</li>
-      <li><strong>Teste!</strong> Envie "Oi" para o número do sandbox e veja a IA responder.</li>
-    </ol>
+            <li><strong>Configure variáveis:</strong> Substitua <code>SEU_ACCESS_TOKEN</code>, <code>SEU_PHONE_NUMBER_ID</code>, <code>SUA_API_KEY_GRATUITA</code> e <code>SEU_VERIFY_TOKEN</code> pelos valores obtidos nos passos anteriores.</li>
+            <li><strong>Hospede o código.</strong> Use um serviço free‑tier como <a href="https://render.com/" target="_blank">Render</a> ou <a href="https://railway.app/" target="_blank">Railway</a>. Basta apontar o repositório e definir a porta 3000.</li>
+            <li><strong>Configure o webhook na Meta.</strong> No painel da API do WhatsApp, adicione a URL pública do seu app (ex.: <code>https://seuprojeto.onrender.com/webhook/SEU_PHONE_NUMBER_ID</code>) e o token de verificação.</li>
+            <li><strong>Teste!</strong> Envie uma mensagem para o número configurado e veja a IA responder automaticamente.</li>
+        </ol>
 
-    <h2>Comparação rápida: Manual vs LeadBot</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Aspecto</th>
-          <th>Manual (DIY)</th>
-          <th>LeadBot</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Tempo de implementação</td>
-          <td>Horas a dias (configuração de APIs, server, webhook)</td>
-          <td>Minutos (instalação 1‑click)</td>
-        </tr>
-        <tr>
-          <td>Custo mensal</td>
-          <td>Possível gasto com servidores ou limites de API</td>
-          <td>Gratuito até 24h de uso (leadbot‑24h)</td>
-        </tr>
-        <tr>
-          <td>Manutenção</td>
-          <td>Atualizações de código, certificados, logs</td>
-          <td>Automática, atualizações incluídas</td>
-        </tr>
-        <tr>
-          <td>Escalabilidade</td>
-          <td>Depende da sua infra</td>
-          <td>Escala automática na nuvem</td>
-        </tr>
-        <tr>
-          <td>Recursos de IA</td>
-          <td>Precisa integrar separadamente (Dialogflow, OpenAI)</td>
-          <td>IA integrada, treinamento simplificado</td>
-        </tr>
-      </tbody>
-    </table>
+        <h2>Comparação rápida</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Manual (código acima)</th>
+                    <th>LeadBot (Solução pronta)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Custo inicial</td>
+                    <td>Zero (serviços free‑tier)</td>
+                    <td>R$ 49,90 (acesso 24 h)</td>
+                </tr>
+                <tr>
+                    <td>Tempo de configuração</td>
+                    <td>2‑4 h (dependendo da familiaridade)</td>
+                    <td>Instalação em minutos</td>
+                </tr>
+                <tr>
+                    <td>Manutenção</td>
+                    <td>Você atualiza dependências e tokens</td>
+                    <td>Atualizações automáticas</td>
+                </tr>
+                <tr>
+                    <td>Escalabilidade</td>
+                    <td>Limitada ao plano free‑tier escolhido</td>
+                    <td>Infra robusta com suporte 24 h</td>
+                </tr>
+                <tr>
+                    <td>Suporte</td>
+                    <td>Comunidade e documentação</td>
+                    <td>Equipe dedicada via chat</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <h2>Pronto para acelerar?</h2>
-    <p>Se você quer a mesma funcionalidade sem lidar com código, servidores ou limites, experimente o <strong>LeadBot 24h</strong> – chatbot de WhatsApp com IA pronto para uso, sem custo mensal.</p>
-    <a class="button" href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=learn&utm_medium=chatbot-sem-custo&utm_campaign=leadbot24h-202608211826" target="_blank">Comprar LeadBot 24h no Gumroad</a>
+        <a class="cta" href="https://planificador7.gumroad.com/l/leadbot-24h" target="_blank">Quero o LeadBot pronto em 24h – Comprar agora</a>
 
-    <footer style="margin-top:2rem;font-size:.9rem;color:#555;">
-      © 2024 LeadBot – Todos os direitos reservados.
-    </footer>
-  </div>
+        <p>Se preferir evitar código e ter suporte dedicado, o <strong>LeadBot</strong> entrega a mesma funcionalidade com interface amigável e garantia de uptime.</p>
+    </div>
 </body>
 </html>
