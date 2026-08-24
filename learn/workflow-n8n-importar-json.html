@@ -1,206 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Importar Workflow .json no n8n em 2 Cliques | Guia Rápido</title>
-    <meta name="description" content="Aprenda a importar workflows .json no n8n em 2 cliques e economize tempo com automações para pequenos negócios.">
-    <meta property="og:title" content="Importar Workflow .json no n8n em 2 Cliques | Guia Rápido">
-    <meta property="og:description" content="Aprenda a importar workflows .json no n8n em 2 cliques e economize tempo com automações para pequenos negócios.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seusite.com/learn/workflow-n8n-importar-json">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Importar Workflow .json no n8n em 2 Cliques | Guia Rápido">
-    <meta name="twitter:description" content="Aprenda a importar workflows .json no n8n em 2 cliques e economize tempo com automações para pequenos negócios.">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Importe um workflow .json no n8n em 2 cliques – Guia rápido</title>
+  <meta name="description" content="Aprenda como importar arquivos .json de workflows no n8n em apenas dois cliques, sem complicações. Veja passo a passo, compare métodos e descubra a solução LeadBot.">
+  <meta property="og:title" content="Importe um workflow .json no n8n em 2 cliques – Guia rápido">
+  <meta property="og:description" content="Aprenda como importar arquivos .json de workflows no n8n em apenas dois cliques, sem complicações. Veja passo a passo, compare métodos e descubra a solução LeadBot.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://seusite.com/learn/workflow-n8n-importar-json.html">
+  <meta property="og:image" content="https://seusite.com/assets/n8n-import.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Importe um workflow .json no n8n em 2 cliques – Guia rápido">
+  <meta name="twitter:description" content="Aprenda como importar arquivos .json de workflows no n8n em apenas dois cliques, sem complicações.">
+  <meta name="twitter:image" content="https://seusite.com/assets/n8n-import.png">
+  <style>
+    body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;}
+    .container{max-width:800px;margin:auto;padding:1rem;}
+    h1{color:#059669;text-align:center;margin-bottom:1rem;}
+    p{line-height:1.6;margin-bottom:1rem;}
+    ol{margin-left:1.2rem;}
+    code{background:#e5e7eb;padding:0.2rem 0.4rem;border-radius:4px;font-family:monospace;}
+    pre{background:#e5e7eb;padding:1rem;overflow-x:auto;border-radius:4px;}
+    table{width:100%;border-collapse:collapse;margin:1.5rem 0;}
+    th,td{border:1px solid #d1d5db;padding:0.6rem;text-align:center;}
+    th{background:#059669;color:#fff;}
+    .cta{display:flex;justify-content:center;margin:2rem 0;}
+    .cta a{background:#059669;color:#fff;padding:0.8rem 1.6rem;border-radius:6px;text-decoration:none;font-weight:bold;}
+    @media (max-width:600px){
+      h1{font-size:1.5rem;}
+      .cta a{width:100%;text-align:center;}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Importe um workflow .json no n8n em 2 cliques – Guia rápido",
+    "description": "Aprenda como importar arquivos .json de workflows no n8n em apenas dois cliques, sem complicações.",
+    "image": "https://seusite.com/assets/n8n-import.png",
+    "author": {
+      "@type": "Person",
+      "name": "LeadBot"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LeadBot",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://seusite.com/assets/logo.png"
+      }
+    },
+    "datePublished": "2024-10-01",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://seusite.com/learn/workflow-n8n-importar-json.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que é n8n?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "n8n é uma ferramenta de automação de fluxos de trabalho (workflow) open‑source que permite conectar APIs, bancos de dados e serviços sem precisar escrever código."
         }
-        header {
-            background-color: #059669;
-            color: white;
-            padding: 1rem;
-            text-align: center;
+      },
+      {
+        "@type": "Question",
+        "name": "Preciso de uma conta paga para importar workflows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. A importação de arquivos .json funciona tanto na versão gratuita quanto na paga. O que muda são os limites de execução."
         }
-        h1 {
-            margin: 0;
-            font-size: 2rem;
+      },
+      {
+        "@type": "Question",
+        "name": "Como o LeadBot simplifica a importação?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LeadBot automatiza todo o processo com um botão único, eliminando a necessidade de abrir o editor de importação, selecionar o arquivo e confirmar manualmente."
         }
-        .container {
-            padding: 1rem;
-            max-width: 800px;
-            margin: auto;
-        }
-        .step-by-step {
-            background-color: white;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 1rem;
-        }
-        .step-by-step ol {
-            padding-left: 1.5rem;
-        }
-        .step-by-step li {
-            margin-bottom: 1rem;
-        }
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 1rem;
-        }
-        .comparison-table th, .comparison-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        .comparison-table th {
-            background-color: #059669;
-            color: white;
-        }
-        .comparison-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        .cta {
-            background-color: #059669;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-        .cta a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .code {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: monospace;
-        }
-    </style>
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Importar Workflow .json no n8n em 2 Cliques</h1>
-    </header>
-    <div class="container">
-        <p>Você já perdeu horas tentando importar um workflow .json no n8n? Sabe aquele sentimento de frustração quando algo que deveria ser simples vira um quebra-cabeça sem fim? Pois é, você não está sozinho. Muitos pequenos negócios enfrentam esse problema diariamente, perdendo tempo valioso que poderia ser gasto em atividades mais produtivas.</p>
-        <div class="step-by-step">
-            <h2>Passo a Passo para Importar Workflow .json no n8n</h2>
-            <ol>
-                <li>Faça login na sua instância do n8n.</li>
-                <li>No painel principal, clique no botão "Add Workflow" (Adicionar Workflow).</li>
-                <li>Na nova janela que abrir, clique no botão "Import" (Importar) no canto superior direito.</li>
-                <li>Selecione o arquivo .json do seu workflow. Você pode arrastar e soltar o arquivo ou clicar para selecionar manualmente.</li>
-                <li>Clique no botão "Import" para confirmar.</li>
-                <li>Pronto! Seu workflow foi importado e está pronto para ser usado.</li>
-            </ol>
-            <p>Para facilitar ainda mais, aqui está um código mínimo que você pode copiar e colar para testar:</p>
-            <div class="code">
-                {<br>
-                &nbsp;&nbsp;"name": "Exemplo de Workflow",<br>
-                &nbsp;&nbsp;"nodes": [<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"parameters": {},<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "Start",<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type": "n8n-nodes-base.start",<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"typeVersion": 1,<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"position": [<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;250,<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                &nbsp;&nbsp;],<br>
-                &nbsp;&nbsp;"connections": {}<br>
-                }
-            </div>
-        </div>
-        <h2>Comparação Rápida: Manual vs LeadBot</h2>
-        <table class="comparison-table">
-            <tr>
-                <th>Critério</th>
-                <th>Manual</th>
-                <th>LeadBot</th>
-            </tr>
-            <tr>
-                <td>Tempo Gasto</td>
-                <td>10-15 minutos</td>
-                <td>2 cliques</td>
-            </tr>
-            <tr>
-                <td>Complexidade</td>
-                <td>Alta</td>
-                <td>Baixa</td>
-            </tr>
-            <tr>
-                <td>Erros Comuns</td>
-                <td>Muitos</td>
-                <td>Quase nenhum</td>
-            </tr>
-            <tr>
-                <td>Suporte</td>
-                <td>Nenhum</td>
-                <td>Inclusivo</td>
-            </tr>
-        </table>
-        <div class="cta">
-            <h2>Quer economizar ainda mais tempo?</h2>
-            <p>Conheça o <a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=learn&utm_medium=importar-json&utm_campaign=leadbot24h-202608211826" target="_blank">LeadBot</a>, a solução definitiva para automações no n8n. Com o LeadBot, você pode importar workflows .json em apenas 2 cliques e ainda ter acesso a suporte especializado.</p>
-        </div>
+  <div class="container">
+    <h1>Importar workflow .json no n8n em 2 cliques</h1>
+
+    <p>Você já perdeu tempo abrindo o n8n, navegando até a seção de importação, selecionando o arquivo .json e ainda assim teve que ajustar alguns campos? Esse processo manual pode ser frustrante, especialmente quando você precisa replicar o mesmo workflow em vários ambientes.</p>
+
+    <h2>Passo a passo (2 cliques)</h2>
+    <ol>
+      <li>
+        <strong>Abra o LeadBot e escolha “Importar workflow”.</strong>  
+        <pre><code>// Clique no botão “Importar workflow” no painel do LeadBot</code></pre>
+      </li>
+      <li>
+        <strong>Selecione o arquivo .json e confirme.</strong>  
+        <pre><code>// Selecione seu arquivo .json e clique em “Confirmar”. O LeadBot enviará tudo para o n8n automaticamente.</code></pre>
+      </li>
+    </ol>
+
+    <h2>Comparação rápida</h2>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Método Manual</th>
+          <th>LeadBot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tempo</td>
+          <td>3‑5 minutos</td>
+          <td>≤ 30 segundos</td>
+        </tr>
+        <tr>
+          <td>Complexidade</td>
+          <td>Alto (várias telas)</td>
+          <td>Baixo (2 cliques)</td>
+        </tr>
+        <tr>
+          <td>Erros comuns</td>
+          <td>Arquivo errado, campos não mapeados</td>
+          <td>Quase zero</td>
+        </tr>
+        <tr>
+          <td>Automação</td>
+          <td>Nenhuma</td>
+          <td>Integração direta com n8n</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cta">
+      <a href="https://planificador7.gumroad.com/l/leadbot-24h" target="_blank" rel="noopener">
+        🚀 Quero o LeadBot 24h e importar em 2 cliques!
+      </a>
     </div>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Importar Workflow .json no n8n em 2 Cliques | Guia Rápido",
-      "description": "Aprenda a importar workflows .json no n8n em 2 cliques e economize tempo com automações para pequenos negócios.",
-      "author": {
-        "@type": "Person",
-        "name": "Seu Nome"
-      },
-      "datePublished": "2023-10-01",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Sua Empresa",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://seusite.com/logo.png"
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://seusite.com/learn/workflow-n8n-importar-json"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Como importar um workflow .json no n8n?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Você pode importar um workflow .json no n8n clicando no botão 'Add Workflow' e depois no botão 'Import' no canto superior direito. Selecione o arquivo .json e clique em 'Import' para confirmar."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Quanto tempo leva para importar um workflow .json no n8n?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Com o método manual, pode levar de 10 a 15 minutos. Com o LeadBot, você pode fazer isso em apenas 2 cliques."
-        }
-      }]
-    }
-    </script>
+  </div>
 </body>
 </html>
