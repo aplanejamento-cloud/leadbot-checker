@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Google Analytics 4 — Leadbot Checker Landing (CYCLE 36) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ENZCBT5Y55');
-      // CTA click tracking (CYCLE44) — funnel instrumentation, read-only observability
-      document.addEventListener('DOMContentLoaded', function(){
-        var cta = document.querySelector('.cta-button');
-        if (cta) {
-          cta.addEventListener('click', function(){
-            if (window.gtag) {
-              gtag('event', 'cta_click', {
-                'link_url': cta.getAttribute('href'),
-                'link_text': (cta.innerText || 'cta').trim(),
-                'utm_content': 'leadbot-lite'
-              });
-            }
-          });
-        }
+    <!-- GA4 INSTRUMENTATION C100 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ENZCBT5Y55', {
+  page_path: window.location.pathname + window.location.search,
+  page_title: document.title,
+});
+document.addEventListener('DOMContentLoaded', function(){
+  var up = new URLSearchParams(window.location.search);
+  var utmLp = {};
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+    var v = up.get(k); if (v) utmLp[k] = v;
+  });
+  if (Object.keys(utmLp).length > 0) {
+    gtag('event', 'landing_page_view', {
+      event_category: 'funnel',
+      utm_source: utmLp.utm_source || '',
+      utm_medium: utmLp.utm_medium || '',
+      utm_campaign: utmLp.utm_campaign || '',
+      utm_content: utmLp.utm_content || '',
+      non_interaction: true
+    });
+  }
+  var ctas = document.querySelectorAll('a[href*="planificador7.gumroad.com"]');
+  ctas.forEach(function(cta){
+    cta.addEventListener('click', function(){
+      if (!window.gtag) return;
+      var qi = cta.href.indexOf('?');
+      var qp = qi > 0 ? new URLSearchParams(cta.href.substring(qi)) : new URLSearchParams();
+      var utmEv = {};
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+        var v = qp.get(k); if (v) utmEv[k] = v;
       });
-    </script>
+      gtag('event', 'cta_click', {
+        event_category: 'funnel',
+        destination: 'gumroad_checkout',
+        utm_source: utmEv.utm_source || '',
+        utm_medium: utmEv.utm_medium || '',
+        utm_campaign: utmEv.utm_campaign || '',
+        utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
+        link_url: cta.href
+      });
+      gtag('event', 'checkout_start', {
+        event_category: 'funnel',
+        destination: 'gumroad_checkout',
+        utm_source: utmEv.utm_source || '',
+        utm_medium: utmEv.utm_medium || '',
+        utm_campaign: utmEv.utm_campaign || '',
+        utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
+        link_url: cta.href
+      });
+    });
+  });
+});
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Prejuízo por Leads Perdidos no WhatsApp</title>
