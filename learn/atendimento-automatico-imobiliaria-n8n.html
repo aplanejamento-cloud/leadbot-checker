@@ -1,6 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head><!-- GA4 INSTRUMENTATION C100 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
+document.addEventListener('DOMContentLoaded', function(){
+  var up = new URLSearchParams(window.location.search);
+  var utm = {};
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+    var v = up.get(k); if (v) utm[k] = v;
+  });
+  if (Object.keys(utm).length > 0) {
+    gtag('event', 'landing_page_view', {
+      event_category: 'funnel',
+      utm_source: utm.utm_source || '',
+      utm_medium: utm.utm_medium || '',
+      utm_campaign: utm.utm_campaign || '',
+      utm_content: utm.utm_content || '',
+      non_interaction: true
+    });
+  }
+  document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (!window.gtag) return;
+      var qi = el.href.indexOf('?');
+      var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
+      var utmEv = {};
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+        var v = qp.get(k); if (v) utmEv[k] = v;
+      });
+      gtag('event', 'cta_click', {
+        event_category: 'funnel',
+        destination: 'gumroad_checkout',
+        utm_source: utmEv.utm_source || '',
+        utm_medium: utmEv.utm_medium || '',
+        utm_campaign: utmEv.utm_campaign || '',
+        utm_content: utmEv.utm_content || '',
+        link_url: el.href
+      });
+      gtag('event', 'checkout_start', {
+        event_category: 'funnel',
+        destination: 'gumroad_checkout',
+        utm_source: utmEv.utm_source || '',
+        utm_medium: utmEv.utm_medium || '',
+        utm_campaign: utmEv.utm_campaign || '',
+        utm_content: utmEv.utm_content || '',
+        link_url: el.href
+      });
+    });
+  });
+});
+</script>
+
     <meta charset="UTF-8">
     <title>Atendimento Automático para Imobiliárias com n8n + WhatsApp – 24h LeadBot</title>
     <meta name="description" content="Descubra como automatizar o atendimento de leads imobiliários usando n8n e WhatsApp. Guia passo‑a‑passo, comparação com o método manual e link para adquirir o LeadBot 24h.">
