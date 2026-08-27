@@ -2,6 +2,15 @@
 
 > Projeto aberto com ferramentas gratuitas para automatizar qualificação de leads no WhatsApp usando n8n, Gemini e workflows reais. Para pequenos negócios que precisam responder clientes fora do horário sem aumentar custos fixos.
 
+# LeadBot 24h — Atenda clientes no WhatsApp fora do horário e não perca vendas
+
+> Seu cliente chama no WhatsApp às 22h e ninguém responde? Ele vai procurar outro. O LeadBot qualifica leads 24h e entrega oportunidades quentes para você fechar.
+
+**Para quem é:** pequenos negócios, imobiliárias, clínicas, prestadores de serviço e profissionais autônomos que recebem leads pelo WhatsApp e perdem vendas por demora no atendimento.
+
+---
+
+
 ## Problema
 
 Clientes que enviam mensagem no WhatsApp fora do horário comercial têm 3x mais chance de procurar um concorrente. Responder manualmente 24h exige equipe ou ferramentas caras.
@@ -76,7 +85,7 @@ Projeto maintained por [aplanejamento-cloud](https://github.com/aplanejamento-cl
         v
 [Gumroad — planificador7.gumroad.com/l/leadbot-24h]
   - Checkout Gumroad (pagamento/entrega)
-  - Produto: template n8n leadbot-lite (sem IA, 2 nodes)
+  - Produto: setup n8n leadbot-lite (sem IA, 2 nodes)
 ```
 
 ## Stack
@@ -130,7 +139,7 @@ O template leadbot-lite.json (2 nos n8n) demonstra o fluxo minimo:
 ## Saiba mais
 
 - [Todos os guias](https://aplanejamento-cloud.github.io/leadbot-checker) — landing completa
-- [Template n8n leadbot-lite](https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?utm_source=github&utm_medium=readme&utm_campaign=leadbot24h&utm_content=readme-cta) — download via Gumroad
+- [Template n8n leadbot-lite](https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?utm_source=github&utm_medium=readme-business&utm_campaign=leadbot24h&utm_content=readme-cta-b109) — download via Gumroad
 - [n8n workflow JSON import](https://aplanejamento-cloud.github.io/leadbot-checker/learn/workflow-n8n-importar-json.html) — importar workflows prontos
 - [Gemini gratis + n8n](https://aplanejamento-cloud.github.io/leadbot-checker/learn/gemini-gratis-n8n-automacao.html) — IA sem custo mensal
 
