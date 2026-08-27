@@ -52,3 +52,92 @@ Projeto maintained por [aplanejamento-cloud](https://github.com/aplanejamento-cl
 ---
 
 *Última atualização automática: 2026-08-27T13:53:14Z*
+
+
+## Como funciona — arquitetura
+
+```
+[Visitante chega na landing]
+        |
+        v
+[Landing page — github.io/leadbot-checker]
+  - Calculadora: quanto voce esta perdendo com leads nao respondidos?
+  - Guias: fluxos prontos para n8n + WhatsApp + Gemini
+        |
+        v
+[Visitante clica no CTA "Quero LeadBot 24h"]
+        |
+        v
+[Redirector Worker — Cloudflare]
+  - Captura: slug, UTMs, timestamp, path
+  - Registra em R2 (sale-ledger/click/<uuid>.json)
+  - NAO altera destino, NAO adiciona parametros
+        |
+        v
+[Gumroad — planificador7.gumroad.com/l/leadbot-24h]
+  - Checkout Gumroad (pagamento/entrega)
+  - Produto: template n8n leadbot-lite (sem IA, 2 nodes)
+```
+
+## Stack
+
+| Camada | Tecnologia | Funcao |
+|--------|-----------|--------|
+| Automacao | n8n | Orquestracao do fluxo de qualificacao |
+| IA | Google Gemini (free tier) | Classificacao de intencao do lead |
+| Canal | WhatsApp API (Twilio) | Envio e recebimento de mensagens |
+| Hospedagem | Cloudflare Workers | Redirector com logging de cliques |
+| Storage | Cloudflare R2 | Ledger de clicks (sale-ledger bucket) |
+| Analytics | GA4 | landing_page_view, cta_click, checkout_start |
+| Frontend | HTML/CSS vanilla | Landing + 14 learn pages (GitHub Pages) |
+
+## Workflow do leadbot-lite (exemplo)
+
+O template leadbot-lite.json (2 nos n8n) demonstra o fluxo minimo:
+
+1. **Webhook recebe mensagem** — entrada via Twilio WhatsApp
+2. **Regra de qualificacao** — classifica como QUENTE/MORNO/FRIO
+3. **Follow-up automatico** — mensagens fora do horario comercial
+
+> leadbot-lite e SEM IA generativa. Usa regras. O plano com Gemini (IA) esta documentado em: chatbot-whatsapp-ia-sem-custo-mensal.html
+
+## Fluxo tipico — passo a passo
+
+1. Cliente envia "oi" ou "quero orcamento" no WhatsApp
+2. Twilio entrega para webhook do n8n (n8n cloud ou self-hosted)
+3. n8n aplica regras: horario saudacao / fora-horario captura
+4. Lead qualificado recebe follow-up automático
+5. CRM ou painel recebe lead quente para fechamento humano
+
+## Guias e recursos
+
+| Recurso | Descricao |
+|---------|-----------|
+| [Qualificar leads WhatsApp com n8n](https://aplanejamento-cloud.github.io/leadbot-checker/learn/como-qualificar-leads-whatsapp-n8n.html) | Fluxo passo a passo |
+| [Automacao para pequenos negocios](https://aplanejamento-cloud.github.io/leadbot-checker/learn/automacao-leads-pequenos-negocios.html) | Caso de uso SME |
+| [Chatbot WhatsApp IA sem custo](https://aplanejamento-cloud.github.io/leadbot-checker/learn/chatbot-whatsapp-ia-sem-custo-mensal.html) | Gemini + n8n |
+| [Converter leads de madrugada](https://aplanejamento-cloud.github.io/leadbot-checker/learn/converter-leads-madrugada-whatsapp.html) | Resposta fora horario |
+| [Webhook instavel recovery](https://aplanejamento-cloud.github.io/leadbot-checker/learn/webhook-instavel-whatsapp-n8n-recovery.html) | Tratamento de falhas |
+| [Calculadora de prejuizo](https://aplanejamento-cloud.github.io/leadbot-checker) | Quanto voce esta perdendo? |
+
+## Casos de uso
+
+- Pequena imobiliaria: atendimento automatico fora de horario
+- Clinica/estetica: qualificacao antes da consulta
+- E-commerce: captura e resposta 24h sem custo fixo adicional
+- Prestador de servico: follow-up pos-orcamento automatico
+
+## Saiba mais
+
+- [Todos os guias](https://aplanejamento-cloud.github.io/leadbot-checker) — landing completa
+- [Template n8n leadbot-lite](https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?utm_source=github&utm_medium=readme&utm_campaign=leadbot24h&utm_content=readme-cta) — download via Gumroad
+- [n8n workflow JSON import](https://aplanejamento-cloud.github.io/leadbot-checker/learn/workflow-n8n-importar-json.html) — importar workflows prontos
+- [Gemini gratis + n8n](https://aplanejamento-cloud.github.io/leadbot-checker/learn/gemini-gratis-n8n-automacao.html) — IA sem custo mensal
+
+## Contribuindo
+
+Pull requests sao bem-vindos. Issues com bugs ou duvidas sobre n8n tambem.
+
+## Licenca
+
+MIT — uso livre para projetos comerciais ou pessoais.
