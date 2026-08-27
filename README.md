@@ -11,6 +11,16 @@
 ---
 
 
+### Conteúdo para donos de negócios
+
+| Problema | Guia |
+|----------|------|
+| Atendimento WhatsApp para pequenos negócios | [Automático 24h para pequenos negócios](https://aplanejamento-cloud.github.io/leadbot-checker/learn/atendimento-whatsapp-pequenos-negocios.html) |
+| Não perder clientes no WhatsApp | [Como parar de perder clientes](https://aplanejamento-cloud.github.io/leadbot-checker/learn/nao-perder-clientes-whatsapp.html) |
+| Atendimento para loja de roupas | [WhatsApp automático para loja](https://aplanejamento-cloud.github.io/leadbot-checker/learn/atendimento-whatsapp-loja-roupas.html) |
+| Atendimento para salão/barbearia | [Agendamento automático para salão](https://aplanejamento-cloud.github.io/leadbot-checker/learn/atendimento-whatsapp-salao-barbearia.html) |
+| Atendimento para imobiliária | [Captura de leads para imobiliária](https://aplanejamento-cloud.github.io/leadbot-checker/learn/atendimento-whatsapp-imobiliaria.html) |
+
 ## Problema
 
 Clientes que enviam mensagem no WhatsApp fora do horário comercial têm 3x mais chance de procurar um concorrente. Responder manualmente 24h exige equipe ou ferramentas caras.
