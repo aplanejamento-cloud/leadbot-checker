@@ -158,36 +158,6 @@
 </head>
 <body>
     <div class="container">
-        <div id="captureSection" style="border: 2px solid #047857; border-radius: 8px; padding: 18px; margin-bottom: 24px; background-color: #f0fdf4;">
-            <h2 style="margin-top:0; color:#047857;">📋 Checklist Grátis: Como Responder e Organizar Leads em 24h</h2>
-            <p style="font-size:15px; color:#333;">Receba o checklist para parar de perder clientes que chamam no WhatsApp fora do horário.</p>
-            <form id="magnetForm" onsubmit="return submitMagnet(event)">
-                <input type="text" name="hp" id="hp" style="position:absolute; left:-9999px; width:1px; height:1px;" tabindex="-1" autocomplete="off" aria-hidden="true">
-                <div class="form-group">
-                    <label for="m_name">Seu nome</label>
-                    <input type="text" id="m_name" name="name" required maxlength="80" placeholder="Ex.: João Silva">
-                </div>
-                <div class="form-group">
-                    <label for="m_company">Nome do negócio</label>
-                    <input type="text" id="m_company" name="company" required maxlength="100" placeholder="Ex.: Barbearia Coutinho">
-                </div>
-                <div class="form-group">
-                    <label>Como prefere receber o material?</label>
-                    <label style="font-weight:normal; width:auto; display:inline-block; margin-right:16px;"><input type="radio" name="contact_channel" value="email" checked style="width:auto;"> E-mail</label>
-                    <label style="font-weight:normal; width:auto; display:inline-block;"><input type="radio" name="contact_channel" value="whatsapp" style="width:auto;"> WhatsApp</label>
-                </div>
-                <div class="form-group">
-                    <label for="m_value">E-mail ou WhatsApp (com DDD)</label>
-                    <input type="text" id="m_value" name="contact_value" required placeholder="ex.: voce@empresa.com.br ou (13) 99999-9999">
-                </div>
-                <div class="form-group">
-                    <label style="font-weight:normal;"><input type="checkbox" id="m_consent" required style="width:auto;"> Concordo em receber o material e eventuais comunicações sobre LeadBot 24h (LGPD).</label>
-                </div>
-                <button type="submit" id="magnetBtn">Receber Checklist Grátis</button>
-                <p id="magnetMsg" style="font-size:13px; color:#047857; display:none;"></p>
-                <p style="font-size:11px; color:#777; margin-top:10px;">Seus dados são usados só para entregar o material e comunicações do LeadBot 24h. Exclusão a qualquer momento: lgpd@leadbot24h.com.br</p>
-            </form>
-        </div>
         <h1>Calculadora de Prejuízo por Leads Perdidos no WhatsApp</h1>
         <form id="leadForm">
             <div class="form-group">
@@ -258,82 +228,6 @@
             // Mostrar resultado
             document.getElementById('result').style.display = 'block';
         }
-    </script>
-    <script>
-        // ===== C161: Lead magnet capture =====
-        var INBOUND_API = "https://leadbot-inbound.aplanejamento.workers.dev";
-        window.LEADBOT_LEAD_ID = null;
-
-        // Persist UTM from URL into localStorage once
-        (function captureUtm(){
-            var up = new URLSearchParams(window.location.search);
-            var saved = {};
-            try { saved = JSON.parse(localStorage.getItem('leadbot_utm_params') || '{}'); } catch(e){}
-            ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-                var v = up.get(k);
-                if (v) saved[k] = v;
-            });
-            localStorage.setItem('leadbot_utm_params', JSON.stringify(saved));
-        })();
-
-        function submitMagnet(ev){
-            ev.preventDefault();
-            var msg = document.getElementById('magnetMsg');
-            var btn = document.getElementById('magnetBtn');
-
-            // Honeypot: hidden field must be empty (bots fill it)
-            if (document.getElementById('hp').value) {
-                msg.style.display = 'block'; msg.style.color = '#047857'; msg.textContent = 'Pronto! Verifique seu e-mail/WhatsApp.';
-                btn.disabled = true; return false;
-            }
-
-            var channel = document.querySelector('input[name="contact_channel"]:checked').value;
-            var value = document.getElementById('m_value').value.trim();
-            var payload = {
-                name: document.getElementById('m_name').value.trim(),
-                company: document.getElementById('m_company').value.trim(),
-                contact_channel: channel,
-                contact_value: value,
-                consent: document.getElementById('m_consent').checked
-            };
-            try { Object.assign(payload, JSON.parse(localStorage.getItem('leadbot_utm_params') || '{}')); } catch(e){}
-
-            btn.disabled = true; btn.textContent = 'Enviando...';
-            fetch(INBOUND_API + '/api/lead', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            }).then(function(r){ return r.json(); }).then(function(j){
-                if (j && j.lead_id) {
-                    window.LEADBOT_LEAD_ID = j.lead_id;
-                    msg.style.display = 'block'; msg.style.color = '#047857'; msg.textContent = 'Pronto! Seu checklist está aqui:';
-                    var m = document.getElementById('magnetMsg');
-                    m.innerHTML = m.textContent + ' <a href="' + INBOUND_API + '/api/lead-magnet" target="_blank" style="color:#047857; font-weight:bold;">Baixar Checklist (PDF)</a>';
-                    document.getElementById('magnetForm').style.display = 'none';
-                    gaSend('lead_captured', j.lead_id);
-                    if(window.gtag){ gtag('event', 'lead_captured', { event_category:'funnel', lead_id:j.lead_id, transport_type:'beacon' }); }
-                } else {
-                    var errMap = {
-                        invalid_name: 'Preencha seu nome corretamente.',
-                        invalid_company: 'Preencha o nome da empresa.',
-                        invalid_channel: 'Escolha e-mail ou WhatsApp.',
-                        invalid_email: 'Informe um e-mail válido.',
-                        invalid_whatsapp: 'Informe um WhatsApp válido (com DDD e 8-9 dígitos).',
-                        consent_required: 'Você precisa aceitar o uso dos seus dados.',
-                        rate_limited: 'Muitas tentativas. Aguarde um minuto.',
-                        invalid_json: 'Dados inválidos. Tente novamente.'
-                    };
-                    msg.style.display='block'; msg.style.color='#dc2626';
-                    msg.textContent = errMap[j.error] || 'Não foi possível enviar. Verifique os dados e tente novamente.';
-                    btn.disabled=false; btn.textContent='Receber Checklist Grátis';
-                }
-            }).catch(function(){ 
-                msg.style.display='block'; msg.style.color='#dc2626'; msg.textContent='Erro de conexão. Tente novamente.';
-                btn.disabled=false; btn.textContent='Receber Checklist Grátis';
-            });
-            return false;
-        }
-        function gaSend(){ /* stub */ }
     </script>
 </body>
 </html>
