@@ -68,10 +68,13 @@ Pagamento seguro via Gumroad. Acesso imediato.
 | Atendimento para salão/barbearia | [Agendamento para salão](https://aplanejamento-cloud.github.io/leadbot-checker/learn/atendimento-whatsapp-salao-barbearia.html) |
 | Atendimento para imobiliária | [Captura de leads para imobiliária](https://aplanejamento-cloud.github.io/leadbot-checker/learn/atendimento-whatsapp-imobiliaria.html) |
 
-## Calculadora
+## Calculadora + Checklist grátis
 
 Quanto você está perdendo por leads não respondidos?  
 [Calculadora de prejuízo →](https://aplanejamento-cloud.github.io/leadbot-checker)
+
+Não quer perder clientes? Pegue o **Checklist grátis: como responder e organizar leads em 24h** (e-mail ou WhatsApp) — acesse a página e preencha o formulário.  
+[Testar a landing real (calculadora + checklist) →](https://aplanejamento-cloud.github.io/leadbot-checker/?utm_source=github&utm_medium=profile&utm_campaign=C162-A&utm_content=readme)
 
 ## Licença
 
