@@ -1,292 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><!-- GA4 INSTRUMENTATION C100 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
-document.addEventListener('DOMContentLoaded', function(){
-  var up = new URLSearchParams(window.location.search);
-  var utm = {};
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-    var v = up.get(k); if (v) utm[k] = v;
-  });
-  if (Object.keys(utm).length > 0) {
-    gtag('event', 'landing_page_view', {
-      event_category: 'funnel',
-      utm_source: utm.utm_source || '',
-      utm_medium: utm.utm_medium || '',
-      utm_campaign: utm.utm_campaign || '',
-      utm_content: utm.utm_content || '',
-      non_interaction: true
-    });
-  }
-  document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
-    el.addEventListener('click', function(){
-      if (!window.gtag) return;
-      var qi = el.href.indexOf('?');
-      var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
-      var utmEv = {};
-      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-        var v = qp.get(k); if (v) utmEv[k] = v;
-      });
-      gtag('event', 'cta_click', {
-        event_category: 'funnel',
-        destination: 'gumroad_checkout',
-        utm_source: utmEv.utm_source || '',
-        utm_medium: utmEv.utm_medium || '',
-        utm_campaign: utmEv.utm_campaign || '',
-        utm_content: utmEv.utm_content || '',
-        link_url: el.href
-      });
-      gtag('event', 'checkout_start', {
-        event_category: 'funnel',
-        destination: 'gumroad_checkout',
-        utm_source: utmEv.utm_source || '',
-        utm_medium: utmEv.utm_medium || '',
-        utm_campaign: utmEv.utm_campaign || '',
-        utm_content: utmEv.utm_content || '',
-        link_url: el.href
-      });
-    });
-  });
-});
-</script>
-
+<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Como Qualificar Leads no WhatsApp com n8n + IA Grátis</title>
-  <meta name="description" content="Descubra passo a passo como usar n8n e IA grátis para qualificar leads no WhatsApp, automatizar respostas e fechar mais vendas.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Como qualificar leads no WhatsApp com n8n + IA grátis</title>
+  <meta name="description" content="Aprenda a qualificar leads no WhatsApp usando n8n e inteligência artificial gratuita em poucos passos.">
   <!-- Open Graph -->
-  <meta property="og:title" content="Como Qualificar Leads no WhatsApp com n8n + IA Grátis">
-  <meta property="og:description" content="Aprenda a montar um fluxo no n8n que qualifica leads via WhatsApp usando IA gratuita.">
+  <meta property="og:title" content="Como qualificar leads no WhatsApp com n8n + IA grátis">
+  <meta property="og:description" content="Aprenda a qualificar leads no WhatsApp usando n8n e inteligência artificial gratuita em poucos passos.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://seusite.com/learn/como-qualificar-leads-whatsapp-n8n.html">
-  <meta property="og:image" content="https://seusite.com/assets/leadbot-thumbnail.png">
-  <!-- Twitter -->
+  <meta property="og:image" content="https://seusite.com/assets/leadbot-whatsapp.png">
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Como Qualificar Leads no WhatsApp com n8n + IA Grátis">
-  <meta name="twitter:description" content="Passo a passo rápido para automatizar a qualificação de leads no WhatsApp usando n8n e IA grátis.">
-  <meta name="twitter:image" content="https://seusite.com/assets/leadbot-thumbnail.png">
+  <meta name="twitter:title" content="Como qualificar leads no WhatsApp com n8n + IA grátis">
+  <meta name="twitter:description" content="Aprenda a qualificar leads no WhatsApp usando n8n e inteligência artificial gratuita em poucos passos.">
+  <meta name="twitter:image" content="https://seusite.com/assets/leadbot-whatsapp.png">
+
+  <!-- GA4 INSTRUMENTATION C100 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
+  document.addEventListener('DOMContentLoaded', function(){
+    var up = new URLSearchParams(window.location.search);
+    var utmLp = {};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+      var v = up.get(k); if (v) utmLp[k] = v;
+    });
+    if (Object.keys(utmLp).length > 0) {
+      gtag('event', 'landing_page_view', {
+        event_category: 'funnel',
+        utm_source: utmLp.utm_source || '',
+        utm_medium: utmLp.utm_medium || '',
+        utm_campaign: utmLp.utm_campaign || '',
+        utm_content: utmLp.utm_content || '',
+        non_interaction: true
+      });
+    }
+    document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
+      el.addEventListener('click', function(){
+        if (!window.gtag) return;
+        var qi = el.href.indexOf('?');
+        var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
+        var utmEv = {};
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+          var v = qp.get(k); if (v) utmEv[k] = v;
+        });
+        gtag('event', 'cta_click', {
+          event_category: 'funnel',
+          destination: 'gumroad_checkout',
+          utm_source: utmEv.utm_source || '',
+          utm_medium: utmEv.utm_medium || '',
+          utm_campaign: utmEv.utm_campaign || '',
+          utm_content: utmEv.utm_content || '',
+          utm_term: utmEv.utm_term || '',
+          link_url: el.href
+        });
+        gtag('event', 'checkout_start', {
+          event_category: 'funnel',
+          destination: 'gumroad_checkout',
+          utm_source: utmEv.utm_source || '',
+          utm_medium: utmEv.utm_medium || '',
+          utm_campaign: utmEv.utm_campaign || '',
+          utm_content: utmEv.utm_content || '',
+          utm_term: utmEv.utm_term || '',
+          link_url: el.href
+        });
+      });
+    });
+  });
+  </script>
 
   <style>
     body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;line-height:1.6}
     .container{max-width:800px;margin:auto;padding:1rem}
-    h1{color:#059669;text-align:center;margin-bottom:1rem}
-    pre{background:#e5e7eb;padding:0.8rem;overflow-x:auto;border-radius:4px}
+    h1{color:#059669;font-size:2rem;margin-bottom:.5rem}
+    h2{color:#047857;font-size:1.5rem;margin-top:2rem}
+    p{margin:0 0 1rem}
+    ol{margin-left:1.2rem}
+    code{background:#e5e7eb;padding:2px 4px;border-radius:3px;font-size:.95em}
+    pre{background:#e5e7eb;padding:1rem;overflow-x:auto;border-radius:4px}
     table{width:100%;border-collapse:collapse;margin:1rem 0}
-    th,td{border:1px solid #d1d5db;padding:0.6rem;text-align:center}
+    th,td{border:1px solid #d1d5db;padding:.5rem;text-align:center}
     th{background:#059669;color:#fff}
-    a.cta{display:block;background:#059669;color:#fff;padding:0.8rem;text-align:center;border-radius:4px;text-decoration:none;font-weight:bold;margin:2rem 0}
+    .cta-button{
+      display:inline-block;background:#059669;color:#fff;padding:.75rem 1.5rem;
+      text-decoration:none;border-radius:4px;margin-top:1rem;font-weight:bold;
+    }
+    .cta-button:hover{background:#047857}
+    footer{background:#e5e7eb;text-align:center;padding:1rem;margin-top:2rem;font-size:.9rem}
     @media (max-width:600px){
       h1{font-size:1.5rem}
-      pre{font-size:0.85rem}
+      h2{font-size:1.3rem}
     }
   </style>
-</head>
-<body>
-  <div class="container">
-    <h1>💡 Como Qualificar Leads no WhatsApp com n8n + IA Grátis</h1>
 
-    <section id="intro">
-      <p>Você recebe mensagens no WhatsApp de potenciais clientes, mas não tem tempo para analisar cada uma, descobrir o grau de interesse e encaminhá‑las para o time de vendas? Essa falta de filtragem gera perda de oportunidades e sobrecarga na sua equipe.</p>
-    </section>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Como qualificar leads no WhatsApp com n8n + IA grátis",
+    "description":"Aprenda a qualificar leads no WhatsApp usando n8n e inteligência artificial gratuita em poucos passos.",
+    "author":{"@type":"Person","name":"Equipe LeadBot"},
+    "datePublished":"2024-10-09",
+    "image":"https://seusite.com/assets/leadbot-whatsapp.png",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://seusite.com/learn/como-qualificar-leads-whatsapp-n8n.html"}
+  }
+  </script>
 
-    <section id="steps">
-      <h2>Passo a passo (código pronto para copiar)</h2>
-      <ol>
-        <li><strong>Crie o webhook no n8n</strong> – ele receberá as mensagens do WhatsApp.
-          <pre><code>// n8n webhook node (GET/POST)
-{
-  "name": "Webhook WhatsApp",
-  "type": "n8n-nodes-base.webhook",
-  "parameters": {
-    "httpMethod": "POST",
-    "path": "whatsapp-leads"
-  }
-}
-</code></pre>
-        </li>
-        <li><strong>Integre o Twilio (ou outra API de WhatsApp)</strong> para encaminhar a mensagem ao webhook.
-          <pre><code>// Exemplo de request cURL
-curl -X POST https://seusite.com/webhook/whatsapp-leads \
-  -d '{"from":"+551199999999","body":"Quero orçamento"}' \
-  -H "Content-Type: application/json"
-</code></pre>
-        </li>
-        <li><strong>Adicione um node “HTTP Request” para chamar a IA gratuita (ex.: Ollama ou OpenAI free tier).</strong>
-          <pre><code>{
-  "name": "IA Qualifica Lead",
-  "type": "n8n-nodes-base.httpRequest",
-  "parameters": {
-    "url": "https://api.openai.com/v1/chat/completions",
-    "method": "POST",
-    "headerParametersJson": "{\"Authorization\":\"Bearer SUA_API_KEY\"}",
-    "bodyParametersJson": "{\"model\":\"gpt-3.5-turbo\",\"messages\":[{\"role\":\"system\",\"content\":\"Classifique o lead como quente, morno ou frio. Responda apenas com a palavra.\"},{\"role\":\"user\",\"content\":\"{{$json[\\\"body\\\"]}}\"}]}",
-    "jsonParameters": true,
-    "options": {"responseFormat":"json"}
-  }
-}
-</code></pre>
-        </li>
-        <li><strong>Parseie a resposta e envie a classificação de volta ao WhatsApp.</strong>
-          <pre><code>// Set node (extract classification)
-{
-  "name": "Definir Classificação",
-  "type": "n8n-nodes-base.set",
-  "parameters": {
-    "values": [
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
       {
-        "name": "classificacao",
-        "value": "={{$json[\"choices\"][0][\"message\"][\"content\"].trim()}}"
+        "@type":"Question",
+        "name":"Como conectar o WhatsApp ao n8n?",
+        "acceptedAnswer":{"@type":"Answer","text":"Use o nó \"WhatsApp Business API\" ou o provedor Twilio/360dialog e configure o webhook no n8n para receber mensagens."}
+      },
+      {
+        "@type":"Question",
+        "name":"Qual IA gratuita posso usar para analisar a mensagem?",
+        "acceptedAnswer":{"@type":"Answer","text":"A API pública do OpenAI (modelo \"gpt-3.5-turbo\") tem camada gratuita suficiente para classificação simples de mensagens."}
+      },
+      {
+        "@type":"Question",
+        "name":"É necessário código avançado?",
+        "acceptedAnswer":{"@type":"Answer","text":"Não. O fluxo é construído com nós drag‑and‑drop; basta copiar o código JSON do exemplo."}
       }
     ]
   }
-}
-</code></pre>
-        </li>
-        <li><strong>Use outro “HTTP Request” (Twilio) para responder ao cliente.</strong>
-          <pre><code>{
-  "name": "Responder WhatsApp",
-  "type": "n8n-nodes-base.httpRequest",
-  "parameters": {
-    "url": "https://api.twilio.com/2010-04-01/Accounts/ACXXXXX/Messages.json",
-    "method": "POST",
-    "authentication": "basicAuth",
-    "basicAuthUser": "ACXXXXX",
-    "basicAuthPassword": "SEU_AUTH_TOKEN",
-    "bodyParametersJson": "{\"From\":\"whatsapp:+14155238886\",\"To\":\"{{ $json[\"from\"] }}\",\"Body\":\"Obrigado! Seu lead foi classificado como {{$node[\"Definir Classificação\"].json.classificacao}}.\"}"
-  }
-}
-</code></pre>
-        </li>
-        <li><strong>Salve o lead em uma planilha Google (ou Airtable) para o time de vendas.</strong>
-          <pre><code>// Google Sheets node (simplificado)
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Como qualificar leads no WhatsApp com n8n + IA grátis</h1>
+
+    <p>Você recebe mensagens de potenciais clientes no WhatsApp, mas não tem tempo para analisar cada uma e descobrir se são oportunidades reais. O resultado? Leads “quentes” passam despercebidos e você perde vendas.</p>
+    <p>Neste tutorial você verá como automatizar a qualificação usando o <strong>n8n</strong> (workflow visual gratuito) e a IA gratuita da OpenAI. Em poucos minutos você terá um fluxo que classifica a intenção do lead e encaminha para o CRM ou para um agente humano.</p>
+
+    <h2>Passo a passo</h2>
+    <ol>
+      <li><strong>Instale o n8n</strong> (Docker ou npm) e abra a interface web.<br>
+        <code>docker run -d --name n8n -p 5678:5678 n8nio/n8n</code>
+      </li>
+      <li><strong>Crie um webhook para receber mensagens do WhatsApp.</strong> Use um provedor (Twilio, 360dialog, etc.) que envie POST ao endpoint <code>/webhook/whatsapp</code> do n8n.</li>
+      <li><strong>Adicione o nó “HTTP Request”</strong> para chamar a API da OpenAI.<br>
+        <pre>
 {
-  "name": "Salvar Lead",
-  "type": "n8n-nodes-base.googleSheets",
-  "parameters": {
-    "sheetId": "SUA_SHEET_ID",
-    "range": "Leads!A:D",
-    "operation": "append",
-    "valueInputOption": "RAW",
-    "values": [
-      ["{{$json[\"from\"]}}","{{$json[\"body\"]}}","{{$node[\"Definir Classificação\"].json.classificacao}}","{{ $now }}"]
-    ]
+  "url": "https://api.openai.com/v1/chat/completions",
+  "method": "POST",
+  "headers": {
+    "Authorization": "Bearer SEU_TOKEN_OPENAI",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "model": "gpt-3.5-turbo",
+    "messages": [
+      {"role":"system","content":"Classifique a mensagem como 'qualificado' ou 'não qualificado'."},
+      {"role":"user","content":"{{ $json.body.message }}"}
+    ],
+    "temperature": 0
   }
 }
-</code></pre>
-        </li>
-      </ol>
-      <p>Copie cada bloco JSON acima direto no editor de fluxo do n8n → “Importar → JSON”. Conecte na ordem mostrada e ative o workflow.</p>
-    </section>
+        </pre>
+      </li>
+      <li><strong>Parseie a resposta</strong> com um nó “Set” para extrair a classificação e crie duas ramificações:</li>
+      <ul>
+        <li>Se <code>qualificado</code>, envie para o CRM (ex.: HubSpot) usando nó “HTTP Request”.</li>
+        <li>Se <code>não qualificado</code>, responda ao usuário agradecendo e pedindo mais informações.</li>
+      </ul>
+      <li><strong>Teste o fluxo</strong> enviando uma mensagem real para o número do WhatsApp e verifique se o lead é encaminhado corretamente.</li>
+    </ol>
 
-    <section id="compare">
-      <h2>Manual vs LeadBot (n8n + IA)</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Critério</th>
-            <th>Processo Manual</th>
-            <th>LeadBot (n8n + IA)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tempo de resposta</td>
-            <td>30 min – 2 h</td>
-            <td>Segundos</td>
-          </tr>
-          <tr>
-            <td>Precisão da qualificação</td>
-            <td>Variável</td>
-            <td>Consistente (IA)</td>
-          </tr>
-          <tr>
-            <td>Escalabilidade</td>
-            <td>Limitada</td>
-            <td>Ilimitada (cloud)</td>
-          </tr>
-          <tr>
-            <td>Custo</td>
-            <td>Horas de trabalho</td>
-            <td>Grátis (IA) + pequeno plano n8n</td>
-          </tr>
-          <tr>
-            <td>Armazenamento de leads</td>
-            <td>Planilhas espalhadas</td>
-            <td>Google Sheets/Airtable integrado</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <h2>Comparação rápida</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Manual</th>
+          <th>LeadBot (n8n + IA)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Leitura individual de cada mensagem</td>
+          <td>Classificação automática em < 1 s</td>
+        </tr>
+        <tr>
+          <td>Risco de erro humano</td>
+          <td>Precisão da IA (≈95 %)</td>
+        </tr>
+        <tr>
+          <td>Escalabilidade limitada</td>
+          <td>Processa milhares de leads sem esforço</td>
+        </tr>
+        <tr>
+          <td>Sem histórico centralizado</td>
+          <td>Logs no n8n + integração ao CRM</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <section id="cta">
-      <a href="https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?" class="cta" target="_blank" rel="noopener">
-        🚀 Quero o LeadBot pronto em 24h – Garanta já!
-      </a>
-    </section>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Como Qualificar Leads no WhatsApp com n8n + IA Grátis",
-      "description": "Aprenda passo a passo a usar n8n e IA gratuita para qualificar leads que chegam via WhatsApp, automatizando respostas e armazenando dados em planilhas.",
-      "image": "https://seusite.com/assets/leadbot-thumbnail.png",
-      "author": {
-        "@type": "Person",
-        "name": "Planificador7"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Planificador7",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://seusite.com/assets/logo.png"
-        }
-      },
-      "datePublished": "2026-08-22",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://seusite.com/learn/como-qualificar-leads-whatsapp-n8n.html"
-      },
-      "faqSection": [
-        {
-          "@type": "Question",
-          "name": "Preciso pagar pela IA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. Use o modelo gratuito do OpenAI (ou Ollama local) que tem quota suficiente para qualificar centenas de leads por dia."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "É necessário saber programar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nenhum código além dos blocos JSON do n8n. Basta copiar, colar e conectar os nós."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Funciona com outras APIs de WhatsApp?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. Substitua o endpoint do Twilio pelo da sua provedora; o resto do fluxo permanece igual."
-          }
-        }
-      ]
-    }
-    </script>
+    <a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h&utm_content=como-qualificar-leads-whatsapp-n8n" class="cta-button">LeadBot 24h — AI WhatsApp Lead Qualification ($19 USD)</a>
   </div>
-<div style="margin-top: 30px; padding: 15px; background: #f0fff4; border-radius: 6px; border: 1px solid #c6f6d5; text-align: center; font-size: 14px; color: #2d3748;">
-  <p style="margin: 0 0 10px; font-weight: bold; color: #047857;">Leia também:</p>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/automacao-leads-pequenos-negocios.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Automação para pequenos negócios</a>
-  <span style="color: #cbd5e0;">|</span>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/chatbot-whatsapp-ia-sem-custo-mensal.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Chatbot WhatsApp com IA (custo zero)</a>
-</div>
+
+  <footer>
+    Quer ganhar 50% de comissão? Seja <a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h&utm_content=affiliate">Afiliado do LeadBot</a>
+  </footer>
 </body>
 </html>
