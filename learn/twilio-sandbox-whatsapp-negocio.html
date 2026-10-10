@@ -1,222 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><!-- GA4 INSTRUMENTATION C100 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
-document.addEventListener('DOMContentLoaded', function(){
-  var up = new URLSearchParams(window.location.search);
-  var utm = {};
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-    var v = up.get(k); if (v) utm[k] = v;
-  });
-  if (Object.keys(utm).length > 0) {
-    gtag('event', 'landing_page_view', {
-      event_category: 'funnel',
-      utm_source: utm.utm_source || '',
-      utm_medium: utm.utm_medium || '',
-      utm_campaign: utm.utm_campaign || '',
-      utm_content: utm.utm_content || '',
-      non_interaction: true
-    });
-  }
-  document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
-    el.addEventListener('click', function(){
-      if (!window.gtag) return;
-      var qi = el.href.indexOf('?');
-      var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
-      var utmEv = {};
-      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-        var v = qp.get(k); if (v) utmEv[k] = v;
-      });
-      gtag('event', 'cta_click', {
-        event_category: 'funnel',
-        destination: 'gumroad_checkout',
-        utm_source: utmEv.utm_source || '',
-        utm_medium: utmEv.utm_medium || '',
-        utm_campaign: utmEv.utm_campaign || '',
-        utm_content: utmEv.utm_content || '',
-        link_url: el.href
-      });
-      gtag('event', 'checkout_start', {
-        event_category: 'funnel',
-        destination: 'gumroad_checkout',
-        utm_source: utmEv.utm_source || '',
-        utm_medium: utmEv.utm_medium || '',
-        utm_campaign: utmEv.utm_campaign || '',
-        utm_content: utmEv.utm_content || '',
-        link_url: el.href
-      });
-    });
-  });
-});
-</script>
-
+<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Como testar o WhatsApp Business de graça com Twilio Sandbox</title>
-  <meta name="description" content="Aprenda passo a passo a configurar o Twilio WhatsApp Sandbox e testar mensagens no seu negócio sem custos.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twilio WhatsApp Sandbox para testes (grátis) – Guia rápido</title>
+  <meta name="description" content="Aprenda a configurar o Twilio WhatsApp Sandbox de forma simples e gratuita. Passo a passo, comparação com LeadBot e CTA para automação de leads.">
   <!-- Open Graph -->
-  <meta property="og:title" content="Como testar o WhatsApp Business de graça com Twilio Sandbox">
-  <meta property="og:description" content="Aprenda passo a passo a configurar o Twilio WhatsApp Sandbox e testar mensagens no seu negócio sem custos.">
+  <meta property="og:title" content="Twilio WhatsApp Sandbox para testes (grátis) – Guia rápido">
+  <meta property="og:description" content="Aprenda a configurar o Twilio WhatsApp Sandbox de forma simples e gratuita. Passo a passo, comparação com LeadBot e CTA para automação de leads.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://seusite.com/learn/twilio-sandbox-whatsapp-negocio.html">
-  <meta property="og:image" content="https://seusite.com/assets/whatsapp-sandbox.png">
+  <meta property="og:image" content="https://seusite.com/assets/twilio-whatsapp.png">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Como testar o WhatsApp Business de graça com Twilio Sandbox">
-  <meta name="twitter:description" content="Aprenda passo a passo a configurar o Twilio WhatsApp Sandbox e testar mensagens no seu negócio sem custos.">
-  <meta name="twitter:image" content="https://seusite.com/assets/whatsapp-sandbox.png">
+  <meta name="twitter:title" content="Twilio WhatsApp Sandbox para testes (grátis) – Guia rápido">
+  <meta name="twitter:description" content="Aprenda a configurar o Twilio WhatsApp Sandbox de forma simples e gratuita. Passo a passo, comparação com LeadBot e CTA para automação de leads.">
+  <meta name="twitter:image" content="https://seusite.com/assets/twilio-whatsapp.png">
+
+  <!-- GA4 INSTRUMENTATION C100 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
+  document.addEventListener('DOMContentLoaded', function(){
+    var up = new URLSearchParams(window.location.search);
+    var utmLp = {};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+      var v = up.get(k); if (v) utmLp[k] = v;
+    });
+    if (Object.keys(utmLp).length > 0) {
+      gtag('event', 'landing_page_view', {
+        event_category: 'funnel',
+        utm_source: utmLp.utm_source || '',
+        utm_medium: utmLp.utm_medium || '',
+        utm_campaign: utmLp.utm_campaign || '',
+        utm_content: utmLp.utm_content || '',
+        non_interaction: true
+      });
+    }
+    document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
+      el.addEventListener('click', function(){
+        if (!window.gtag) return;
+        var qi = el.href.indexOf('?');
+        var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
+        var utmEv = {};
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+          var v = qp.get(k); if (v) utmEv[k] = v;
+        });
+        gtag('event', 'cta_click', {
+          event_category: 'funnel',
+          destination: 'gumroad_checkout',
+          utm_source: utmEv.utm_source || '',
+          utm_medium: utmEv.utm_medium || '',
+          utm_campaign: utmEv.utm_campaign || '',
+          utm_content: utmEv.utm_content || '',
+          utm_term: utmEv.utm_term || '',
+          link_url: el.href
+        });
+        gtag('event', 'checkout_start', {
+          event_category: 'funnel',
+          destination: 'gumroad_checkout',
+          utm_source: utmEv.utm_source || '',
+          utm_medium: utmEv.utm_medium || '',
+          utm_campaign: utmEv.utm_campaign || '',
+          utm_content: utmEv.utm_content || '',
+          utm_term: utmEv.utm_term || '',
+          link_url: el.href
+        });
+      });
+    });
+  });
+  </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Twilio WhatsApp Sandbox para testes (grátis)",
+        "description": "Guia rápido para ativar o sandbox gratuito do WhatsApp no Twilio, ideal para validar fluxos antes de colocar em produção.",
+        "author": {
+          "@type": "Person",
+          "name": "LeadBot Team"
+        },
+        "datePublished": "2024-10-10",
+        "image": "https://seusite.com/assets/twilio-whatsapp.png",
+        "url": "https://seusite.com/learn/twilio-sandbox-whatsapp-negocio.html"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O sandbox do WhatsApp no Twilio é realmente gratuito?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O sandbox permite enviar e receber mensagens ilimitadas durante o período de testes sem custo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso usar o número do sandbox em produção depois?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O número do sandbox serve apenas para testes. Para produção você precisará solicitar aprovação do número oficial junto ao WhatsApp Business."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso de cartão de crédito para criar a conta no Twilio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, o Twilio pede um cartão de crédito para validar a conta, mas não há cobrança enquanto você estiver usando apenas o sandbox."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
-    body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;}
-    .container{max-width:800px;margin:auto;padding:1rem;}
-    h1{background:#059669;color:#fff;padding:1rem;margin:0 0 1rem 0;font-size:1.8rem;text-align:center;}
-    p{line-height:1.6;margin:0 0 1rem 0;}
-    ol{margin:0 0 1rem 1.5rem;}
-    code{background:#e5e7eb;padding:0.2rem 0.4rem;border-radius:4px;font-family:monospace;}
-    pre{background:#e5e7eb;padding:1rem;overflow:auto;border-radius:4px;}
-    table{width:100%;border-collapse:collapse;margin:1rem 0;}
-    th,td{border:1px solid #d1d5db;padding:0.5rem;text-align:center;}
-    th{background:#059669;color:#fff;}
-    .cta{display:block;width:100%;text-align:center;background:#059669;color:#fff;padding:0.75rem;margin:2rem 0 0 0;border:none;border-radius:4px;font-size:1rem;cursor:pointer;text-decoration:none;}
-    @media (min-width:600px){
-      h1{font-size:2.2rem;}
+    body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; color:#333;}
+    .container {max-width:800px; margin:auto; padding:20px;}
+    h1 {color:#059669; font-size:2rem; margin-bottom:0.5rem;}
+    h2 {color:#047857; font-size:1.5rem; margin-top:1.5rem;}
+    p {margin:0.8rem 0;}
+    ol {margin-left:1.2rem;}
+    li {margin:0.6rem 0;}
+    code {background:#f4f4f4; padding:2px 4px; border-radius:3px; font-family:monospace;}
+    table {width:100%; border-collapse:collapse; margin:1rem 0;}
+    th, td {border:1px solid #ddd; padding:0.6rem; text-align:left;}
+    th {background:#059669; color:#fff;}
+    .cta-button {
+      display:inline-block;
+      background:#059669;
+      color:#fff;
+      padding:0.8rem 1.2rem;
+      text-decoration:none;
+      border-radius:4px;
+      font-weight:bold;
+      margin-top:1rem;
+    }
+    .cta-button:hover {background:#047857;}
+    footer {background:#f9f9f9; text-align:center; padding:1rem; font-size:0.9rem; margin-top:2rem;}
+    @media (max-width:600px){
+      h1{font-size:1.6rem;}
+      h2{font-size:1.3rem;}
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Teste seu WhatsApp Business de graça com o Twilio Sandbox</h1>
+    <h1>Twilio WhatsApp Sandbox para testes (grátis)</h1>
 
-    <p><strong>Problema real:</strong> Você quer automatizar mensagens no WhatsApp para seu negócio, mas não tem número de teste e ainda não quer gastar com a integração oficial.</p>
+    <p>Você quer testar automações de WhatsApp sem gastar nada? Muitos empreendedores ficam travados porque acreditam que precisam de um número oficial aprovado antes de validar seus fluxos. Na prática, o <strong>Twilio WhatsApp Sandbox</strong> oferece um número temporário totalmente gratuito para experimentação.</p>
+    <p>Com ele você pode:</p>
+    <ul>
+      <li>Enviar e receber mensagens ilimitadas;</li>
+      <li>Integrar com APIs, bots e CRMs;</li>
+      <li>Validar a experiência do cliente antes de investir em número oficial.</li>
+    </ul>
 
-    <h2>Passo a passo para ativar o Sandbox</h2>
+    <h2>Passo a passo para ativar o sandbox</h2>
     <ol>
-      <li>Crie uma conta <a href="https://www.twilio.com/try-twilio" target="_blank">gratuita no Twilio</a> e acesse o <strong>Console</strong>.</li>
-      <li>No menu, vá em <code>Messaging → Try it out → WhatsApp Sandbox</code>.</li>
-      <li>Copie o código <code>XXXXXX</code> exibido e envie como mensagem para <code>whatsapp:+14155238886</code> a partir do seu celular.</li>
-      <li>Depois que o Twilio confirmar a associação, anote o <strong>Sandbox Number</strong> (ex.: <code>whatsapp:+14155238886</code>) e o <strong>Auth Token</strong> nas credenciais da conta.</li>
-      <li>Teste enviando uma mensagem usando <code>curl</code> (substitua os valores pelos seus):</li>
+      <li>
+        <strong>Crie a conta no Twilio</strong><br>
+        Acesse <a href="https://www.twilio.com/try-twilio" target="_blank">twilio.com/try-twilio</a>, preencha seus dados e informe um cartão de crédito (não será cobrado enquanto usar apenas o sandbox).
+      </li>
+      <li>
+        <strong>Ative o WhatsApp Sandbox</strong><br>
+        No console, vá em <em>Messaging → Try it out → WhatsApp Sandbox</em>. Clique em <code>Activate Sandbox</code>.
+      </li>
+      <li>
+        <strong>Conecte seu celular ao sandbox</strong><br>
+        O Twilio exibirá um código <code>join</code> e um número. Envie <code>join {código}</code> via WhatsApp para esse número. Você receberá a confirmação de que está conectado.
+      </li>
+      <li>
+        <strong>Teste enviando mensagens</strong><br>
+        Use a ferramenta <em>Programmable Messaging</em> ou execute um <code>curl</code> rápido:<br>
+        <code>
+        curl -X POST https://api.twilio.com/2010-04-01/Accounts/ACXXXX/Messages.json \\
+        --data-urlencode "To=whatsapp:+{SEU_NUMERO}" \\
+        --data-urlencode "From=whatsapp:+{NUMERO_SANDBOX}" \\
+        --data-urlencode "Body=Olá, teste do sandbox!" \\
+        -u ACXXXX:AUTH_TOKEN
+        </code>
+      </li>
     </ol>
 
-    <pre><code>curl -X POST https://api.twilio.com/2010-04-01/Accounts/SEU_ACCOUNT_SID/Messages.json \
---data-urlencode "Body=Olá, teste do Sandbox!" \
---data-urlencode "From=whatsapp:+14155238886" \
---data-urlencode "To=whatsapp:+SEU_NUMERO_DE_TELEFONE" \
--u SEU_ACCOUNT_SID:SEU_AUTH_TOKEN
-</code></pre>
-
-    <h2>Comparação rápida</h2>
+    <h2>Comparação rápida: Configuração manual vs LeadBot</h2>
     <table>
       <thead>
         <tr>
-          <th>Recurso</th>
-          <th>Configuração Manual</th>
-          <th>LeadBot (24h)</th>
+          <th>Critério</th>
+          <th>Manual (Twilio)</th>
+          <th>LeadBot (AI WhatsApp)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Tempo de implantação</td>
-          <td>30‑60 min (inclui criação de conta, sandbox e código)</td>
-          <td>5 min (instalação automática)</td>
+          <td>Tempo de implementação</td>
+          <td>30‑60 min (contas, sandbox, código)</td>
+          <td>5 min (plug‑and‑play)</td>
         </tr>
         <tr>
-          <td>Conhecimento técnico</td>
-          <td>Necessário entender API REST e credenciais</td>
-          <td>Zero código, interface drag‑and‑drop</td>
+          <td>Custo inicial</td>
+          <td>Gratuito (sandbox) + cartão de crédito</td>
+          <td>$19 USD (acesso imediato)</td>
         </tr>
         <tr>
-          <td>Limite de mensagens</td>
-          <td>Até 1 000 mensagens/dia (sandbox)</td>
-          <td>Plano LeadBot 24h: 5 000 mensagens/dia</td>
+          <td>Necessidade de código</td>
+          <td>Sim (API, webhook)</td>
+          <td>Não (interface visual)</td>
         </tr>
         <tr>
-          <td>Custo</td>
-          <td>Grátis (sandbox) + custos de número quando sair do sandbox</td>
-          <td>R$ 49,90 (acesso ao LeadBot por 24 h)</td>
+          <td>Qualidade de leads</td>
+          <td>Depende da sua lógica</td>
+          <td>AI qualifica e segmenta automaticamente</td>
         </tr>
       </tbody>
     </table>
 
-    <a href="https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?" class="cta" target="_blank">Quero o LeadBot 24h e automatizar já!</a>
+    <a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h&utm_content=twilio-sandbox-whatsapp-negocio&utm_term=" class="cta-button">LeadBot 24h — AI WhatsApp Lead Qualification ($19 USD)</a>
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Como testar o WhatsApp Business de graça com Twilio Sandbox",
-  "description": "Aprenda passo a passo a configurar o Twilio WhatsApp Sandbox e testar mensagens no seu negócio sem custos.",
-  "author": {
-    "@type": "Person",
-    "name": "LeadBot"
-  },
-  "datePublished": "2026-08-23",
-  "image": "https://seusite.com/assets/whatsapp-sandbox.png",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://seusite.com/learn/twilio-sandbox-whatsapp-negocio.html"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "LeadBot",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://seusite.com/assets/logo.png"
-    }
-  }
-}
-    </script>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "O que é o Twilio WhatsApp Sandbox?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "É um ambiente de teste gratuito fornecido pela Twilio que permite enviar e receber mensagens WhatsApp sem precisar de um número oficial."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quanto custa usar o Sandbox?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "O Sandbox é totalmente gratuito enquanto você está em fase de testes. Quando migrar para produção, haverá custos de número e mensagem."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Preciso de um número de telefone próprio?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Não para testar. Você usa o número do Sandbox (whatsapp:+14155238886). Para produção, sim, será necessário registrar um número oficial."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Posso usar o Sandbox com o LeadBot?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim. O LeadBot já vem configurado para conectar ao Sandbox, permitindo que você comece a automatizar imediatamente."
-      }
-    }
-  ]
-}
-    </script>
+    <footer>
+      Quer ganhar 50% de comissão? Seja Afiliado do LeadBot
+    </footer>
   </div>
-<div style="margin-top: 30px; padding: 15px; background: #f0fff4; border-radius: 6px; border: 1px solid #c6f6d5; text-align: center; font-size: 14px; color: #2d3748;">
-  <p style="margin: 0 0 10px; font-weight: bold; color: #047857;">Leia também:</p>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/chatbot-whatsapp-ia-sem-custo-mensal.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Chatbot WhatsApp com IA</a>
-  <span style="color: #cbd5e0;">|</span>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/como-qualificar-leads-whatsapp-n8n.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Fluxo completo n8n + WhatsApp</a>
-</div>
 </body>
 </html>
