@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><!-- GA4 INSTRUMENTATION C100 -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Importar workflow .json no n8n em 2 cliques – Guia rápido</title>
+<meta name="description" content="Aprenda a importar workflows JSON no n8n em apenas 2 cliques, economizando tempo e evitando erros. Passo a passo simples e comparativo com a automação LeadBot.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Importar workflow .json no n8n em 2 cliques – Guia rápido">
+<meta property="og:description" content="Aprenda a importar workflows JSON no n8n em apenas 2 cliques, economizando tempo e evitando erros. Passo a passo simples e comparativo com a automação LeadBot.">
+<meta property="og:url" content="https://seusite.com/learn/workflow-n8n-importar-json.html">
+<meta property="og:image" content="https://seusite.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Importar workflow .json no n8n em 2 cliques – Guia rápido">
+<meta name="twitter:description" content="Aprenda a importar workflows JSON no n8n em apenas 2 cliques, economizando tempo e evitando erros. Passo a passo simples e comparativo com a automação LeadBot.">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -9,17 +21,17 @@ gtag('js', new Date());
 gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
 document.addEventListener('DOMContentLoaded', function(){
   var up = new URLSearchParams(window.location.search);
-  var utm = {};
+  var utmLp = {};
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-    var v = up.get(k); if (v) utm[k] = v;
+    var v = up.get(k); if (v) utmLp[k] = v;
   });
-  if (Object.keys(utm).length > 0) {
+  if (Object.keys(utmLp).length > 0) {
     gtag('event', 'landing_page_view', {
       event_category: 'funnel',
-      utm_source: utm.utm_source || '',
-      utm_medium: utm.utm_medium || '',
-      utm_campaign: utm.utm_campaign || '',
-      utm_content: utm.utm_content || '',
+      utm_source: utmLp.utm_source || '',
+      utm_medium: utmLp.utm_medium || '',
+      utm_campaign: utmLp.utm_campaign || '',
+      utm_content: utmLp.utm_content || '',
       non_interaction: true
     });
   }
@@ -39,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function(){
         utm_medium: utmEv.utm_medium || '',
         utm_campaign: utmEv.utm_campaign || '',
         utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
         link_url: el.href
       });
       gtag('event', 'checkout_start', {
@@ -48,165 +61,60 @@ document.addEventListener('DOMContentLoaded', function(){
         utm_medium: utmEv.utm_medium || '',
         utm_campaign: utmEv.utm_campaign || '',
         utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
         link_url: el.href
       });
     });
   });
 });
 </script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Importe um workflow .json no n8n em 2 cliques – Guia rápido</title>
-  <meta name="description" content="Aprenda como importar arquivos .json de workflows no n8n em apenas dois cliques, sem complicações. Veja passo a passo, compare métodos e descubra a solução LeadBot.">
-  <meta property="og:title" content="Importe um workflow .json no n8n em 2 cliques – Guia rápido">
-  <meta property="og:description" content="Aprenda como importar arquivos .json de workflows no n8n em apenas dois cliques, sem complicações. Veja passo a passo, compare métodos e descubra a solução LeadBot.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://seusite.com/learn/workflow-n8n-importar-json.html">
-  <meta property="og:image" content="https://seusite.com/assets/n8n-import.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Importe um workflow .json no n8n em 2 cliques – Guia rápido">
-  <meta name="twitter:description" content="Aprenda como importar arquivos .json de workflows no n8n em apenas dois cliques, sem complicações.">
-  <meta name="twitter:image" content="https://seusite.com/assets/n8n-import.png">
-  <style>
-    body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;}
-    .container{max-width:800px;margin:auto;padding:1rem;}
-    h1{color:#059669;text-align:center;margin-bottom:1rem;}
-    p{line-height:1.6;margin-bottom:1rem;}
-    ol{margin-left:1.2rem;}
-    code{background:#e5e7eb;padding:0.2rem 0.4rem;border-radius:4px;font-family:monospace;}
-    pre{background:#e5e7eb;padding:1rem;overflow-x:auto;border-radius:4px;}
-    table{width:100%;border-collapse:collapse;margin:1.5rem 0;}
-    th,td{border:1px solid #d1d5db;padding:0.6rem;text-align:center;}
-    th{background:#059669;color:#fff;}
-    .cta{display:flex;justify-content:center;margin:2rem 0;}
-    .cta a{background:#059669;color:#fff;padding:0.8rem 1.6rem;border-radius:6px;text-decoration:none;font-weight:bold;}
-    @media (max-width:600px){
-      h1{font-size:1.5rem;}
-      .cta a{width:100%;text-align:center;}
-    }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Importe um workflow .json no n8n em 2 cliques – Guia rápido",
-    "description": "Aprenda como importar arquivos .json de workflows no n8n em apenas dois cliques, sem complicações.",
-    "image": "https://seusite.com/assets/n8n-import.png",
-    "author": {
-      "@type": "Person",
-      "name": "LeadBot"
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://seusite.com/learn/workflow-n8n-importar-json.html"},
+  "headline":"Importar workflow .json no n8n em 2 cliques – Guia rápido",
+  "description":"Aprenda a importar workflows JSON no n8n em apenas 2 cliques, economizando tempo e evitando erros. Passo a passo simples e comparativo com a automação LeadBot.",
+  "author":{"@type":"Person","name":"LeadBot"},
+  "publisher":{"@type":"Organization","name":"LeadBot","logo":{"@type":"ImageObject","url":"https://seusite.com/images/logo.png"}},
+  "datePublished":"2026-10-10",
+  "image":"https://seusite.com/images/og-image.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Como importar um arquivo .json no n8n?",
+      "acceptedAnswer":{"@type":"Answer","text":"Baixe o arquivo .json, acesse a interface do n8n, vá em Import/Export > Import > Import JSON e cole o conteúdo ou carregue o arquivo. Clique em Importar e pronto!"}
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "LeadBot",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://seusite.com/assets/logo.png"
-      }
-    },
-    "datePublished": "2024-10-01",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://seusite.com/learn/workflow-n8n-importar-json.html"
+    {
+      "@type":"Question",
+      "name":"Qual a diferença entre importar manualmente e usar o LeadBot?",
+      "acceptedAnswer":{"@type":"Answer","text":"O LeadBot automatiza a importação e a configuração de workflows de qualificação de leads, eliminando passos repetitivos e reduzindo erros humanos."}
     }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "O que é n8n?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "n8n é uma ferramenta de automação de fluxos de trabalho (workflow) open‑source que permite conectar APIs, bancos de dados e serviços sem precisar escrever código."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Preciso de uma conta paga para importar workflows?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Não. A importação de arquivos .json funciona tanto na versão gratuita quanto na paga. O que muda são os limites de execução."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Como o LeadBot simplifica a importação?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "LeadBot automatiza todo o processo com um botão único, eliminando a necessidade de abrir o editor de importação, selecionar o arquivo e confirmar manualmente."
-        }
-      }
-    ]
-  }
-  </script>
+  ]
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;background:#f4f4f4;color:#333}
+.container{max-width:800px;margin:auto;padding:20px;background:#fff;border-radius:8px}
+h1{color:#059669;font-size:2em;margin-top:0}
+p{line-height:1.6}
+ol{padding-left:20px}
+table{width:100%;border-collapse:collapse;margin:20px 0}
+th,td{border:1px solid #ddd;padding:8px;text-align:center}
+th{background:#047857;color:#fff}
+.cta-button{display:inline-block;background:#059669;color:#fff;padding:12px 20px;border-radius:4px;text-decoration:none;font-weight:bold}
+.cta-button:hover{background:#047857}
+footer{font-size:0.9em;color:#777;text-align:center;margin-top:20px}
+@media(max-width:600px){h1{font-size:1.5em}}
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Importar workflow .json no n8n em 2 cliques</h1>
-
-    <p>Você já perdeu tempo abrindo o n8n, navegando até a seção de importação, selecionando o arquivo .json e ainda assim teve que ajustar alguns campos? Esse processo manual pode ser frustrante, especialmente quando você precisa replicar o mesmo workflow em vários ambientes.</p>
-
-    <h2>Passo a passo (2 cliques)</h2>
-    <ol>
-      <li>
-        <strong>Abra o LeadBot e escolha “Importar workflow”.</strong>  
-        <pre><code>// Clique no botão “Importar workflow” no painel do LeadBot</code></pre>
-      </li>
-      <li>
-        <strong>Selecione o arquivo .json e confirme.</strong>  
-        <pre><code>// Selecione seu arquivo .json e clique em “Confirmar”. O LeadBot enviará tudo para o n8n automaticamente.</code></pre>
-      </li>
-    </ol>
-
-    <h2>Comparação rápida</h2>
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>Método Manual</th>
-          <th>LeadBot</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Tempo</td>
-          <td>3‑5 minutos</td>
-          <td>≤ 30 segundos</td>
-        </tr>
-        <tr>
-          <td>Complexidade</td>
-          <td>Alto (várias telas)</td>
-          <td>Baixo (2 cliques)</td>
-        </tr>
-        <tr>
-          <td>Erros comuns</td>
-          <td>Arquivo errado, campos não mapeados</td>
-          <td>Quase zero</td>
-        </tr>
-        <tr>
-          <td>Automação</td>
-          <td>Nenhuma</td>
-          <td>Integração direta com n8n</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="cta">
-      <a href="https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?" target="_blank" rel="noopener">
-        🚀 Quero o LeadBot 24h e importar em 2 cliques!
-      </a>
-    </div>
-  </div>
-<div style="margin-top: 30px; padding: 15px; background: #f0fff4; border-radius: 6px; border: 1px solid #c6f6d5; text-align: center; font-size: 14px; color: #2d3748;">
-  <p style="margin: 0 0 10px; font-weight: bold; color: #047857;">Leia também:</p>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/como-qualificar-leads-whatsapp-n8n.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Fluxo completo n8n + WhatsApp</a>
-  <span style="color: #cbd5e0;">|</span>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/automacao-leads-pequenos-negocios.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Automação para pequenos negócios</a>
-</div>
-</body>
-</html>
+<div class="container">
+<h1>Importar workflow .json no n8n em 2 cliques – Guia rápido</h1>
+<p>Você já precisou configurar um fluxo complexo no n8n
