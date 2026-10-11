@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><!-- GA4 INSTRUMENTATION C100 -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atendimento automático para imobiliárias com n8n e WhatsApp</title>
+<meta name="description" content="Aprenda a automatizar o atendimento de leads imobiliários usando n8n e WhatsApp. Ganhe tempo, reduza custos e aumente sua taxa de conversão em poucos passos.">
+<meta property="og:title" content="Atendimento automático para imobiliárias com n8n e WhatsApp">
+<meta property="og:description" content="Aprenda a automatizar o atendimento de leads imobiliários usando n8n e WhatsApp. Ganhe tempo, reduza custos e aumente sua taxa de conversão em poucos passos.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://seusite.com/learn/atendimento-automatico-imobiliaria-n8n.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Atendimento automático para imobiliárias com n8n e WhatsApp">
+<meta name="twitter:description" content="Aprenda a automatizar o atendimento de leads imobiliários usando n8n e WhatsApp. Ganhe tempo, reduza custos e aumente sua taxa de conversão em poucos passos.">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -9,17 +20,17 @@ gtag('js', new Date());
 gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
 document.addEventListener('DOMContentLoaded', function(){
   var up = new URLSearchParams(window.location.search);
-  var utm = {};
+  var utmLp = {};
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-    var v = up.get(k); if (v) utm[k] = v;
+    var v = up.get(k); if (v) utmLp[k] = v;
   });
-  if (Object.keys(utm).length > 0) {
+  if (Object.keys(utmLp).length > 0) {
     gtag('event', 'landing_page_view', {
       event_category: 'funnel',
-      utm_source: utm.utm_source || '',
-      utm_medium: utm.utm_medium || '',
-      utm_campaign: utm.utm_campaign || '',
-      utm_content: utm.utm_content || '',
+      utm_source: utmLp.utm_source || '',
+      utm_medium: utmLp.utm_medium || '',
+      utm_campaign: utmLp.utm_campaign || '',
+      utm_content: utmLp.utm_content || '',
       non_interaction: true
     });
   }
@@ -39,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function(){
         utm_medium: utmEv.utm_medium || '',
         utm_campaign: utmEv.utm_campaign || '',
         utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
         link_url: el.href
       });
       gtag('event', 'checkout_start', {
@@ -48,282 +60,91 @@ document.addEventListener('DOMContentLoaded', function(){
         utm_medium: utmEv.utm_medium || '',
         utm_campaign: utmEv.utm_campaign || '',
         utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
         link_url: el.href
       });
     });
   });
 });
 </script>
-
-    <meta charset="UTF-8">
-    <title>Atendimento Automático para Imobiliárias com n8n + WhatsApp – 24h LeadBot</title>
-    <meta name="description" content="Descubra como automatizar o atendimento de leads imobiliários usando n8n e WhatsApp. Guia passo‑a‑passo, comparação com o método manual e link para adquirir o LeadBot 24h.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Atendimento Automático para Imobiliárias com n8n + WhatsApp">
-    <meta property="og:description" content="Aprenda a montar um fluxo de captura e resposta automática de leads imobiliários usando n8n e WhatsApp em poucos minutos.">
-    <meta property="og:url" content="https://seusite.com/learn/atendimento-automatico-imobiliaria-n8n.html">
-    <meta property="og:image" content="https://seusite.com/assets/leadbot-og.png">
-    <meta property="og:type" content="article">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Atendimento Automático para Imobiliárias com n8n + WhatsApp">
-    <meta name="twitter:description" content="Guia rápido para automatizar o contato com leads via WhatsApp usando n8n.">
-    <meta name="twitter:image" content="https://seusite.com/assets/leadbot-twitter.png">
-
-    <style>
-        body{
-            font-family:Arial,Helvetica,sans-serif;
-            margin:0;
-            padding:0;
-            background:#f9fafb;
-            color:#111;
-        }
-        .container{
-            max-width:800px;
-            margin:auto;
-            padding:1rem;
-        }
-        h1{
-            color:#059669;
-            font-size:2rem;
-            margin-bottom:0.5rem;
-        }
-        p{
-            line-height:1.6;
-            margin-bottom:1rem;
-        }
-        ol{
-            padding-left:1.5rem;
-        }
-        code{
-            background:#e5e7eb;
-            padding:0.2rem 0.4rem;
-            border-radius:4px;
-            font-family:monospace;
-        }
-        pre{
-            background:#1e293b;
-            color:#f8fafc;
-            padding:1rem;
-            overflow-x:auto;
-            border-radius:6px;
-        }
-        table{
-            width:100%;
-            border-collapse:collapse;
-            margin:1.5rem 0;
-        }
-        th,td{
-            border:1px solid #d1d5db;
-            padding:0.75rem;
-            text-align:center;
-        }
-        th{
-            background:#059669;
-            color:#fff;
-        }
-        .cta{
-            display:block;
-            width:100%;
-            text-align:center;
-            background:#059669;
-            color:#fff;
-            padding:0.75rem;
-            border:none;
-            border-radius:6px;
-            font-size:1.1rem;
-            text-decoration:none;
-            margin-top:2rem;
-        }
-        @media (max-width:600px){
-            h1{font-size:1.5rem;}
-        }
-    </style>
-
-    <!-- JSON‑LD Schema.org Article -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://seusite.com/learn/atendimento-automatico-imobiliaria-n8n.html"
+  },
+  "headline": "Atendimento automático para imobiliárias com n8n e WhatsApp",
+  "description": "Aprenda a automatizar o atendimento de leads imobiliários usando n8n e WhatsApp. Ganhe tempo, reduza custos e aumente sua taxa de conversão em poucos passos.",
+  "author": {
+    "@type": "Person",
+    "name": "Seu Nome"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Seu Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://seusite.com/logo.png"
+    }
+  },
+  "datePublished": "2026-10-11",
+  "dateModified": "2026-10-11"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Atendimento Automático para Imobiliárias com n8n + WhatsApp",
-      "description": "Guia passo a passo para automatizar o atendimento de leads imobiliários usando n8n e WhatsApp, comparando o método manual com o LeadBot 24h.",
-      "image": "https://seusite.com/assets/leadbot-og.png",
-      "author": {
-        "@type": "Person",
-        "name": "LeadBot"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "LeadBot",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://seusite.com/assets/logo.png"
-        }
-      },
-      "datePublished": "2024-10-01",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://seusite.com/learn/atendimento-automatico-imobiliaria-n8n.html"
+      "@type": "Question",
+      "name": "Como integrar o WhatsApp ao n8n?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use o nó HTTP Request ou o nó WhatsApp Business API para enviar e receber mensagens, autenticando com as credenciais da API."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais custos envolvidos na automação?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Além do custo da API do WhatsApp, o n8n pode ser hospedado gratuitamente ou em VPS, reduzindo o investimento inicial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é LeadBot 24h?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LeadBot 24h é uma solução pronta que já integra n8n e WhatsApp, qualificando leads em tempo real com IA."
       }
     }
-    </script>
-
-    <!-- JSON‑LD FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Preciso saber programar para usar o n8n?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. O n8n possui interface visual drag‑and‑drop. O tutorial abaixo já traz o fluxo pronto para copiar e colar."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "O WhatsApp funciona sem API oficial?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usamos o serviço “WhatsApp Cloud API” da Meta, que tem plano gratuito para até 1.000 mensagens por mês."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quanto tempo leva para colocar o LeadBot em operação?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Menos de 15 minutos se você seguir o passo a passo e já possuir conta no n8n e no Meta for Developers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Posso personalizar as mensagens enviadas?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. Basta editar o nó “Set” que contém o texto da mensagem ou usar variáveis do lead capturado."
-          }
-        }
-      ]
-    }
-    </script>
+  ]
+}
+</script>
+<style>
+body{font-family:Arial,sans-serif;margin:0;padding:0;background:#fafafa;color:#333}
+.container{max-width:800px;margin:auto;padding:1rem}
+h1{color:#059669}
+button, .cta-button{background:#059669;color:#fff;border:none;padding:0.75rem 1.5rem;font-size:1rem;border-radius:4px;text-decoration:none;display:inline-block}
+.cta-button:hover{background:#047857}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th,td{border:1px solid #ddd;padding:0.75rem;text-align:left}
+th{background:#f0f0f0}
+footer{font-size:0.9rem;text-align:center;padding:1rem 0;background:#f7f7f7}
+pre{background:#eee;padding:1rem;border-radius:4px;overflow:auto}
+code{font-family:monospace}
+@media (max-width:600px){
+  body{font-size:0.95rem}
+  h1{font-size:1.5rem}
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <!-- 1. Título -->
-        <h1>🚀 Atendimento Automático 24h para Imobiliárias com n8n + WhatsApp</h1>
-
-        <!-- 2. Introdução -->
-        <p><strong>Problema real:</strong> Corretoras recebem dezenas de mensagens por dia no WhatsApp, mas nem sempre conseguem responder rapidamente. Leads que ficam <em>no vácuo</em> acabam indo para a concorrência.</p>
-
-        <!-- 3. Passo a passo -->
-        <h2>Passo a passo (código mínimo copiável)</h2>
-        <ol>
-            <li>
-                <strong>Crie a conta no n8n (cloud ou self‑hosted).</strong>
-                <p>Abra <code>https://app.n8n.io</code>, registre‑se e crie um novo workflow.</p>
-            </li>
-            <li>
-                <strong>Conecte o WhatsApp Cloud API.</strong>
-                <p>Instale o nó <code>HTTP Request</code> e configure:</p>
-                <pre><code>{
-  "method": "POST",
-  "url": "https://graph.facebook.com/v19.0/{{WHATSAPP_PHONE_ID}}/messages",
-  "auth": {
-    "type": "Bearer",
-    "bearer": "{{WHATSAPP_ACCESS_TOKEN}}"
-  },
-  "json": true,
-  "body": {
-    "messaging_product": "whatsapp",
-    "to": "{{$json[&quot;phone&quot;]}}",
-    "type": "text",
-    "text": { "body": "Olá {{ $json[&quot;name&quot;] }}, obrigado por entrar em contato! Em que posso ajudar?" }
-  }
-}</code></pre>
-                <p>Substitua <code>{{WHATSAPP_PHONE_ID}}</code> e <code>{{WHATSAPP_ACCESS_TOKEN}}</code> pelos valores da sua app Meta.</p>
-            </li>
-            <li>
-                <strong>Capture o lead via formulário (Google Forms, Typeform ou Webhook).</strong>
-                <p>Use o nó <code>Webhook</code> como gatilho:</p>
-                <pre><code>{
-  "httpMethod": "POST",
-  "path": "lead-imob"
-}</code></pre>
-            </li>
-            <li>
-                <strong>Mapeie os campos.</strong>
-                <p>Adicione um nó <code>Set</code> para garantir que o JSON tenha <code>name</code> e <code>phone</code>:</p>
-                <pre><code>{
-  "name": "={{$json[&quot;nome&quot;]}}",
-  "phone": "={{$json[&quot;telefone&quot;]}}"
-}</code></pre>
-            </li>
-            <li>
-                <strong>Encadeie os nós.</strong>
-                <p>Conecte <code>Webhook → Set → HTTP Request</code>. Salve e ative o workflow.</p>
-            </li>
-            <li>
-                <strong>Teste.</strong>
-                <p>Envie um POST para <code>https://seusubdominio.n8n.cloud/webhook/lead-imob</code> com JSON:</p>
-                <pre><code>{
-  "nome": "João Silva",
-  "telefone": "5511999999999"
-}</code></pre>
-                <p>Você receberá a mensagem automática no WhatsApp do lead.</p>
-            </li>
-        </ol>
-
-        <!-- 4. Comparação rápida -->
-        <h2>Manual vs LeadBot 24h</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Manual</th>
-                    <th>LeadBot 24h (n8n + WhatsApp)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Resposta depende de horário e disponibilidade da equipe</td>
-                    <td>Resposta instantânea 24h/7</td>
-                </tr>
-                <tr>
-                    <td>Alto risco de leads “perdidos”</td>
-                    <td>Taxa de conversão até 3x maior</td>
-                </tr>
-                <tr>
-                    <td>Processos manuais, planilhas e anotações</td>
-                    <td>Dados centralizados no n8n, exportáveis a CRM</td>
-                </tr>
-                <tr>
-                    <td>Escala limitada ao número de atendentes</td>
-                    <td>Escala ilimitada, apenas custo de mensagens</td>
-                </tr>
-                <tr>
-                    <td>Tempo de implementação > 1 semana</td>
-                    <td>Implantação < 15 minutos com o fluxo pronto</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- 5. CTA final -->
-        <a href="https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?" class="cta" target="_blank" rel="noopener">
-            👉 Adquirir LeadBot 24h – Automação completa por <strong>R$ 97</strong>
-        </a>
-
-        <!-- 6. FAQ já está no JSON‑LD acima -->
-    </div>
-<div style="margin-top: 30px; padding: 15px; background: #f0fff4; border-radius: 6px; border: 1px solid #c6f6d5; text-align: center; font-size: 14px; color: #2d3748;">
-  <p style="margin: 0 0 10px; font-weight: bold; color: #047857;">Leia também:</p>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/automacao-leads-pequenos-negocios.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Automação para pequenos negócios</a>
-  <span style="color: #cbd5e0;">|</span>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/chatbot-whatsapp-ia-sem-custo-mensal.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Chatbot WhatsApp com IA</a>
-</div>
-</body>
-</html>
+<div class="container">
+<h1>Atendimento automático para imobiliárias com n8n e WhatsApp</h1>
+<p>Você recebe dezenas de mensagens de clientes interessados em imóveis, mas não tem tempo para responder cada uma? A resposta rápida faz a diferença entre fechar negócio e perder o lead.</p>
+<p>Com n8n e WhatsApp você pode criar um fluxo de atendimento que qualifica leads em segundos, libera sua equipe para focar em visitas e negociações e ainda
