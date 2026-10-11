@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><!-- GA4 INSTRUMENTATION C100 -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automação de Leads para Pequenos Negócios: O que Funciona | LeadBot</title>
+<meta name="description" content="Descubra estratégias práticas de automação de leads que realmente aumentam sua conversão. Guia passo a passo para pequenos negócios usando LeadBot 24h.">
+<meta property="og:title" content="Automação de Leads para Pequenos Negócios: O que Funciona | LeadBot">
+<meta property="og:description" content="Descubra estratégias práticas de automação de leads que realmente aumentam sua conversão. Guia passo a passo para pequenos negócios usando LeadBot 24h.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://seusite.com/learn/automacao-leads-pequenos-negocios.html">
+<meta property="og:site_name" content="LeadBot">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automação de Leads para Pequenos Negócios: O que Funciona | LeadBot">
+<meta name="twitter:description" content="Descubra estratégias práticas de automação de leads que realmente aumentam sua conversão. Guia passo a passo para pequenos negócios usando LeadBot 24h.">
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;background:#f8fafc;color:#1e293b}
+.container{max-width:800px;margin:auto;padding:20px}
+h1{color:#059669}
+h2{color:#047857}
+p{line-height:1.6}
+pre{background:#e2e8f0;padding:10px;border-radius:5px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th,td{border:1px solid #cbd5e1;padding:10px;text-align:left}
+th{background:#f0fdfa}
+.cta-button{display:inline-block;background:#059669;color:white;padding:12px 24px;border-radius:5px;text-decoration:none;font-weight:bold;margin-top:20px}
+.cta-button:hover{background:#047857}
+footer{margin-top:40px;font-size:0.9em;text-align:center;color:#64748b}
+@media (max-width:600px){
+  .cta-button{width:100%}
+}
+</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -9,17 +38,17 @@ gtag('js', new Date());
 gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
 document.addEventListener('DOMContentLoaded', function(){
   var up = new URLSearchParams(window.location.search);
-  var utm = {};
+  var utmLp = {};
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-    var v = up.get(k); if (v) utm[k] = v;
+    var v = up.get(k); if (v) utmLp[k] = v;
   });
-  if (Object.keys(utm).length > 0) {
+  if (Object.keys(utmLp).length > 0) {
     gtag('event', 'landing_page_view', {
       event_category: 'funnel',
-      utm_source: utm.utm_source || '',
-      utm_medium: utm.utm_medium || '',
-      utm_campaign: utm.utm_campaign || '',
-      utm_content: utm.utm_content || '',
+      utm_source: utmLp.utm_source || '',
+      utm_medium: utmLp.utm_medium || '',
+      utm_campaign: utmLp.utm_campaign || '',
+      utm_content: utmLp.utm_content || '',
       non_interaction: true
     });
   }
@@ -39,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
         utm_medium: utmEv.utm_medium || '',
         utm_campaign: utmEv.utm_campaign || '',
         utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
         link_url: el.href
       });
       gtag('event', 'checkout_start', {
@@ -48,222 +78,56 @@ document.addEventListener('DOMContentLoaded', function(){
         utm_medium: utmEv.utm_medium || '',
         utm_campaign: utmEv.utm_campaign || '',
         utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
         link_url: el.href
       });
     });
   });
 });
 </script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Automação de Leads para Pequenos Negócios: O Que Funciona de Verdade</title>
-  <meta name="description" content="Descubra como automatizar a captura e nutrição de leads sem complicação, usando passos simples e comparando o método manual com o LeadBot.">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Automação de Leads para Pequenos Negócios: O Que Funciona de Verdade">
-  <meta property="og:description" content="Descubra como automatizar a captura e nutrição de leads sem complicação, usando passos simples e comparando o método manual com o LeadBot.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://seusite.com/learn/automacao-leads-pequenos-negocios.html">
-  <meta property="og:image" content="https://seusite.com/assets/leadbot-thumbnail.png">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Automação de Leads para Pequenos Negócios: O Que Funciona de Verdade">
-  <meta name="twitter:description" content="Descubra como automatizar a captura e nutrição de leads sem complicação, usando passos simples e comparando o método manual com o LeadBot.">
-  <meta name="twitter:image" content="https://seusite.com/assets/leadbot-thumbnail.png">
-  <style>
-    body{margin:0;padding:0;background:#f9fafb;font-family:Arial,Helvetica,sans-serif;color:#333;}
-    .container{max-width:600px;margin:auto;padding:16px;}
-    h1{color:#059669;font-size:1.8rem;margin-bottom:0.5rem;}
-    p{line-height:1.6;margin-bottom:1rem;}
-    ol{margin-left:1.2rem;}
-    code{background:#e5e7eb;padding:2px 4px;border-radius:4px;font-size:0.95rem;}
-    pre{background:#e5e7eb;padding:12px;overflow-x:auto;border-radius:4px;}
-    table{width:100%;border-collapse:collapse;margin:1rem 0;}
-    th,td{border:1px solid #d1d5db;padding:8px;text-align:center;}
-    th{background:#059669;color:#fff;}
-    .cta{display:block;width:100%;text-align:center;background:#059669;color:#fff;padding:12px 0;border:none;border-radius:4px;font-size:1rem;text-decoration:none;margin-top:1.5rem;}
-    @media (max-width:480px){
-      h1{font-size:1.5rem;}
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
-    <!-- 1. Título -->
-    <h1>Automação de Leads para Pequenos Negócios: O Que Funciona de Verdade</h1>
+<div class="container">
+<h1>Automação de Leads para Pequenos Negócios: O que Funciona</h1>
+<p>Você já investiu em anúncios, criou landing pages e ainda assim sente que os leads que chegam ao seu funil não são realmente qualificados? É comum perder tempo e dinheiro tentando transformar curiosos em clientes sem um processo bem estruturado.</p>
+<p>Além disso, o gerenciamento manual de mensagens no WhatsApp, e-mails e planilhas pode ser um gargalo que impede sua equipe de escalar. Se você quer automatizar a triagem de leads e focar no fechamento, a solução certa está a apenas alguns cliques de distância.</p>
 
-    <!-- 2. Introdução -->
-    <p>
-      Você tem um pequeno negócio, investe tempo em posts nas redes sociais e ainda assim as
-      conversas não se transformam em vendas? O problema mais comum é a <strong>falta de
-      um fluxo estruturado para captar, qualificar e nutrir leads</strong>. Sem automação,
-      você perde oportunidades, gasta horas respondendo manualmente e ainda não tem
-      métricas para melhorar seu processo.
-    </p>
-
-    <!-- 3. Passo a passo numerado (código mínimo copiável) -->
-    <h2 style="color:#059669;font-size:1.4rem;margin-top:1.5rem;">Como criar sua automação em 4 passos</h2>
-    <ol>
-      <li>
-        <strong>Crie um Webhook no n8n</strong> (recebe o lead do formulário):
-        <pre><code>{
-  "nodes": [
-    {
-      "parameters": { "path": "lead-captura" },
-      "name": "Webhook",
-      "type": "n8n-nodes-base.webhook",
-      "typeVersion": 1,
-      "position": [250,300]
-    }
-  ],
-  "connections": {}
-}</code></pre>
-      </li>
-      <li>
-        <strong>Adicione um nó “Google Sheets” para armazenar o lead</strong>:
-        <pre><code>{
-  "nodes": [
-    {
-      "parameters": {
-        "sheetId": "SUA_PLANILHA_ID",
-        "range": "Leads!A1",
-        "valueInputMode": "USER_ENTERED",
-        "appendMode": true,
-        "columns": [
-          {"name":"Nome","value":"{{$json[&quot;name&quot;]}}"},
-          {"name":"Email","value":"{{$json[&quot;email&quot;]}}"},
-          {"name":"Data","value":"{{=$now}}"}
-        ]
-      },
-      "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 1,
-      "position": [500,300]
-    }
-  ],
-  "connections": { "Webhook": { "main": [ [ { "node": "Google Sheets", "type": "main", "index": 0 } ] ] } }
-}</code></pre>
-      </li>
-      <li>
-        <strong>Envie um e‑mail de boas‑vindas</strong> com o nó “Send Email”:
-        <pre><code>{
-  "nodes": [
-    {
-      "parameters": {
-        "fromEmail": "contato@seunegocio.com",
-        "toEmail": "{{$json[&quot;email&quot;]}}",
-        "subject": "Obrigado por se conectar!",
-        "htmlContent": "Olá {{$json[&quot;name&quot;]}},<br>Obrigado por entrar em contato. Em breve retornaremos."
-      },
-      "name": "E‑mail de Boas‑vindas",
-      "type": "n8n-nodes-base.emailSend",
-      "typeVersion": 1,
-      "position": [750,300]
-    }
-  ],
-  "connections": { "Google Sheets": { "main": [ [ { "node": "E‑mail de Boas‑vindas", "type": "main", "index": 0 } ] ] } }
-}</code></pre>
-      </li>
-      <li>
-        <strong>Ative o workflow** e teste** enviando o formulário do seu site.</strong>
-      </li>
-    </ol>
-
-    <!-- 4. Comparação rápida -->
-    <h2 style="color:#059669;font-size:1.4rem;margin-top:1.5rem;">Manual vs LeadBot (n8n)</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Aspecto</th>
-          <th>Processo Manual</th>
-          <th>LeadBot (n8n)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Tempo de captura</td>
-          <td>Horas (planilha + email)</td>
-          <td>Segundos (webhook)</td>
-        </tr>
-        <tr>
-          <td>Erros de digitação</td>
-          <td>Frequentes</td>
-          <td>Zero (dados estruturados)</td>
-        </tr>
-        <tr>
-          <td>Follow‑up automático</td>
-          <td>Não existe</td>
-          <td>Sim (e‑mail, SMS, WhatsApp)</td>
-        </tr>
-        <tr>
-          <td>Custo mensal</td>
-          <td>Horas de trabalho = > R$300</td>
-          <td>Plano n8n grátis ou < R$50</td>
-        </tr>
-        <tr>
-          <td>Escalabilidade</td>
-          <td>Limitada</td>
-          <td>Ilimitada (adiciona‑se nós)</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- 5. CTA final -->
-    <a href="https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?" class="cta" target="_blank" rel="noopener">
-      🎯 Quero o LeadBot pronto para usar em 24h – Comprar Agora
-    </a>
-
-    <!-- 6. JSON‑LD Article + FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Automação de Leads para Pequenos Negócios: O Que Funciona de Verdade",
-      "description": "Aprenda a capturar, organizar e nutrir leads usando n8n em poucos minutos e compare o método manual com o LeadBot.",
-      "author": {
-        "@type": "Person",
-        "name": "Seu Nome"
-      },
-      "datePublished": "2026-08-24",
-      "image": "https://seusite.com/assets/leadbot-thumbnail.png",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://seusite.com/learn/automacao-leads-pequenos-negocios.html"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Seu Site",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://seusite.com/assets/logo.png"
-        }
-      },
-      "faqSection": [
-        {
-          "@type": "Question",
-          "name": "Como capturar leads sem gastar muito?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Use um formulário simples que envia os dados para um webhook n8n. O webhook grava tudo em uma planilha do Google e dispara e‑mail automático, tudo gratuito ou por menos de R$50 por mês."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "O que o LeadBot faz que o método manual não faz?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "LeadBot automatiza captura, armazenamento, validação e follow‑up em segundos, elimina erros humanos, gera relatórios e permite escalar o volume de leads sem esforço adicional."
-          }
-        }
-      ]
-    }
-    </script>
-  </div>
-<div style="margin-top: 30px; padding: 15px; background: #f0fff4; border-radius: 6px; border: 1px solid #c6f6d5; text-align: center; font-size: 14px; color: #2d3748;">
-  <p style="margin: 0 0 10px; font-weight: bold; color: #047857;">Leia também:</p>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/chatbot-whatsapp-ia-sem-custo-mensal.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Chatbot WhatsApp com IA sem custo mensal</a>
-  <span style="color: #cbd5e0;">|</span>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/converter-leads-madrugada-whatsapp.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Capture leads fora do horário</a>
-</div>
-</body>
-</html>
+<h2>Passo a Passo (Código mínimo copiável)</h2>
+<ol>
+<li><strong>Crie um webhook no n8n</strong> que receba a mensagem do WhatsApp:
+<pre><code>POST https://seun8n.com/webhook/leadbot
+{
+  "name": "João",
+  "phone": "+5511987654321",
+  "message": "Quero saber mais"
+}
+</code></pre>
+</li>
+<li><strong>Conecte ao LeadBot 24h</strong> usando a API:
+<pre><code>POST https://api.leadbot.io/v1/qualify
+Headers: Authorization: Bearer SEU_TOKEN
+Body: {
+  "phone": "+5511987654321",
+  "name": "João",
+  "source": "WhatsApp"
+}
+</code></pre>
+</li>
+<li><strong>Retorne a resposta do LeadBot</strong> para enviar mensagem de qualificação:
+<pre><code>{
+  "status":"qualificado",
+  "score": 85,
+  "nextStep":"Enviar proposta"
+}
+</code></pre>
+</li>
+<li><strong>Envie a mensagem via WhatsApp API</strong> (exemplo com Twilio):
+<pre><code>POST https://api.twilio.com/2010-04-01/Accounts/ACXXXXX/Messages.json
+Body: {
+  "From":"whatsapp:+14155238886",
+  "To":"whatsapp:+5511987654321",
+  "Body":"Olá João! Seu score é 85%. Gostaria de receber a proposta?"
+}
+</code></pre>
+</li>
+<li><
