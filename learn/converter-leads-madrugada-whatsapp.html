@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><!-- GA4 INSTRUMENTATION C100 -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como converter leads de madrugada no WhatsApp automaticamente</title>
+<meta name="description" content="Aprenda como automatizar a conversão de leads de madrugada no WhatsApp com LeadBot 24h. Siga passos simples e reduza perdas de oportunidade.">
+<meta property="og:title" content="Como converter leads de madrugada no WhatsApp automaticamente">
+<meta property="og:description" content="Aprenda como automatizar a conversão de leads de madrugada no WhatsApp com LeadBot 24h. Siga passos simples e reduza perdas de oportunidade.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seusite.com/learn/converter-leads-madrugada-whatsapp.html">
+<meta property="og:image" content="https://seusite.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Como converter leads de madrugada no WhatsApp automaticamente">
+<meta name="twitter:description" content="Aprenda como automatizar a conversão de leads de madrugada no WhatsApp com LeadBot 24h. Siga passos simples e reduza perdas de oportunidade.">
+<meta name="twitter:image" content="https://seusite.com/twitter-image.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -9,17 +22,17 @@ gtag('js', new Date());
 gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
 document.addEventListener('DOMContentLoaded', function(){
   var up = new URLSearchParams(window.location.search);
-  var utm = {};
+  var utmLp = {};
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-    var v = up.get(k); if (v) utm[k] = v;
+    var v = up.get(k); if (v) utmLp[k] = v;
   });
-  if (Object.keys(utm).length > 0) {
+  if (Object.keys(utmLp).length > 0) {
     gtag('event', 'landing_page_view', {
       event_category: 'funnel',
-      utm_source: utm.utm_source || '',
-      utm_medium: utm.utm_medium || '',
-      utm_campaign: utm.utm_campaign || '',
-      utm_content: utm.utm_content || '',
+      utm_source: utmLp.utm_source || '',
+      utm_medium: utmLp.utm_medium || '',
+      utm_campaign: utmLp.utm_campaign || '',
+      utm_content: utmLp.utm_content || '',
       non_interaction: true
     });
   }
@@ -39,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function(){
         utm_medium: utmEv.utm_medium || '',
         utm_campaign: utmEv.utm_campaign || '',
         utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
         link_url: el.href
       });
       gtag('event', 'checkout_start', {
@@ -48,279 +62,77 @@ document.addEventListener('DOMContentLoaded', function(){
         utm_medium: utmEv.utm_medium || '',
         utm_campaign: utmEv.utm_campaign || '',
         utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
         link_url: el.href
       });
     });
   });
 });
 </script>
-
-    <meta charset="UTF-8">
-    <title>Como Converter Leads de Madrugada no WhatsApp Automaticamente | LeadBot 24h</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Descubra passo a passo como transformar leads que chegam à noite em vendas via WhatsApp usando automação. Compare métodos manuais e o LeadBot 24h e comece agora.">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Como Converter Leads de Madrugada no WhatsApp Automaticamente">
-    <meta property="og:description" content="Descubra passo a passo como transformar leads que chegam à noite em vendas via WhatsApp usando automação.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://seusite.com/learn/converter-leads-madrugada-whatsapp.html">
-    <meta property="og:image" content="https://seusite.com/assets/leadbot-24h.png">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Como Converter Leads de Madrugada no WhatsApp Automaticamente">
-    <meta name="twitter:description" content="Descubra passo a passo como transformar leads que chegam à noite em vendas via WhatsApp usando automação.">
-    <meta name="twitter:image" content="https://seusite.com/assets/leadbot-24h.png">
-
-    <style>
-        body{
-            font-family:Arial,sans-serif;
-            margin:0;
-            padding:0;
-            background:#f9fafb;
-            color:#111;
-        }
-        .container{
-            max-width:800px;
-            margin:0 auto;
-            padding:1rem;
-        }
-        h1{
-            color:#059669;
-            font-size:2rem;
-            margin-bottom:0.5rem;
-        }
-        p{
-            line-height:1.6;
-            margin-bottom:1rem;
-        }
-        ol{
-            padding-left:1.2rem;
-        }
-        pre{
-            background:#e5e7eb;
-            padding:0.8rem;
-            overflow-x:auto;
-            border-radius:4px;
-        }
-        code{
-            font-family:monospace;
-        }
-        table{
-            width:100%;
-            border-collapse:collapse;
-            margin:1.5rem 0;
-        }
-        th,td{
-            border:1px solid #d1d5db;
-            padding:0.6rem;
-            text-align:center;
-        }
-        th{
-            background:#059669;
-            color:#fff;
-        }
-        .cta{
-            display:inline-block;
-            background:#059669;
-            color:#fff;
-            text-decoration:none;
-            padding:0.8rem 1.5rem;
-            border-radius:4px;
-            font-weight:bold;
-            margin-top:1rem;
-        }
-        @media (max-width:600px){
-            h1{font-size:1.6rem;}
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- 1. H1 -->
-        <h1>Como Converter Leads de Madrugada no WhatsApp Automaticamente</h1>
-
-        <!-- 2. Introdução -->
-        <p>Você recebe mensagens de clientes potenciais entre 00:00 e 04:00, mas sua equipe já está offline. Cada minuto perdido pode significar uma venda a menos. A solução? Automatizar a resposta e o encaminhamento desses leads para que a conversa continue assim que o atendimento for retomado.</p>
-
-        <!-- 3. Passo a passo -->
-        <h2>Passo a passo (código mínimo copiável)</h2>
-        <ol>
-            <li>
-                <strong>Crie um webhook no n8n</strong> que receba a mensagem do WhatsApp (ex.: Twilio, 360dialog ou WhatsApp Business API).<br>
-                <pre><code>POST /webhook/whatsapp
+<script type="application/ld+json">
 {
-  "from": "{{payload.from}}",
-  "body": "{{payload.body}}",
-  "timestamp": "{{payload.timestamp}}"
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Como converter leads de madrugada no WhatsApp automaticamente",
+  "description": "Aprenda como automatizar a conversão de leads de madrugada no WhatsApp com LeadBot 24h. Siga passos simples e reduza perdas de oportunidade.",
+  "author": {
+    "@type": "Organization",
+    "name": "LeadBot"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LeadBot",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://seusite.com/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://seusite.com/learn/converter-leads-madrugada-whatsapp.html",
+  "datePublished": "2026-10-11"
 }
-</code></pre>
-            </li>
-            <li>
-                <strong>Filtre mensagens enviadas fora do horário comercial</strong> (00:00‑04:00).<br>
-                <pre><code>// n8n Function node
-const hour = new Date(item.timestamp * 1000).getHours();
-if (hour >= 0 && hour < 4) {
-  return [{ json: item }];
-}
-return []; // fora do intervalo, ignora
-</code></pre>
-            </li>
-            <li>
-                <strong>Salve o lead em uma planilha (Google Sheets) ou CRM</strong>.<br>
-                <pre><code>// Google Sheets node – Append
+</script>
+<script type="application/ld+json">
 {
-  "sheetId": "YOUR_SHEET_ID",
-  "range": "Leads!A:D",
-  "values": [
-    [
-      "{{item.from}}",
-      "{{item.body}}",
-      "{{$now}}",
-      "pendente"
-    ]
-  ]
-}
-</code></pre>
-            </li>
-            <li>
-                <strong>Envie uma resposta automática</strong> informando que o contato será atendido em breve.<br>
-                <pre><code>// WhatsApp send node
-{
-  "to": "{{item.from}}",
-  "body": "Olá! Recebemos sua mensagem e entraremos em contato em até 1 hora. Enquanto isso, confira nosso FAQ: https://seusite.com/faq"
-}
-</code></pre>
-            </li>
-            <li>
-                <strong>Agende um lembrete interno</strong> (Slack, e‑mail ou notificação no próprio n8n) para que o time responda assim que o expediente iniciar.<br>
-                <pre><code>// Slack node
-{
-  "channel": "#leads-madrugada",
-  "text": "Novo lead recebido às {{item.timestamp}}:\n• WhatsApp: {{item.from}}\n• Mensagem: {{item.body}}"
-}
-</code></pre>
-            </li>
-        </ol>
-
-        <!-- 4. Comparação rápida -->
-        <h2>Manual vs LeadBot 24h</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Aspecto</th>
-                    <th>Processo Manual</th>
-                    <th>LeadBot 24h</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Tempo de resposta</td>
-                    <td>≥ 2 h (até o próximo turno)</td>
-                    <td>Instantâneo (segundos)</td>
-                </tr>
-                <tr>
-                    <td>Erros de digitação</td>
-                    <td>Comuns</td>
-                    <td>Zero, dados são capturados via API</td>
-                </tr>
-                <tr>
-                    <td>Escalabilidade</td>
-                    <td>Limitada ao número de operadores</td>
-                    <td>Ilimitada – fluxo automatizado</td>
-                </tr>
-                <tr>
-                    <td>Custo operacional</td>
-                    <td>Alto (turnos extras)</td>
-                    <td>Baixo (assinatura única)</td>
-                </tr>
-                <tr>
-                    <td>Follow‑up</td>
-                    <td>Manual, risco de esquecimento</td>
-                    <td>Notificações automáticas ao time</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- 5. CTA final -->
-        <h2>Pronto para automatizar suas conversas 24 h?</h2>
-        <p>Adquira o <strong>LeadBot 24h</strong> e tenha respostas automáticas, captura de leads e alertas ao seu time sem esforço.</p>
-        <a class="cta" href="https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?" target="_blank" rel="noopener">Comprar LeadBot 24h no Gumroad</a>
-    </div>
-
-    <!-- 6. JSON‑LD Article + FAQPage -->
-    <script type="application/ld+json">
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Como Converter Leads de Madrugada no WhatsApp Automaticamente",
-      "description": "Passo a passo para automatizar a captura e o atendimento de leads que chegam ao WhatsApp fora do horário comercial.",
-      "image": "https://seusite.com/assets/leadbot-24h.png",
-      "author": {
-        "@type": "Person",
-        "name": "LeadBot Team"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "LeadBot",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://seusite.com/assets/logo.png"
-        }
-      },
-      "datePublished": "2024-10-01",
-      "dateModified": "2024-10-01",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://seusite.com/learn/converter-leads-madrugada-whatsapp.html"
+      "@type": "Question",
+      "name": "Como o LeadBot funciona durante a madrugada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O LeadBot monitora e responde a mensagens do WhatsApp 24/7, qualificando leads em tempo real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso de muita configuração técnica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Basta conectar sua conta WhatsApp Business e definir perguntas de qualificação. O restante é automação."
       }
     }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Por que preciso responder leads à madrugada?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Leads que chegam fora do horário comercial podem ser decisivos; responder rapidamente aumenta a taxa de conversão em até 30 %."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "É seguro integrar o WhatsApp com o n8n?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim, desde que você use credenciais fornecidas pela API oficial (Twilio, 360dialog, etc.) e mantenha os tokens protegidos nas credenciais do n8n."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Preciso de conhecimentos de programação?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. O fluxo acima usa blocos visuais do n8n; basta copiar o código‑exemplo nos nós de Function e configurar as credenciais."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "O LeadBot 24h funciona em qualquer negócio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. O LeadBot foi pensado para ser genérico e pode ser adaptado para lojas, consultorias, clínicas e serviços digitais."
-          }
-        }
-      ]
-    }
-    </script>
-<div style="margin-top: 30px; padding: 15px; background: #f0fff4; border-radius: 6px; border: 1px solid #c6f6d5; text-align: center; font-size: 14px; color: #2d3748;">
-  <p style="margin: 0 0 10px; font-weight: bold; color: #047857;">Leia também:</p>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/chatbot-whatsapp-ia-sem-custo-mensal.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Chatbot WhatsApp com IA</a>
-  <span style="color: #cbd5e0;">|</span>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checker/learn/perder-clientes-fora-horario-resolver.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Prejuízo por leads não respondidos</a>
-</div>
-</body>
-</html>
+  ]
+}
+</script>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;background:#f7f9f9;color:#333;}
+.container{max-width:800px;margin:auto;padding:20px;}
+h1{color:#059669;margin-top:0;}
+p{line-height:1.6;}
+ol{padding-left:20px;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #ddd;padding:10px;text-align:left;}
+th{background:#047857;color:#fff;}
+.cta-button{display:inline-block;background:#059669;color:#fff;text-decoration:none;padding:12px 20px;border-radius:5px;margin-top:20px;}
+footer{text-align:center;font-size:0.9em;color:#777;margin-top:40px;}
+@media (max-width:600px){
+  .cta-button{width:100%;text-align:center;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Como converter leads de madrugada no WhatsApp automaticamente</h1>
+  <p>Você já perdeu oportunidades porque o lead saiu da tela antes de você conseguir qualificá-lo? A madrugada costuma ser quando a maioria das pessoas está fora do escritório, mas seu negócio pode continuar ativo. Sem automação, você corre o risco de perder esses contatos.</p>
+  <p>Com o LeadBot 24h, você cria um fluxo de qualificação
