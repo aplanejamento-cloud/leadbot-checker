@@ -1,256 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><!-- GA4 INSTRUMENTATION C100 -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como criar chatbot de WhatsApp com IA sem custo mensal fixo</title>
+<meta name="description" content="Aprenda passo a passo a montar um chatbot inteligente no WhatsApp usando n8n e OpenAI sem pagar mensalidades fixas.">
+<meta property="og:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal fixo">
+<meta property="og:description" content="Aprenda passo a passo a montar um chatbot inteligente no WhatsApp usando n8n e OpenAI sem pagar mensalidades fixas.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="LeadBot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal fixo">
+<meta name="twitter:description" content="Aprenda passo a passo a montar um chatbot inteligente no WhatsApp usando n8n e OpenAI sem pagar mensalidades fixas.">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
-document.addEventListener('DOMContentLoaded', function(){
-  var up = new URLSearchParams(window.location.search);
-  var utm = {};
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-    var v = up.get(k); if (v) utm[k] = v;
-  });
-  if (Object.keys(utm).length > 0) {
-    gtag('event', 'landing_page_view', {
-      event_category: 'funnel',
-      utm_source: utm.utm_source || '',
-      utm_medium: utm.utm_medium || '',
-      utm_campaign: utm.utm_campaign || '',
-      utm_content: utm.utm_content || '',
-      non_interaction: true
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
+  document.addEventListener('DOMContentLoaded', function(){
+    var up = new URLSearchParams(window.location.search);
+    var utmLp = {};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+      var v = up.get(k); if (v) utmLp[k] = v;
     });
-  }
-  document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
-    el.addEventListener('click', function(){
-      if (!window.gtag) return;
-      var qi = el.href.indexOf('?');
-      var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
-      var utmEv = {};
-      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-        var v = qp.get(k); if (v) utmEv[k] = v;
-      });
-      gtag('event', 'cta_click', {
+    if (Object.keys(utmLp).length > 0) {
+      gtag('event', 'landing_page_view', {
         event_category: 'funnel',
-        destination: 'gumroad_checkout',
-        utm_source: utmEv.utm_source || '',
-        utm_medium: utmEv.utm_medium || '',
-        utm_campaign: utmEv.utm_campaign || '',
-        utm_content: utmEv.utm_content || '',
-        link_url: el.href
+        utm_source: utmLp.utm_source || '',
+        utm_medium: utmLp.utm_medium || '',
+        utm_campaign: utmLp.utm_campaign || '',
+        utm_content: utmLp.utm_content || '',
+        non_interaction: true
       });
-      gtag('event', 'checkout_start', {
-        event_category: 'funnel',
-        destination: 'gumroad_checkout',
-        utm_source: utmEv.utm_source || '',
-        utm_medium: utmEv.utm_medium || '',
-        utm_campaign: utmEv.utm_campaign || '',
-        utm_content: utmEv.utm_content || '',
-        link_url: el.href
+    }
+    document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
+      el.addEventListener('click', function(){
+        if (!window.gtag) return;
+        var qi = el.href.indexOf('?');
+        var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
+        var utmEv = {};
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+          var v = qp.get(k); if (v) utmEv[k] = v;
+        });
+        gtag('event', 'cta_click', {
+          event_category: 'funnel',
+          destination: 'gumroad_checkout',
+          utm_source: utmEv.utm_source || '',
+          utm_medium: utmEv.utm_medium || '',
+          utm_campaign: utmEv.utm_campaign || '',
+          utm_content: utmEv.utm_content || '',
+          utm_term: utmEv.utm_term || '',
+          link_url: el.href
+        });
+        gtag('event', 'checkout_start', {
+          event_category: 'funnel',
+          destination: 'gumroad_checkout',
+          utm_source: utmEv.utm_source || '',
+          utm_medium: utmEv.utm_medium || '',
+          utm_campaign: utmEv.utm_campaign || '',
+          utm_content: utmEv.utm_content || '',
+          utm_term: utmEv.utm_term || '',
+          link_url: el.href
+        });
       });
     });
   });
-});
 </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como criar chatbot de WhatsApp com IA sem custo mensal – Guia prático</title>
-    <meta name="description" content="Aprenda passo a passo a montar um chatbot de WhatsApp usando IA sem pagar mensalidade. Código simples, comparação com LeadBot e link para compra.">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal – Guia prático">
-    <meta property="og:description" content="Aprenda passo a passo a montar um chatbot de WhatsApp usando IA sem pagar mensalidade. Código simples, comparação com LeadBot e link para compra.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html">
-    <meta property="og:image" content="https://seusite.com/assets/whatsapp-chatbot.png">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal – Guia prático">
-    <meta name="twitter:description" content="Aprenda passo a passo a montar um chatbot de WhatsApp usando IA sem pagar mensalidade. Código simples, comparação com LeadBot e link para compra.">
-    <meta name="twitter:image" content="https://seusite.com/assets/whatsapp-chatbot.png">
-    <style>
-        body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;line-height:1.6}
-        .container{max-width:800px;margin:auto;padding:1rem}
-        h1{color:#059669;font-size:2rem;margin-bottom:.5rem}
-        p{margin:0 0 1rem}
-        ol{margin-left:1.2rem}
-        pre{background:#e5e7eb;padding:.8rem;overflow:auto;border-radius:4px}
-        code{font-family:"Courier New",monospace}
-        table{width:100%;border-collapse:collapse;margin:1rem 0}
-        th,td{border:1px solid #d1d5db;padding:.6rem;text-align:center}
-        th{background:#059669;color:#fff}
-        .cta{display:block;width:100%;text-align:center;background:#059669;color:#fff;padding:.8rem 0;margin:2rem 0;border:none;border-radius:4px;text-decoration:none;font-size:1.1rem}
-        @media(min-width:600px){.cta{width:auto;padding:.6rem 2rem}}
-    </style>
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Como criar chatbot de WhatsApp com IA sem custo mensal fixo",
+  "description":"Aprenda passo a passo a montar um chatbot inteligente no WhatsApp usando n8n e OpenAI sem pagar mensalidades fixas.",
+  "author":{"@type":"Person","name":"LeadBot"},
+  "publisher":{"@type":"Organization","name":"LeadBot","logo":{"@type":"ImageObject","url":"https://seusite.com/logo.png"}},
+  "datePublished":"2024-10-11",
+  "mainEntityOfPage":"https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html",
+  "image":"https://seusite.com/preview.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
     {
-        "@context":"https://schema.org",
-        "@type":"Article",
-        "headline":"Como criar chatbot de WhatsApp com IA sem custo mensal",
-        "description":"Aprenda passo a passo a montar um chatbot de WhatsApp usando IA sem pagar mensalidade, veja código exemplo, compare com LeadBot e adquira a solução pronta.",
-        "author":{"@type":"Person","name":"Seu Nome"},
-        "datePublished":"2026-08-24",
-        "image":"https://seusite.com/assets/whatsapp-chatbot.png",
-        "publisher":{"@type":"Organization","name":"Seu Site","logo":{"@type":"ImageObject","url":"https://seusite.com/logo.png"}},
-        "mainEntityOfPage":{"@type":"WebPage","@id":"https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html"}
-    }
-    </script>
-    <script type="application/ld+json">
+      "@type":"Question",
+      "name":"Posso usar o n8n sem pagar?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sim, o n8n possui plano gratuito que atende a maioria das necessidades de automação básica."}
+    },
     {
-        "@context":"https://schema.org",
-        "@type":"FAQPage",
-        "mainEntity":[
-            {
-                "@type":"Question",
-                "name":"É realmente possível criar um chatbot de WhatsApp sem pagar mensalidade?",
-                "acceptedAnswer":{"@type":"Answer","text":"Sim. Usando a API oficial do WhatsApp Business combinada com serviços de IA gratuitos (ex.: OpenAI com plano gratuito ou Hugging Face) e hospedagem em plataformas free-tier, você elimina custos recorrentes."}
-            },
-            {
-                "@type":"Question",
-                "name":"Preciso de conhecimentos avançados em programação?",
-                "acceptedAnswer":{"@type":"Answer","text":"O guia apresenta um código mínimo em Node.js que pode ser copiado e colado. Conhecimentos básicos de terminal e npm são suficientes."}
-            },
-            {
-                "@type":"Question",
-                "name":"Qual a diferença entre fazer manualmente e usar o LeadBot?",
-                "acceptedAnswer":{"@type":"Answer","text":"A tabela abaixo resume custos, tempo de configuração e suporte entre as duas opções."}
-            }
-        ]
+      "@type":"Question",
+      "name":"O WhatsApp Business API tem mensalidade?",
+      "acceptedAnswer":{"@type":"Answer","text":"O WhatsApp Business API em si não tem custo mensal, mas o provedor de integração (ex.: Twilio) cobra por mensagens e pelo número de chamadas."}
     }
-    </script>
-</head>
-<body>
-    <div class="container">
-        <h1>Chatbot de WhatsApp com IA sem custo mensal: Guia passo a passo</h1>
-
-        <p><strong>Problema real:</strong> Pequenos negócios precisam responder rapidamente a clientes no WhatsApp, mas a maioria das soluções cobra assinaturas mensais caras. Este tutorial mostra como montar seu próprio bot usando ferramentas gratuitas, sem comprometer a qualidade.</p>
-
-        <h2>Passo a passo</h2>
-        <ol>
-            <li><strong>Crie uma conta no <a href="https://cloud.facebook.com/" target="_blank">Meta Cloud</a> e habilite a API do WhatsApp Business.</strong> Siga o assistente para gerar o <code>WhatsApp Business Account ID</code> e a <code>Phone Number ID</code>.</li>
-            <li><strong>Obtenha um token de acesso.</strong> No painel da Meta, copie o <code>Access Token</code> (guarde em lugar seguro).</li>
-            <li><strong>Instale Node.js (versão 18+).</strong></li>
-            <li><strong>Crie um novo projeto e instale dependências:</strong></li>
-            <pre><code>mkdir meu-chatbot
-cd meu-chatbot
-npm init -y
-npm install express axios body-parser
-</code></pre>
-            <li><strong>Copie o código abaixo para <code>index.js</code>:</strong></li>
-            <pre><code>const express = require('express');
-const axios = require('axios');
-const bodyParser = require('body-parser');
-
-const app = express();
-app.use(bodyParser.json());
-
-const WHATSAPP_TOKEN = 'SEU_ACCESS_TOKEN';
-const PHONE_ID = 'SEU_PHONE_NUMBER_ID';
-const OPENAI_API_KEY = 'SUA_API_KEY_GRATUITA';
-
-// Recebe mensagens do WhatsApp
-app.post(`/webhook/${PHONE_ID}`, async (req, res) => {
-    const msg = req.body.entry?.[0]?.changes?.[0]?.value?.messages?.[0];
-    if (!msg) return res.sendStatus(200);
-
-    const from = msg.from;
-    const text = msg.text?.body || '';
-
-    // Chama IA (ex.: OpenAI)
-    const aiResponse = await axios.post(
-        'https://api.openai.com/v1/chat/completions',
-        {
-            model: 'gpt-3.5-turbo',
-            messages: [{role: 'user', content: text}]
-        },
-        {headers: {'Authorization': `Bearer ${OPENAI_API_KEY}`}}
-    );
-
-    const reply = aiResponse.data.choices[0].message.content.trim();
-
-    // Envia resposta ao WhatsApp
-    await axios.post(
-        `https://graph.facebook.com/v16.0/${PHONE_ID}/messages`,
-        {
-            messaging_product: 'whatsapp',
-            to: from,
-            text: {body: reply}
-        },
-        {headers: {'Authorization': `Bearer ${WHATSAPP_TOKEN}`}}
-    );
-
-    res.sendStatus(200);
-});
-
-// Verificação do webhook (Meta)
-app.get(`/webhook/${PHONE_ID}`, (req, res) => {
-    const mode = req.query['hub.mode'];
-    const token = req.query['hub.verify_token'];
-    const challenge = req.query['hub.challenge'];
-    if (mode && token && token === 'SEU_VERIFY_TOKEN') {
-        res.status(200).send(challenge);
-    } else {
-        res.sendStatus(403);
-    }
-});
-
-app.listen(3000, () => console.log('Bot rodando na porta 3000'));
-</code></pre>
-            <li><strong>Configure variáveis:</strong> Substitua <code>SEU_ACCESS_TOKEN</code>, <code>SEU_PHONE_NUMBER_ID</code>, <code>SUA_API_KEY_GRATUITA</code> e <code>SEU_VERIFY_TOKEN</code> pelos valores obtidos nos passos anteriores.</li>
-            <li><strong>Hospede o código.</strong> Use um serviço free‑tier como <a href="https://render.com/" target="_blank">Render</a> ou <a href="https://railway.app/" target="_blank">Railway</a>. Basta apontar o repositório e definir a porta 3000.</li>
-            <li><strong>Configure o webhook na Meta.</strong> No painel da API do WhatsApp, adicione a URL pública do seu app (ex.: <code>https://seuprojeto.onrender.com/webhook/SEU_PHONE_NUMBER_ID</code>) e o token de verificação.</li>
-            <li><strong>Teste!</strong> Envie uma mensagem para o número configurado e veja a IA responder automaticamente.</li>
-        </ol>
-
-        <h2>Comparação rápida</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Manual (código acima)</th>
-                    <th>LeadBot (Solução pronta)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Custo inicial</td>
-                    <td>Zero (serviços free‑tier)</td>
-                    <td>R$ 49,90 (acesso 24 h)</td>
-                </tr>
-                <tr>
-                    <td>Tempo de configuração</td>
-                    <td>2‑4 h (dependendo da familiaridade)</td>
-                    <td>Instalação em minutos</td>
-                </tr>
-                <tr>
-                    <td>Manutenção</td>
-                    <td>Você atualiza dependências e tokens</td>
-                    <td>Atualizações automáticas</td>
-                </tr>
-                <tr>
-                    <td>Escalabilidade</td>
-                    <td>Limitada ao plano free‑tier escolhido</td>
-                    <td>Infra robusta com suporte 24 h</td>
-                </tr>
-                <tr>
-                    <td>Suporte</td>
-                    <td>Comunidade e documentação</td>
-                    <td>Equipe dedicada via chat</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <a class="cta" href="https://leadbot-redirector.aplanejamento.workers.dev/r/leadbot-lite?" target="_blank">Quero o LeadBot pronto em 24h – Comprar agora</a>
-
-        <p>Se preferir evitar código e ter suporte dedicado, o <strong>LeadBot</strong> entrega a mesma funcionalidade com interface amigável e garantia de uptime.</p>
-    </div>
-<div style="margin-top: 30px; padding: 15px; background: #f0fff4; border-radius: 6px; border: 1px solid #c6f6d5; text-align: center; font-size: 14px; color: #2d3748;">
-  <p style="margin: 0 0 10px; font-weight: bold; color: #047857;">Leia também:</p>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checkerlearn/automacao-leads-pequenos-negocios.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h&utm_content=automacao-leads-pequenos-negocios" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Automação de leads para pequenos negócios</a>
-  <span style="color: #cbd5e0;">|</span>
-  <a href="https://aplanejamento-cloud.github.io/leadbot-checkerlearn/como-qualificar-leads-whatsapp-n8n.html?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h&utm_content=como-qualificar-leads-whatsapp-n8n" style="color: #047857; text-decoration: none; margin: 0 8px; font-weight: 500;">Fluxo completo n8n + WhatsApp</a>
-</div>
-</body>
-</html>
+  ]
+}
+</script>
+<style>
+  body{margin:0;padding:0;font-family:Arial,sans-serif;background:#f4f4f4;color:#333;}
+  .container{max-width:800px;margin:auto;padding:20px;background:#fff;}
+  h1{color:#059669;}
+  .steps ol{margin-left:20px;}
+  .steps li{margin-bottom:10px;}
+  table{width:100%;border-collapse:collapse;margin:20px 0;}
+  table, th, td{border:1px solid #ddd;}
+  th, td{padding:10px;text-align:left;}
+  th{background:#059669;color:#fff;}
+  .cta-button{display:inline-block;padding:12px 24px;background:#059669;color:#fff;text-decoration:none;border-radius:5px;font-weight:bold;}
+  .cta-button:hover
