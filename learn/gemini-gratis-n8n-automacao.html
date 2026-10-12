@@ -4,20 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gemini grátis no n8n: configuração passo a passo</title>
-  <meta name="description" content="Aprenda a integrar o modelo Gemini gratuito ao n8n em poucos minutos. Guia prático, código pronto e comparação com LeadBot.">
-  <!-- Open Graph -->
+  <meta name="description" content="Aprenda a usar o Gemini grátis no n8n passo a passo e automatize seus fluxos de trabalho com IA. Guia completo, código mínimo e comparação com o LeadBot.">
   <meta property="og:title" content="Gemini grátis no n8n: configuração passo a passo">
-  <meta property="og:description" content="Aprenda a integrar o modelo Gemini gratuito ao n8n em poucos minutos. Guia prático, código pronto e comparação com LeadBot.">
+  <meta property="og:description" content="Aprenda a usar o Gemini grátis no n8n passo a passo e automatize seus fluxos de trabalho com IA.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://seusite.com/learn/gemini-gratis-n8n-automacao.html">
-  <meta property="og:image" content="https://seusite.com/assets/gemini-n8n.png">
-  <!-- Twitter -->
+  <meta property="og:image" content="https://seusite.com/images/gemini-n8n-og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gemini grátis no n8n: configuração passo a passo">
-  <meta name="twitter:description" content="Aprenda a integrar o modelo Gemini gratuito ao n8n em poucos minutos. Guia prático, código pronto e comparação com LeadBot.">
-  <meta name="twitter:image" content="https://seusite.com/assets/gemini-n8n.png">
-
-  <!-- GA4 INSTRUMENTATION C100 -->
+  <meta name="twitter:description" content="Aprenda a usar o Gemini grátis no n8n passo a passo e automatize seus fluxos de trabalho com IA.">
+  <meta name="twitter:image" content="https://seusite.com/images/gemini-n8n-og.jpg">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
@@ -73,64 +69,53 @@
     });
   });
   </script>
-
   <style>
-    body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9fafb;color:#111;line-height:1.6}
-    .container{max-width:800px;margin:auto;padding:1rem}
-    h1{color:#059669;font-size:2rem;margin-bottom:0.5rem}
-    h2{color:#047857;font-size:1.5rem;margin-top:1.5rem}
-    ol{margin-left:1.2rem}
-    code{background:#e5e7eb;padding:0.2rem 0.4rem;border-radius:4px;font-family:"Courier New",monospace}
-    .cta-button{
-      display:inline-block;margin:2rem 0;padding:0.75rem 1.5rem;
-      background:#059669;color:#fff;text-decoration:none;
-      border-radius:6px;font-weight:bold;
-    }
-    .cta-button:hover{background:#047857}
-    table{width:100%;border-collapse:collapse;margin-top:1rem}
-    th,td{border:1px solid #d1d5db;padding:0.5rem;text-align:left}
-    th{background:#e5e7eb}
-    footer{background:#059669;color:#fff;text-align:center;padding:0.5rem;margin-top:2rem;font-size:0.9rem}
-    @media (max-width:600px){
-      h1{font-size:1.6rem}
-      h2{font-size:1.3rem}
-    }
+    body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9f9f9;color:#333;}
+    .container{max-width:800px;margin:auto;padding:20px;}
+    h1{color:#059669;}
+    p{line-height:1.6;}
+    .steps{margin-top:20px;}
+    .steps li{margin-bottom:10px;}
+    .code{background:#e0e0e0;padding:10px;border-radius:4px;font-family:monospace;white-space:pre-wrap;}
+    table{width:100%;border-collapse:collapse;margin:20px 0;}
+    th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+    th{background:#047857;color:#fff;}
+    .cta-button{display:inline-block;background:#059669;color:#fff;padding:12px 20px;border-radius:4px;text-decoration:none;font-weight:bold;}
+    .cta-button:hover{background:#047857;}
+    footer{margin-top:40px;font-size:0.9em;color:#777;text-align:center;}
   </style>
-
-  <!-- JSON‑LD Article -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Gemini grátis no n8n: configuração passo a passo",
-    "description":"Aprenda a integrar o modelo Gemini gratuito ao n8n em poucos minutos. Guia prático, código pronto e comparação com LeadBot.",
-    "author":{"@type":"Person","name":"Equipe LeadBot"},
-    "datePublished":"2024-10-10",
-    "image":"https://seusite.com/assets/gemini-n8n.png",
-    "url":"https://seusite.com/learn/gemini-gratis-n8n-automacao.html"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Gemini grátis no n8n: configuração passo a passo",
+    "description": "Aprenda a usar o Gemini grátis no n8n passo a passo e automatize seus fluxos de trabalho com IA.",
+    "image": "https://seusite.com/images/gemini-n8n-og.jpg",
+    "author": {"@type":"Person","name":"Nome do Autor"},
+    "publisher":{"@type":"Organization","name":"Seu Site","logo":{"@type":"ImageObject","url":"https://seusite.com/logo.png"}},
+    "datePublished":"2026-10-12",
+    "mainEntityOfPage":"https://seusite.com/learn/gemini-gratis-n8n-automacao.html"
   }
   </script>
-
-  <!-- JSON‑LD FAQPage -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
       {
-        "@type":"Question",
-        "name":"O Gemini é realmente gratuito?",
-        "acceptedAnswer":{"@type":"Answer","text":"Sim. O modelo Gemini oferece uma cota gratuita que pode ser usada sem custos dentro dos limites de uso diário."}
+        "@type": "Question",
+        "name": "O que é o Gemini?",
+        "acceptedAnswer": {"@type":"Answer","text":"Gemini é uma família de modelos de linguagem avançados desenvolvida pela Google, focada em desempenho e eficiência."}
       },
       {
-        "@type":"Question",
-        "name":"Preciso de chave de API para usar o Gemini no n8n?",
-        "acceptedAnswer":{"@type":"Answer","text":"Sim. Crie uma conta no Google AI Studio, copie a chave de API e insira-a nas credenciais do n8n."}
+        "@type": "Question",
+        "name": "Como integrar o Gemini ao n8n?",
+        "acceptedAnswer": {"@type":"Answer","text":"Você pode usar a API REST do Gemini em um nó HTTP Request dentro do seu fluxo n8n, autenticando com chave API gratuita."}
       },
       {
-        "@type":"Question",
-        "name":"Posso substituir o LeadBot pelo Gemini?",
-        "acceptedAnswer":{"@type":"Answer","text":"O Gemini cobre geração de texto, mas o LeadBot já inclui fluxos prontos para qualificação de leads no WhatsApp, economizando tempo de implementação."}
+        "@type": "Question",
+        "name": "Quais são os benefícios de usar o LeadBot em comparação com a configuração manual?",
+        "acceptedAnswer": {"@type":"Answer","text":"LeadBot oferece automação pronta, integração direta com WhatsApp e qualificação de leads sem precisar programar."}
       }
     ]
   }
@@ -139,70 +124,5 @@
 <body>
   <div class="container">
     <h1>Gemini grátis no n8n: configuração passo a passo</h1>
-
-    <p>Você quer usar IA avançada nos seus workflows sem gastar nada? O modelo Gemini, da Google, oferece uma camada gratuita que pode ser conectada ao n8n em poucos minutos. Muitos usuários ainda se perdem ao criar credenciais ou montar o fluxo correto, gerando frustração e perda de tempo.</p>
-    <p>Neste guia vamos resolver esses pontos: criaremos a credencial, configuraremos o nó HTTP Request e testaremos a resposta. Tudo isso com código pronto para copiar e colar.</p>
-
-    <h2>Passo a passo</h2>
-    <ol>
-      <li>
-        <strong>Obtenha a chave de API Gemini</strong><br>
-        Acesse <a href="https://ai.google.dev/gemini-api" target="_blank">Google AI Studio</a>, crie um projeto e copie a chave que aparece em <em>API key</em>.
-      </li>
-      <li>
-        <strong>Crie a credencial no n8n</strong><br>
-        <code>
-        # No n8n → Credenciais → Nova credencial → “API Key”<br>
-        Nome: Gemini<br>
-        Chave: <em>sua-chave-aqui</em>
-        </code>
-      </li>
-      <li>
-        <strong>Monte o fluxo</strong><br>
-        <ol type="a">
-          <li>Arraste um nó <code>HTTP Request</code>.</li>
-          <li>Selecione a credencial “Gemini”.</li>
-          <li>Configure:
-            <ul>
-              <li><strong>URL</strong>: <code>https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent</code></li>
-              <li><strong>Method</strong>: <code>POST</code></li>
-              <li><strong>Body</strong> (JSON):
-                <code>{
-  "contents":[
-    {"role":"user","parts":[{"text":"{{ $json.prompt }}"}]}
-  ]
-}</code>
-              </li>
-            </ul>
-          </li>
-        </ol>
-      </li>
-      <li>
-        <strong>Teste</strong><br>
-        Defina um nó “Set” antes do HTTP Request com a propriedade <code>prompt</code> = “Qual a capital da Austrália?”. Execute o workflow e veja a resposta no nó seguinte.
-      </li>
-    </ol>
-
-    <h2>Comparação rápida: Manual vs LeadBot</h2>
-    <table>
-      <thead>
-        <tr><th></th><th>Configuração Manual (Gemini)</th><th>LeadBot (WhatsApp Lead Qualification)</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Tempo de implantação</td><td>30‑45 min (credencial + fluxo)</td><td>5 min (instalação pronta)</td></tr>
-        <tr><td>Funcionalidade de lead scoring</td><td>Precisa ser programada</td><td>Já incluído</td></tr>
-        <tr><td>Custo</td><td>Gratuito até limites de cota</td><td>$19 USD (24 h de uso)</td></tr>
-        <tr><td>Manutenção</td><td>Você gerencia atualizações</td><td>Atualizações automáticas</td></tr>
-      </tbody>
-    </table>
-
-    <a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h&utm_content=gemini-gratis-n8n-automacao" class="cta-button">
-      LeadBot 24h — AI WhatsApp Lead Qualification ($19 USD)
-    </a>
-  </div>
-
-  <footer>
-    Quer ganhar 50% de comissão? Seja Afiliado do LeadBot
-  </footer>
-</body>
-</html>
+    <p>Você já tentou usar IA no seu fluxo de automação, mas se deparou com a burocracia de APIs e tokens? O Gemini, gratuito na Google Cloud, oferece respostas precisas sem custo. Mas, sem uma boa integração, você perde tempo configurando tudo manualmente.</p>
+    <p>Este guia traz um passo a passo simples, com código mínimo que você pode copiar
