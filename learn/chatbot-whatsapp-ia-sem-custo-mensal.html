@@ -4,111 +4,124 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Como criar chatbot de WhatsApp com IA sem custo mensal fixo</title>
-<meta name="description" content="Aprenda passo a passo a montar um chatbot inteligente no WhatsApp usando n8n e OpenAI sem pagar mensalidades fixas.">
+<meta name="description" content="Aprenda a montar um chatbot inteligente no WhatsApp sem pagar mensalidades fixas. Guia prático com exemplos de código e integração com n8n e OpenAI.">
 <meta property="og:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal fixo">
-<meta property="og:description" content="Aprenda passo a passo a montar um chatbot inteligente no WhatsApp usando n8n e OpenAI sem pagar mensalidades fixas.">
-<meta property="og:type" content="article">
+<meta property="og:description" content="Aprenda a montar um chatbot inteligente no WhatsApp sem pagar mensalidades fixas. Guia prático com exemplos de código e integração com n8n e OpenAI.">
 <meta property="og:url" content="https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="LeadBot">
-<meta name="twitter:card" content="summary">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://seusite.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Como criar chatbot de WhatsApp com IA sem custo mensal fixo">
-<meta name="twitter:description" content="Aprenda passo a passo a montar um chatbot inteligente no WhatsApp usando n8n e OpenAI sem pagar mensalidades fixas.">
+<meta name="twitter:description" content="Aprenda a montar um chatbot inteligente no WhatsApp sem pagar mensalidades fixas. Guia prático com exemplos de código e integração com n8n e OpenAI.">
+<meta name="twitter:image" content="https://seusite.com/assets/twitter-image.png">
+<link rel="canonical" href="https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
-  document.addEventListener('DOMContentLoaded', function(){
-    var up = new URLSearchParams(window.location.search);
-    var utmLp = {};
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-      var v = up.get(k); if (v) utmLp[k] = v;
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
+document.addEventListener('DOMContentLoaded', function(){
+  var up = new URLSearchParams(window.location.search);
+  var utmLp = {};
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+    var v = up.get(k); if (v) utmLp[k] = v;
+  });
+  if (Object.keys(utmLp).length > 0) {
+    gtag('event', 'landing_page_view', {
+      event_category: 'funnel',
+      utm_source: utmLp.utm_source || '',
+      utm_medium: utmLp.utm_medium || '',
+      utm_campaign: utmLp.utm_campaign || '',
+      utm_content: utmLp.utm_content || '',
+      non_interaction: true
     });
-    if (Object.keys(utmLp).length > 0) {
-      gtag('event', 'landing_page_view', {
-        event_category: 'funnel',
-        utm_source: utmLp.utm_source || '',
-        utm_medium: utmLp.utm_medium || '',
-        utm_campaign: utmLp.utm_campaign || '',
-        utm_content: utmLp.utm_content || '',
-        non_interaction: true
+  }
+  document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (!window.gtag) return;
+      var qi = el.href.indexOf('?');
+      var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
+      var utmEv = {};
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+        var v = qp.get(k); if (v) utmEv[k] = v;
       });
-    }
-    document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
-      el.addEventListener('click', function(){
-        if (!window.gtag) return;
-        var qi = el.href.indexOf('?');
-        var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
-        var utmEv = {};
-        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-          var v = qp.get(k); if (v) utmEv[k] = v;
-        });
-        gtag('event', 'cta_click', {
-          event_category: 'funnel',
-          destination: 'gumroad_checkout',
-          utm_source: utmEv.utm_source || '',
-          utm_medium: utmEv.utm_medium || '',
-          utm_campaign: utmEv.utm_campaign || '',
-          utm_content: utmEv.utm_content || '',
-          utm_term: utmEv.utm_term || '',
-          link_url: el.href
-        });
-        gtag('event', 'checkout_start', {
-          event_category: 'funnel',
-          destination: 'gumroad_checkout',
-          utm_source: utmEv.utm_source || '',
-          utm_medium: utmEv.utm_medium || '',
-          utm_campaign: utmEv.utm_campaign || '',
-          utm_content: utmEv.utm_content || '',
-          utm_term: utmEv.utm_term || '',
-          link_url: el.href
-        });
+      gtag('event', 'cta_click', {
+        event_category: 'funnel',
+        destination: 'gumroad_checkout',
+        utm_source: utmEv.utm_source || '',
+        utm_medium: utmEv.utm_medium || '',
+        utm_campaign: utmEv.utm_campaign || '',
+        utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
+        link_url: el.href
+      });
+      gtag('event', 'checkout_start', {
+        event_category: 'funnel',
+        destination: 'gumroad_checkout',
+        utm_source: utmEv.utm_source || '',
+        utm_medium: utmEv.utm_medium || '',
+        utm_campaign: utmEv.utm_campaign || '',
+        utm_content: utmEv.utm_content || '',
+        utm_term: utmEv.utm_term || '',
+        link_url: el.href
       });
     });
   });
+});
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Article",
-  "headline":"Como criar chatbot de WhatsApp com IA sem custo mensal fixo",
-  "description":"Aprenda passo a passo a montar um chatbot inteligente no WhatsApp usando n8n e OpenAI sem pagar mensalidades fixas.",
-  "author":{"@type":"Person","name":"LeadBot"},
-  "publisher":{"@type":"Organization","name":"LeadBot","logo":{"@type":"ImageObject","url":"https://seusite.com/logo.png"}},
-  "datePublished":"2024-10-11",
-  "mainEntityOfPage":"https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html",
-  "image":"https://seusite.com/preview.jpg"
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Como criar chatbot de WhatsApp com IA sem custo mensal fixo",
+  "description": "Aprenda a montar um chatbot inteligente no WhatsApp sem pagar mensalidades fixas. Guia prático com exemplos de código e integração com n8n e OpenAI.",
+  "author": {
+    "@type": "Person",
+    "name": "Seu Nome"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Seu Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://seusite.com/assets/logo.png"
+    }
+  },
+  "datePublished": "2024-10-13",
+  "dateModified": "2024-10-13",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://seusite.com/learn/chatbot-whatsapp-ia-sem-custo-mensal.html"
+  }
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@type":"Question",
-      "name":"Posso usar o n8n sem pagar?",
-      "acceptedAnswer":{"@type":"Answer","text":"Sim, o n8n possui plano gratuito que atende a maioria das necessidades de automação básica."}
+      "@type": "Question",
+      "name": "É realmente possível criar um chatbot no WhatsApp sem pagar mensalidades fixas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, usando a API do WhatsApp via 360dialog ou Twilio em modo de teste, combinada com n8n e OpenAI. As taxas são baseadas no número de mensagens enviadas, não em mensalidades."
+      }
     },
     {
-      "@type":"Question",
-      "name":"O WhatsApp Business API tem mensalidade?",
-      "acceptedAnswer":{"@type":"Answer","text":"O WhatsApp Business API em si não tem custo mensal, mas o provedor de integração (ex.: Twilio) cobra por mensagens e pelo número de chamadas."}
+      "@type": "Question",
+      "name": "Qual é o custo mínimo esperado para operar o bot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O custo mínimo envolve a taxa de mensagem do provedor da API (por exemplo, R$0,07 por mensagem) e o consumo do OpenAI (dependendo do volume). Em escala pequena, pode ficar abaixo de R$50/mês."
+      }
     }
   ]
 }
 </script>
 <style>
-  body{margin:0;padding:0;font-family:Arial,sans-serif;background:#f4f4f4;color:#333;}
-  .container{max-width:800px;margin:auto;padding:20px;background:#fff;}
-  h1{color:#059669;}
-  .steps ol{margin-left:20px;}
-  .steps li{margin-bottom:10px;}
-  table{width:100%;border-collapse:collapse;margin:20px 0;}
-  table, th, td{border:1px solid #ddd;}
-  th, td{padding:10px;text-align:left;}
-  th{background:#059669;color:#fff;}
-  .cta-button{display:inline-block;padding:12px 24px;background:#059669;color:#fff;text-decoration:none;border-radius:5px;font-weight:bold;}
-  .cta-button:hover
+body{margin:0;font-family:Arial,sans-serif;background:#f4f9f5;color:#222;}
+.container{max-width:800px;margin:auto;padding:20px;}
+h1{color:#059669;}
+h2{color:#047857;}
