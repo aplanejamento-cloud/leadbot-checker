@@ -1,51 +1,312 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perder clientes fora do horário? Resolva sem contratar!</title>
-<meta name="description" content="Aprenda a reter clientes fora do horário sem contratar pessoal. Dicas práticas e automação via WhatsApp com LeadBot 24h.">
-<meta property="og:title" content="Perder clientes fora do horário? Resolva sem contratar!">
-<meta property="og:description" content="Aprenda a reter clientes fora do horário sem contratar pessoal. Dicas práticas e automação via WhatsApp com LeadBot 24h.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://seusite.com/learn/perder-clientes-fora-horario-resolver.html">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Perder clientes fora do horário? Resolva sem contratar!">
-<meta name="twitter:description" content="Aprenda a reter clientes fora do horário sem contratar pessoal. Dicas práticas e automação via WhatsApp com LeadBot 24h.">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
-document.addEventListener('DOMContentLoaded', function(){
-  var up = new URLSearchParams(window.location.search);
-  var utmLp = {};
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-    var v = up.get(k); if (v) utmLp[k] = v;
-  });
-  if (Object.keys(utmLp).length > 0) {
-    gtag('event', 'landing_page_view', {
-      event_category: 'funnel',
-      utm_source: utmLp.utm_source || '',
-      utm_medium: utmLp.utm_medium || '',
-      utm_campaign: utmLp.utm_campaign || '',
-      utm_content: utmLp.utm_content || '',
-      non_interaction: true
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perder clientes fora do horário: como resolver sem contratar</title>
+  <meta name="description" content="Descubra como parar de perder vendas no WhatsApp fora do horário comercial sem precisar contratar ninguém. Automatize seu atendimento com IA usando n8n.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Perder clientes fora do horário: como resolver sem contratar">
+  <meta property="og:description" content="Automatize seu atendimento no WhatsApp e capture leads 24h por dia sem aumentar sua folha de pagamento.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://seusite.com/learn/perder-clientes-fora-horario-resolver.html">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Perder clientes fora do horário: como resolver sem contratar">
+  <meta name="twitter:description" content="Automatize seu atendimento no WhatsApp e capture leads 24h por dia sem aumentar sua folha de pagamento.">
+
+  <!-- GA4 INSTRUMENTATION C100 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZCBT5Y55"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ENZCBT5Y55', {page_path: window.location.pathname + window.location.search});
+  document.addEventListener('DOMContentLoaded', function(){
+    var up = new URLSearchParams(window.location.search);
+    var utmLp = {};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+      var v = up.get(k); if (v) utmLp[k] = v;
     });
-  }
-  document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
-    el.addEventListener('click', function(){
-      if (!window.gtag) return;
-      var qi = el.href.indexOf('?');
-      var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
-      var utmEv = {};
-      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-        var v = qp.get(k); if (v) utmEv[k] = v;
-      });
-      gtag('event', 'cta_click', {
+    if (Object.keys(utmLp).length > 0) {
+      gtag('event', 'landing_page_view', {
         event_category: 'funnel',
-        destination: 'gumroad_checkout',
-        utm_source: utmEv.utm_source || '',
-        utm_medium: utmEv.utm_medium || '',
-        utm_campaign: utmEv.utm
+        utm_source: utmLp.utm_source || '',
+        utm_medium: utmLp.utm_medium || '',
+        utm_campaign: utmLp.utm_campaign || '',
+        utm_content: utmLp.utm_content || '',
+        non_interaction: true
+      });
+    }
+    document.querySelectorAll('a[href*="planificador7.gumroad.com"]').forEach(function(el){
+      el.addEventListener('click', function(){
+        if (!window.gtag) return;
+        var qi = el.href.indexOf('?');
+        var qp = qi > 0 ? new URLSearchParams(el.href.substring(qi)) : new URLSearchParams();
+        var utmEv = {};
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+          var v = qp.get(k); if (v) utmEv[k] = v;
+        });
+        gtag('event', 'cta_click', {
+          event_category: 'funnel',
+          destination: 'gumroad_checkout',
+          utm_source: utmEv.utm_source || '',
+          utm_medium: utmEv.utm_medium || '',
+          utm_campaign: utmEv.utm_campaign || '',
+          utm_content: utmEv.utm_content || '',
+          utm_term: utmEv.utm_term || '',
+          link_url: el.href
+        });
+        gtag('event', 'checkout_start', {
+          event_category: 'funnel',
+          destination: 'gumroad_checkout',
+          utm_source: utmEv.utm_source || '',
+          utm_medium: utmEv.utm_medium || '',
+          utm_campaign: utmEv.utm_campaign || '',
+          utm_content: utmEv.utm_content || '',
+          utm_term: utmEv.utm_term || '',
+          link_url: el.href
+        });
+      });
+    });
+  });
+  </script>
+
+  <!-- JSON-LD Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Perder clientes fora do horário: como resolver sem contratar",
+    "description": "Aprenda a automatizar o atendimento noturno e de finais de semana no WhatsApp para pequenas empresas usando automação e inteligência artificial.",
+    "author": {
+      "@type": "Organization",
+      "name": "LeadBot 24h"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LeadBot 24h"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como atender clientes fora do horário comercial sem contratar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Você pode usar automações via n8n combinadas com IA para responder mensagens no WhatsApp, qualificar leads e agendar contatos automaticamente 24 horas por dia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Perder mensagens no WhatsApp à noite prejudica as vendas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Leads que não recebem resposta imediata costumam procurar concorrentes que respondem mais rápido."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-dark: #047857;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --text-light: #4b5563;
+      --border: #e5e7eb;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: var(--text);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 16px;
+      color: var(--text-light);
+    }
+    .step-box {
+      background: #f3f4f6;
+      border-left: 4px solid var(--primary);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .step-box h3 {
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    code {
+      background: #e5e7eb;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f3f4f6;
+      color: var(--text);
+    }
+    .cta-container {
+      text-align: center;
+      margin: 40px 0 20px 0;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 16px 32px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+      box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+    }
+    .cta-button:hover {
+      background-color: var(--primary-dark);
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Perder clientes fora do horário: como resolver sem contratar</h1>
+
+    <p>O sol se põe, sua loja física fecha ou seu expediente comercial acaba, mas as pessoas continuam navegando na internet e mandando mensagens no WhatsApp. O problema? Na manhã seguinte, quando você finalmente abre o chat, o lead já foi atendido pelo concorrente que respondeu na hora.</p>
+    
+    <p>Contratar uma recepcionista noturna ou um plantonista de fim de semana é financeiramente inviável para a maioria dos pequenos negócios. A boa notícia é que você não precisa aumentar sua folha de pagamento para resolver isso: a automação inteligente resolve o problema por uma fração do custo.</p>
+
+    <h2>O passo a passo para blindar seu atendimento 24h</h2>
+
+    <div class="step-box">
+      <h3>Passo 1: Capture o evento de entrada (Webhook)</h3>
+      <p>Configure sua API do WhatsApp (Evolution API, Z-API ou similar) para enviar todas as mensagens recebidas para um fluxo no n8n através de um nó Webhook.</p>
+    </div>
+
+    <div class="step-box">
+      <h3>Passo 2: Verifique o horário da mensagem</h3>
+      <p>Utilize um nó de condição para checar se a mensagem chegou fora do horário comercial. Se estiver dentro do expediente, o fluxo segue o atendimento humano normal. Se for fora, aciona a inteligência artificial.</p>
+    </div>
+
+    <div class="step-box">
+      <h3>Passo 3: Qualifique o lead com IA</h3>
+      <p>Conecte o n8n a uma LLM (como OpenAI GPT-4o-mini). Alimente a IA com o catálogo de produtos e perguntas frequentes da sua empresa. Ela vai responder o cliente educadamente, tirar dúvidas e coletar nome, e-mail e necessidade.</p>
+    </div>
+
+    <div class="step-box">
+      <h3>Passo 4: Salve e notifique a equipe</h3>
+      <p>Insira os dados qualificados diretamente no seu CRM ou planilha e envie um resumo direto no WhatsApp do vendedor responsável para o primeiro contato na manhã seguinte.</p>
+    </div>
+
+    <h2>Atendimento Manual vs. LeadBot 24h</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Situação</th>
+          <th>Atendimento Manual</th>
+          <th>Com LeadBot 24h (n8n + IA)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Horário Noturno</strong></td>
+          <td>Mensagens ignoradas até o dia seguinte (Lead perdido).</td>
+          <td>Resposta imediata, qualificação e captura de dados.</td>
+        </tr>
+        <tr>
+          <td><strong>Custo Mensal</strong></td>
+          <td>Alto (Salário + Encargos de um plantonista).</td>
+          <td>Zero custo com pessoal extra (Apenas IA de baixo custo).</td>
+        </tr>
+        <tr>
+          <td><strong>Velocidade</strong></td>
+          <td>Depende da disponibilidade humana.</td>
+          <td>Menos de 3 segundos, 24 horas por dia.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cta-container">
+      <a href="https://planificador7.gumroad.com/l/leadbot-24h?utm_source=github&utm_medium=learn_page&utm_campaign=leadbot24h&utm_content=perder-clientes-fora-horario-resolver" class="cta-button">LeadBot 24h — AI WhatsApp Lead Qualification ($19 USD)</a>
+    </div>
+
+    <footer>
+      <p>Quer ganhar 50% de comissão? <a href="https://planificador7.gumroad.com/affiliates" target="_blank">Seja Afiliado do LeadBot</a></p>
+    </footer>
+  </div>
+
+</body>
+</html>
